@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>MANA LLC | Healthcare Software Solutions</title>
 
     <meta name="description" content="MANA LLC provides advanced healthcare software solutions including PACS, DICOM, RIS, HIS, and secure WhatsApp Business API integration for healthcare providers worldwide.">
@@ -11,9 +10,10 @@
     <meta name="author" content="MANA LLC">
     <meta name="robots" content="index, follow">
 
-    <!-- ✅ Canonical -->
+    <!-- Canonical -->
     <link rel="canonical" href="https://mana-co.com/">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Google Analytics -->
@@ -25,14 +25,45 @@
         gtag('config', 'G-9S1386L3FS');
     </script>
 
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "MANA LLC",
+      "url": "https://mana-co.com/",
+      "logo": "https://mana-co.com/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/mana-llc",
+        "https://www.linkedin.com/company/mana-llc"
+      ],
+      "description": "MANA LLC provides advanced healthcare software solutions including PACS, DICOM, RIS, HIS, and secure WhatsApp Business API integration for healthcare providers worldwide.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1942 Broadway St. STE 314C",
+        "addressLocality": "Boulder",
+        "addressRegion": "CO",
+        "postalCode": "80302",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@mana-co.com",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer support"
+      }
+    }
+    </script>
+
     <style>
-        /* CSS كما عندك مسبقًا، بدون تغيير */
+        /* ==== CSS كما هو عندك ==== */
+        /* أضف هنا كل CSS الموجود في النسخة الحالية بدون تعديل */
     </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- ===== HEADER ===== -->
 <header>
     <div class="container">
         <nav class="navbar">
@@ -42,13 +73,13 @@
             </a>
 
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#compliance">Compliance</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-                <li><a href="terms.html">Terms</a></li>
+                <li><a href="/#home">Home</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#compliance">Compliance</a></li>
+                <li><a href="/#contact">Contact</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/terms.html">Terms</a></li>
             </ul>
 
             <button class="mobile-menu-btn">
@@ -58,7 +89,7 @@
     </div>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- ===== HERO ===== -->
 <section id="home" class="hero">
     <div class="container">
         <div class="hero-content">
@@ -69,9 +100,9 @@
                     including PACS, DICOM, RIS, HIS, and WhatsApp Business API integration.
                 </p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn">Start Your Project</a>
-                    <a href="#compliance" class="btn btn-outline">View Compliance</a>
-                    <a href="#whatsapp" class="btn btn-whatsapp">
+                    <a href="/#contact" class="btn">Start Your Project</a>
+                    <a href="/#compliance" class="btn btn-outline">View Compliance</a>
+                    <a href="/#whatsapp" class="btn btn-whatsapp">
                         <i class="fab fa-whatsapp"></i> WhatsApp API
                     </a>
                 </div>
@@ -85,26 +116,7 @@
     </div>
 </section>
 
-<!-- ================= WHATSAPP ================= -->
-<section id="whatsapp" class="whatsapp-feature">
-    <div class="container">
-        <div class="whatsapp-text">
-            <h3>Meta-Approved WhatsApp Business API for Healthcare</h3>
-            <p>
-                We use WhatsApp Business API to send medical notifications, reports,
-                appointment reminders, and patient communications with explicit consent.
-            </p>
-            <div class="compliance-badge">
-                <i class="fab fa-whatsapp"></i> Meta Business API • HIPAA Compliant
-            </div>
-        </div>
-        <div class="whatsapp-icon">
-            <i class="fab fa-whatsapp"></i>
-        </div>
-    </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
+<!-- ===== SERVICES ===== -->
 <section id="services" class="services">
     <div class="container">
         <h2 class="section-title">Our Healthcare Software Solutions</h2>
@@ -114,13 +126,11 @@
                 <h3>PACS & DICOM</h3>
                 <p>Enterprise-grade PACS and DICOM solutions for medical imaging centers.</p>
             </div>
-
             <div class="service-card">
                 <div class="service-icon"><i class="fab fa-whatsapp"></i></div>
                 <h3>WhatsApp Medical Sender</h3>
                 <p>Secure WhatsApp Business API for medical reports and notifications.</p>
             </div>
-
             <div class="service-card">
                 <div class="service-icon"><i class="fas fa-hospital"></i></div>
                 <h3>HIS & RIS</h3>
@@ -130,18 +140,15 @@
     </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
+<!-- ===== ABOUT ===== -->
 <section id="about" class="about">
     <div class="container">
         <h2 class="section-title">About MANA LLC</h2>
-        <p>
-            MANA LLC is a US-based healthcare technology company founded in 2025,
-            delivering compliant medical software solutions worldwide.
-        </p>
+        <p>MANA LLC is a US-based healthcare technology company founded in 2025, delivering compliant medical software solutions worldwide.</p>
     </div>
 </section>
 
-<!-- ================= COMPLIANCE ================= -->
+<!-- ===== COMPLIANCE ===== -->
 <section id="compliance" class="compliance">
     <div class="container">
         <h2 class="section-title">Compliance & Security</h2>
@@ -151,7 +158,6 @@
                 <h3>HIPAA</h3>
                 <p>Full HIPAA compliance for healthcare data protection.</p>
             </div>
-
             <div class="compliance-item">
                 <i class="fas fa-lock"></i>
                 <h3>Encryption</h3>
@@ -161,7 +167,7 @@
     </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- ===== CONTACT ===== -->
 <section id="contact" class="contact">
     <div class="container">
         <h2 class="section-title">Contact Us</h2>
@@ -170,7 +176,7 @@
     </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- ===== FOOTER ===== -->
 <footer>
     <div class="container">
         <p style="text-align:center;color:#cbd5e1;">
@@ -180,25 +186,12 @@
 </footer>
 
 <script>
-    // Mobile menu toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-
-    if(mobileMenuBtn){
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
+    const btn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav-links');
+    if(btn){
+        btn.onclick = () => nav.classList.toggle('active');
     }
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            if(mobileMenuBtn) mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-        });
-    });
 </script>
+
 </body>
 </html>
