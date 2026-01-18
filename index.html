@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MANA LLC | Healthcare Software Solutions</title>
-
+    
+    <!-- Meta SEO -->
     <meta name="description" content="MANA LLC provides advanced healthcare software solutions including PACS, DICOM, RIS, HIS, and secure WhatsApp Business API integration for healthcare providers worldwide.">
     <meta name="keywords" content="Healthcare Software, PACS, DICOM, RIS, HIS, WhatsApp Business API Healthcare, Medical Software Solutions">
     <meta name="author" content="MANA LLC">
     <meta name="robots" content="index, follow">
-
+    
     <!-- Canonical -->
     <link rel="canonical" href="https://mana-co.com/">
 
@@ -25,39 +26,57 @@
         gtag('config', 'G-9S1386L3FS');
     </script>
 
-    <!-- Structured Data JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "MANA LLC",
-      "url": "https://mana-co.com/",
-      "logo": "https://mana-co.com/logo.png",
-      "sameAs": [
-        "https://www.facebook.com/mana-llc",
-        "https://www.linkedin.com/company/mana-llc"
-      ],
-      "description": "MANA LLC provides advanced healthcare software solutions including PACS, DICOM, RIS, HIS, and secure WhatsApp Business API integration for healthcare providers worldwide.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1942 Broadway St. STE 314C",
-        "addressLocality": "Boulder",
-        "addressRegion": "CO",
-        "postalCode": "80302",
-        "addressCountry": "US"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "contact@mana-co.com",
-        "telephone": "+1-555-123-4567",
-        "contactType": "customer support"
-      }
-    }
-    </script>
-
     <style>
-        /* ==== CSS كما هو عندك ==== */
-        /* أضف هنا كل CSS الموجود في النسخة الحالية بدون تعديل */
+        /* ======= CSS كما هو بدون تغيير ======= */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --accent: #06b6d4;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --whatsapp-green: #25D366;
+        }
+
+        * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+        body {background-color: var(--light); color: var(--secondary); line-height: 1.6;}
+        .container {width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px;}
+        
+        header {background: white; box-shadow:0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; top:0; z-index:1000;}
+        .navbar {display:flex; justify-content:space-between; align-items:center; padding:20px 0;}
+        .logo {font-size:1.8rem; font-weight:800; color:var(--primary); text-decoration:none; display:flex; align-items:center;}
+        .nav-links {display:flex; list-style:none;}
+        .nav-links li {margin-left:30px;}
+        .nav-links a {text-decoration:none; color:var(--secondary); font-weight:600; transition: var(--transition);}
+        .nav-links a:hover {color:var(--primary);}
+        .mobile-menu-btn {display:none; background:none; border:none; font-size:1.5rem; cursor:pointer;}
+
+        .hero {padding:180px 0 100px; display:flex; align-items:center; justify-content:center;}
+        .hero-content {display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;}
+        .hero-text {flex:1; min-width:300px; margin-right:30px;}
+        .hero-text h1 {font-size:2.5rem; margin-bottom:20px;}
+        .cta-buttons a {margin-right:15px; text-decoration:none; padding:10px 20px; border-radius: var(--radius); background: var(--primary); color:white; transition: var(--transition);}
+        .cta-buttons a:hover {background: var(--primary-dark);}
+        .btn-outline {background:white; border:2px solid var(--primary); color:var(--primary);}
+        .btn-outline:hover {background:var(--primary); color:white;}
+        .btn-whatsapp {background: var(--whatsapp-green); color:white;}
+        .btn-whatsapp:hover {background:#128c3d;}
+
+        .services, .about, .compliance, .contact {padding:100px 0;}
+        .section-title {text-align:center; font-size:2rem; margin-bottom:50px; color:var(--primary);}
+        .services-grid, .compliance-grid {display:flex; gap:30px; flex-wrap:wrap; justify-content:center;}
+        .service-card, .compliance-item {background:white; padding:30px; border-radius:var(--radius); box-shadow: var(--shadow); flex:1; min-width:250px; text-align:center;}
+        .service-icon, .compliance-item i {font-size:2.5rem; color:var(--primary); margin-bottom:15px;}
+
+        footer {background: var(--secondary); color:white; padding:50px 0 20px; text-align:center;}
+        footer p {margin:0; color:#cbd5e1;}
+        
+        @media(max-width:992px){.mobile-menu-btn{display:block;}.nav-links{position:fixed; top:80px; left:-100%; flex-direction:column; background:white; width:80%; height:calc(100vh-80px); padding:30px; transition:0.5s; z-index:999;}.nav-links.active{left:0;}.nav-links li{margin:15px 0;}}
+        @media(max-width:768px){.hero-text h1{font-size:2rem;}}
     </style>
 </head>
 
@@ -71,7 +90,6 @@
                 <img src="logo.png" alt="MANA LLC Logo" style="height:80px;margin-right:10px;">
                 MANA LLC
             </a>
-
             <ul class="nav-links">
                 <li><a href="/#home">Home</a></li>
                 <li><a href="/#services">Services</a></li>
@@ -81,10 +99,7 @@
                 <li><a href="/privacy.html">Privacy</a></li>
                 <li><a href="/terms.html">Terms</a></li>
             </ul>
-
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
         </nav>
     </div>
 </header>
@@ -95,23 +110,27 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Advanced <span style="color:#2563eb;">Healthcare</span> Software Solutions</h1>
-                <p>
-                    MANA LLC delivers secure, compliant, and scalable medical software solutions
-                    including PACS, DICOM, RIS, HIS, and WhatsApp Business API integration.
-                </p>
+                <p>MANA LLC delivers secure, compliant, and scalable medical software solutions including PACS, DICOM, RIS, HIS, and WhatsApp Business API integration.</p>
                 <div class="cta-buttons">
                     <a href="/#contact" class="btn">Start Your Project</a>
                     <a href="/#compliance" class="btn btn-outline">View Compliance</a>
-                    <a href="/#whatsapp" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> WhatsApp API
-                    </a>
+                    <a href="/#whatsapp" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp API</a>
                 </div>
             </div>
-
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80"
-                     alt="Healthcare Software Solutions">
+                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80" alt="Healthcare Software Solutions">
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHATSAPP ===== -->
+<section id="whatsapp" class="whatsapp-feature" style="padding:80px 0; text-align:center;">
+    <div class="container">
+        <h3>Meta-Approved WhatsApp Business API for Healthcare</h3>
+        <p>We use WhatsApp Business API to send medical notifications, reports, appointment reminders, and patient communications with explicit consent.</p>
+        <div style="font-size:1.2rem; color:var(--whatsapp-green); margin-top:10px;">
+            <i class="fab fa-whatsapp"></i> Meta Business API • HIPAA Compliant
         </div>
     </div>
 </section>
@@ -179,18 +198,26 @@
 <!-- ===== FOOTER ===== -->
 <footer>
     <div class="container">
-        <p style="text-align:center;color:#cbd5e1;">
-            © 2025–2026 MANA LLC — Healthcare Software Solutions — HIPAA Compliant
-        </p>
+        <p>© 2025–2026 MANA LLC — Healthcare Software Solutions — HIPAA Compliant</p>
     </div>
 </footer>
 
 <script>
-    const btn = document.querySelector('.mobile-menu-btn');
-    const nav = document.querySelector('.nav-links');
-    if(btn){
-        btn.onclick = () => nav.classList.toggle('active');
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    if(mobileMenuBtn){
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
     }
+    document.querySelectorAll('.nav-links a').forEach(link=>{
+        link.addEventListener('click',()=>{
+            navLinks.classList.remove('active');
+            if(mobileMenuBtn) mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    });
 </script>
 
 </body>
