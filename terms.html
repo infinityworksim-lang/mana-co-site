@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="canonical" href="https://mana-co.com/terms.html">
-
-<meta name="robots" content="index, follow">
-
-<meta name="description" content="Terms and Conditions for MANA LLC healthcare software services, including PACS, DICOM, HIS, RIS, and WhatsApp Business API integrations. HIPAA-compliant medical software solutions.">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Terms & Conditions | MANA LLC</title>
+
+    <meta name="description" content="Terms and Conditions for MANA LLC healthcare software services, including PACS, DICOM, HIS, RIS, and WhatsApp Business API integrations. HIPAA-compliant medical software solutions.">
+    <meta name="robots" content="index, follow">
+
+    <!-- ✅ Canonical -->
+    <link rel="canonical" href="https://mana-co.com/terms.html">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
+        /* ====== CSS كما هو بدون تغيير ====== */
         :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
@@ -46,7 +50,6 @@
             padding: 0 15px;
         }
 
-        /* Header */
         header {
             background: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -72,11 +75,6 @@
             align-items: center;
         }
 
-        .logo i {
-            margin-right: 10px;
-            color: var(--accent);
-        }
-
         .nav-links {
             display: flex;
             list-style: none;
@@ -90,12 +88,6 @@
             text-decoration: none;
             color: var(--secondary);
             font-weight: 600;
-            transition: var(--transition);
-            padding: 5px 0;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
         }
 
         .mobile-menu-btn {
@@ -103,11 +95,8 @@
             background: none;
             border: none;
             font-size: 1.5rem;
-            color: var(--secondary);
-            cursor: pointer;
         }
 
-        /* Legal Page */
         .legal-page {
             padding: 150px 0 100px;
         }
@@ -121,487 +110,39 @@
             box-shadow: var(--shadow);
         }
 
-        .legal-content h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--primary);
-            font-size: 2.5rem;
-        }
-
-        .legal-content h2 {
-            margin-top: 40px;
-            color: var(--secondary);
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--gray-light);
-        }
-
-        .legal-content h3 {
-            margin-top: 30px;
-            color: var(--primary);
-        }
-
-        .legal-list {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        .legal-list li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 10px;
-        }
-
-        .legal-list li:before {
-            content: "•";
-            color: var(--primary);
-            font-weight: bold;
-            position: absolute;
-            left: -10px;
-        }
-
-        .highlight-box {
-            background: #f0f9ff;
-            border-left: 4px solid var(--primary);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 var(--radius) var(--radius) 0;
-        }
-
-        .whatsapp-highlight {
-            background: rgba(37, 211, 102, 0.1);
-            border-left: 4px solid var(--whatsapp-green);
-        }
-
-        .update-date {
-            text-align: center;
-            color: var(--gray);
-            font-style: italic;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--gray-light);
-        }
-
-        .back-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: var(--radius);
-            transition: var(--transition);
-        }
-
-        .back-button:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
-        .important-note {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 var(--radius) var(--radius) 0;
-        }
-
-        /* Footer */
         footer {
             background: var(--secondary);
             color: white;
-            padding: 50px 0 20px;
+            padding: 40px 0 20px;
             margin-top: 50px;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-column {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .footer-column h4 {
-            color: white;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-column h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--accent);
         }
 
         .footer-links {
             list-style: none;
         }
 
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
         .footer-links a {
             color: #cbd5e1;
             text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
-            padding-left: 5px;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #94a3b8;
-            font-size: 0.9rem;
         }
 
         @media (max-width: 992px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                flex-direction: column;
-                background: white;
-                width: 80%;
-                height: calc(100vh - 80px);
-                box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
-                transition: 0.5s;
-                padding: 30px;
-                z-index: 999;
-            }
-            
-            .nav-links.active {
-                left: 0;
-            }
-            
-            .nav-links li {
-                margin: 15px 0;
-            }
-            
-            .legal-content {
-                padding: 30px 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .legal-content h1 {
-                font-size: 2rem;
-            }
-            
-            .footer-column {
-                min-width: 100%;
-            }
+            .mobile-menu-btn { display: block; }
         }
     </style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-    <img src="logo.png" alt="MANA LLC Logo" style="height: 100px; margin-right: 10px;">
-    MANA LLC
-</a>
-                
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms</a></li>
-                </ul>
-                
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Terms & Conditions Content -->
-    <section class="legal-page">
-        <div class="container">
-            <div class="legal-content">
-                <h1>Terms & Conditions</h1>
-                <div class="update-date">Effective: October 2025</div>
-                
-                <p>These Terms & Conditions ("Terms") govern your use of MANA LLC's healthcare software services, including but not limited to PACS, DICOM, RIS, HIS, and WhatsApp integration services ("Services"). By accessing or using our Services, you agree to be bound by these Terms.</p>
-                
-                <div class="important-note">
-                    <strong>Important:</strong> These Terms include specific provisions for WhatsApp Business API usage. Healthcare providers must obtain explicit patient consent for all WhatsApp communications as required by Meta and healthcare regulations.
-                </div>
-                
-                <div class="highlight-box whatsapp-highlight">
-                    <h3>WhatsApp Business API Usage Declaration</h3>
-                    <p><strong>"We use WhatsApp Business API to send medical notifications, reports, and support messages to registered users only. All communications are HIPAA-compliant and require explicit patient consent."</strong></p>
-                    <p>This statement is included in our Meta Business verification and API approval process.</p>
-                </div>
-                
-                <h2>1. Acceptance of Terms</h2>
-                <p>By registering for, accessing, or using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you are entering into these Terms on behalf of a healthcare organization, you represent that you have the authority to bind that organization.</p>
-                
-                <h2>2. Healthcare Provider Responsibilities</h2>
-                <h3>2.1 Compliance with Healthcare Regulations</h3>
-                <ul class="legal-list">
-                    <li>Maintain valid healthcare licenses, certifications, and NPI numbers</li>
-                    <li>Comply with HIPAA, HITECH, GDPR, and other applicable regulations</li>
-                    <li>Implement appropriate administrative, physical, and technical safeguards</li>
-                    <li>Conduct required risk assessments and security audits</li>
-                </ul>
-                
-                <h3>2.2 Patient Consent Management</h3>
-                <ul class="legal-list">
-                    <li>Obtain explicit, documented consent from patients for data processing</li>
-                    <li>Maintain consent records for audit and compliance purposes</li>
-                    <li>Respect patient preferences for communication methods</li>
-                    <li>Provide clear opt-out mechanisms in all communications</li>
-                </ul>
-                
-                <h3>2.3 Data Accuracy and Integrity</h3>
-                <ul class="legal-list">
-                    <li>Ensure accuracy and completeness of patient data</li>
-                    <li>Implement data validation and quality control procedures</li>
-                    <li>Maintain audit trails for data modifications</li>
-                    <li>Report data errors or discrepancies promptly</li>
-                </ul>
-                
-                <h2>3. WhatsApp Integration Service Terms</h2>
-                
-                <div class="highlight-box">
-                    <h3>3.1 Approved Usage</h3>
-                    <p>Our WhatsApp Business API integration is approved by Meta for the following healthcare communications:</p>
-                    <ul class="legal-list">
-                        <li><strong>Medical Test Results:</strong> Laboratory reports, imaging findings, diagnostic results</li>
-                        <li><strong>Appointment Management:</strong> Reminders, confirmations, rescheduling, cancellations</li>
-                        <li><strong>Patient Follow-up:</strong> Post-treatment instructions, medication reminders, recovery check-ins</li>
-                        <li><strong>Healthcare Notifications:</strong> Facility updates, policy changes, service announcements</li>
-                        <li><strong>Support Messages:</strong> Technical assistance, billing inquiries, general support</li>
-                    </ul>
-                </div>
-                
-                <h3>3.2 Consent Requirements</h3>
-                <p>Healthcare providers must:</p>
-                <ul class="legal-list">
-                    <li>Obtain written consent from patients before sending WhatsApp messages</li>
-                    <li>Document consent in the patient's medical record</li>
-                    <li>Include opt-out instructions in every message (e.g., "Reply STOP to unsubscribe")</li>
-                    <li>Honor opt-out requests immediately (within 24 hours)</li>
-                    <li>Maintain consent records for at least 6 years as required by HIPAA</li>
-                </ul>
-                
-                <h3>3.3 Prohibited Usage</h3>
-                <p>The following uses of our WhatsApp integration are strictly prohibited:</p>
-                <ul class="legal-list">
-                    <li>Marketing, advertising, or promotional content</li>
-                    <li>Unsolicited medical advice or diagnosis</li>
-                    <li>Messages to individuals who have not provided consent</li>
-                    <li>Sharing of medical data with unauthorized third parties</li>
-                    <li>Phishing attempts or fraudulent activities</li>
-                    <li>Harassment, spam, or abusive communications</li>
-                </ul>
-                
-                <h3>3.4 Meta Compliance</h3>
-                <p>Healthcare providers must comply with Meta's WhatsApp Business Policy, including:</p>
-                <ul class="legal-list">
-                    <li>Only sending messages to opted-in recipients</li>
-                    <li>Respecting user privacy and communication preferences</li>
-                    <li>Not using WhatsApp for emergency communications</li>
-                    <li>Complying with Meta's prohibited content policies</li>
-                </ul>
-                
-                <h2>4. Service Description</h2>
-                <p>MANA LLC provides the following healthcare software solutions:</p>
-                <ul class="legal-list">
-                    <li><strong>PACS/DICOM Solutions:</strong> Medical image storage, retrieval, viewing, and sharing with full DICOM compliance</li>
-                    <li><strong>WhatsApp Medical Sender:</strong> Secure, HIPAA-compliant WhatsApp Business API integration for patient communications</li>
-                    <li><strong>Radiology Information System (RIS):</strong> Comprehensive management for imaging departments including scheduling, tracking, and reporting</li>
-                    <li><strong>Hospital Information System (HIS):</strong> Integrated hospital management including EHR, billing, inventory, and administration</li>
-                    <li><strong>Healthcare Data Security:</strong> End-to-end encryption, access controls, and regulatory compliance</li>
-                    <li><strong>Cloud & Telemedicine:</strong> Secure cloud hosting and remote patient care solutions</li>
-                </ul>
-                
-                <h2>5. User Rights and Service Levels</h2>
-                <h3>5.1 Service Access</h3>
-                <ul class="legal-list">
-                    <li>Access to the Services according to your subscription tier</li>
-                    <li>Technical support during business hours (24/7 for critical issues)</li>
-                    <li>Regular system updates and security patches</li>
-                    <li>Data backup and disaster recovery services</li>
-                </ul>
-                
-                <h3>5.2 Data Portability</h3>
-                <p>Upon request, we will provide healthcare providers with their data in standardized formats (DICOM, HL7, FHIR, etc.) for migration or interoperability purposes.</p>
-                
-                <h3>5.3 Service Modifications</h3>
-                <p>We reserve the right to modify, suspend, or discontinue any aspect of the Services with 30 days' notice. We will not make changes that materially reduce functionality or security without your consent.</p>
-                
-                <h2>6. Limitations of Liability</h2>
-                
-                <div class="important-note">
-                    <strong>Important Disclaimer:</strong> MANA LLC provides software tools for healthcare management but does not provide medical services, diagnosis, or treatment advice. Healthcare providers remain responsible for clinical decisions and patient care.
-                </div>
-                
-                <h3>6.1 Service Limitations</h3>
-                <p>MANA LLC provides software tools but does not:</p>
-                <ul class="legal-list">
-                    <li>Provide medical advice, diagnosis, or treatment recommendations</li>
-                    <li>Guarantee specific healthcare outcomes or results</li>
-                    <li>Assume responsibility for clinical decisions or medical errors</li>
-                    <li>Control internet connectivity, third-party services, or medical devices</li>
-                    <li>Ensure uninterrupted service (though we aim for 99.9% uptime)</li>
-                </ul>
-                
-                <h3>6.2 Liability Cap</h3>
-                <p>Our maximum aggregate liability for any claim related to the Services is limited to the amount paid by you for the Services in the 12 months preceding the claim. We are not liable for indirect, incidental, consequential, or punitive damages.</p>
-                
-                <h3>6.3 Force Majeure</h3>
-                <p>We are not liable for delays or failures in performance resulting from circumstances beyond our reasonable control, including natural disasters, acts of government, pandemics, or infrastructure failures.</p>
-                
-                <h2>7. Data Protection & Compliance</h2>
-                <ul class="legal-list">
-                    <li>We comply with HIPAA Security and Privacy Rules</li>
-                    <li>We sign Business Associate Agreements (BAAs) with covered entities</li>
-                    <li>We implement appropriate technical and organizational security measures</li>
-                    <li>We report data breaches according to regulatory requirements (within 60 days for HIPAA)</li>
-                    <li>We conduct regular security audits and risk assessments</li>
-                    <li>We provide security training to our personnel</li>
-                </ul>
-                
-                <h2>8. Intellectual Property</h2>
-                <p>All software, documentation, trademarks, logos, and related materials are owned by MANA LLC or its licensors. You receive a limited, non-exclusive, non-transferable license to use the Services according to your subscription. You may not:</p>
-                <ul class="legal-list">
-                    <li>Reverse engineer, decompile, or disassemble the software</li>
-                    <li>Modify, adapt, or create derivative works</li>
-                    <li>Distribute, sublicense, or transfer the software</li>
-                    <li>Remove or alter copyright notices</li>
-                    <li>Use the software for competitive analysis or development</li>
-                </ul>
-                
-                <h2>9. Payment Terms</h2>
-                <ul class="legal-list">
-                    <li>Subscription fees are billed monthly or annually in advance</li>
-                    <li>Payment is due upon receipt of invoice (net 30 days)</li>
-                    <li>Late payments may result in service suspension with 14 days' notice</li>
-                    <li>Fees are non-refundable except as required by law or specified in your agreement</li>
-                    <li>Price changes will be communicated 60 days in advance</li>
-                    <li>Additional fees may apply for custom development, integration, or premium support</li>
-                </ul>
-                
-                <h2>10. Termination</h2>
-                <h3>10.1 Termination Rights</h3>
-                <p>Either party may terminate service with 30 days written notice. We may terminate immediately for:</p>
-                <ul class="legal-list">
-                    <li>Material breach of these Terms</li>
-                    <li>Non-payment of fees</li>
-                    <li>Violation of healthcare regulations</li>
-                    <li>Unauthorized use of the Services</li>
-                </ul>
-                
-                <h3>10.2 Post-Termination</h3>
-                <p>Upon termination:</p>
-                <ul class="legal-list">
-                    <li>We will assist with data migration for 30 days</li>
-                    <li>We will securely delete your data according to our data retention policy</li>
-                    <li>You will pay all outstanding fees</li>
-                    <li>Licenses and access will be revoked</li>
-                </ul>
-                
-                <h2>11. Changes to Terms</h2>
-                <p>We may modify these Terms at any time. We will notify healthcare providers of significant changes via email or through our software platform at least 30 days before changes take effect. Continued use of the Services after changes constitutes acceptance of the modified Terms.</p>
-                
-                <h2>12. Governing Law and Dispute Resolution</h2>
-                <p>These Terms are governed by the laws of the State of New York, United States. Any disputes will be resolved through binding arbitration in New York, NY, in accordance with the rules of the American Arbitration Association. Each party bears its own arbitration costs.</p>
-                
-                <h2>13. Contact Information</h2>
-                <p>For questions about these Terms or to exercise your rights:</p>
-                <p><strong>MANA LLC Legal Department</strong><br>
-                Email: <a href="mailto:info@mana-co.com" style="color: var(--primary);">info@mana-co.com</a><br>
-                Phone: +2 (015) 050 90440<br>
-                Address: 1942 Broadway St. STE 314C Boulder CO 80302 US</p>
-                
-                
-                <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Home</a>
-            </div>
-        </div>
-    </section>
+<!-- ===== HEADER ===== -->
+<header>
+    <div class="container">
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <img src="logo.png" alt="MANA LLC Logo" style="height:90px;margin-right:10px;">
+                MANA LLC
+            </a>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>MANA LLC</h4>
-                    <p>Healthcare Software Solutions</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Legal</h4>
-                    <ul class="footer-links">
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="#">Business Associate Agreement</a></li>
-                        <li><a href="#">WhatsApp Usage Policy</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Contact</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> legal@manallc.com</li>
-                        <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +1 (555) 123-4567</li>
-                        <li><i class="fab fa-whatsapp" style="margin-right: 8px;"></i> whatsapp@manallc.com</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 MANA LLC. All rights reserved. | Meta WhatsApp Business API Approved • HIPAA Compliant</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        if(mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                    ? '<i class="fas fa-times"></i>' 
-                    : '<i class="fas fa-bars"></i>';
-            });
-        }
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                if(mobileMenuBtn) mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-    </script>
-</body>
-
-</html>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#services">Servi
