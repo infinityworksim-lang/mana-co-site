@@ -973,38 +973,94 @@
 
 
 
- <!-- Client Section -->
-<section id="clients" class="clients-section" style="padding:50px 0; background:#f9f9f9;">
+
+
+
+
+
+
+
+
+
+<!-- Client Section Slider -->
+<section id="clients" style="padding:50px 0; background:#f9f9f9;">
   <div class="container" style="text-align:center;">
     <h3>Our Trusted Clients</h3>
     <p>We are proud to serve hospitals, clinics, and diagnostic centers worldwide.</p>
-    
-    <div class="client-logos" style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:40px; margin-top:30px;">
-      <img src="images/appolo.png" alt="appolo" style="max-height:60px; object-fit:contain;">
-      <img src="images/batrawi.png" alt="batrawi" style="max-height:60px; object-fit:contain;">
-      <img src="images/biruni.png" alt="biruni" style="max-height:60px; object-fit:contain;">
-      <img src="images/boukerrou.png" alt="boukerrou" style="max-height:60px; object-fit:contain;">
-      <img src="images/essalem.png" alt="essalem" style="max-height:60px; object-fit:contain;">
 
-      <img src="images/fouad.png" alt="fouad" style="max-height:60px; object-fit:contain;">
-      <img src="images/halassother.png" alt="halassother" style="max-height:60px; object-fit:contain;">
-      <img src="images/hamada.png" alt="hamada" style="max-height:60px; object-fit:contain;">
-      <img src="images/hayet.png" alt="hayet" style="max-height:60px; object-fit:contain;">
-      <img src="images/hissar.png" alt="hissar" style="max-height:60px; object-fit:contain;">
-
-      <img src="images/mellouki.png" alt="mellouki" style="max-height:60px; object-fit:contain;">
-      <img src="images/memoral.png" alt="memoral" style="max-height:60px; object-fit:contain;">
-      <img src="images/necir.png" alt="necir" style="max-height:60px; object-fit:contain;">
-      <img src="images/rasheed.png" alt="rasheed" style="max-height:60px; object-fit:contain;">
-      <img src="images/romatem.png" alt="romatem" style="max-height:60px; object-fit:contain;">
-
-      <img src="images/royal.png" alt="royal" style="max-height:60px; object-fit:contain;">
-      <img src="images/soudi .png" alt="soudi " style="max-height:60px; object-fit:contain;">
-      <img src="images/thtc.png" alt="thtc" style="max-height:60px; object-fit:contain;">
-      <img src="images/zeghouane.png" alt="zeghouane" style="max-height:60px; object-fit:contain;">
+    <!-- Swiper -->
+    <div class="swiper client-slider" style="margin-top:30px;">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/appolo.png" alt="appolo"></div>
+        <div class="swiper-slide"><img src="images/batrawi.png" alt="batrawi"></div>
+        <div class="swiper-slide"><img src="images/biruni.png" alt="biruni"></div>
+        <div class="swiper-slide"><img src="images/boukerrou.png" alt="boukerrou"></div>
+        <div class="swiper-slide"><img src="images/essalem.png" alt="essalem"></div>
+        <div class="swiper-slide"><img src="images/fouad.png" alt="fouad"></div>
+        <div class="swiper-slide"><img src="images/halassother.png" alt="halassother"></div>
+        <div class="swiper-slide"><img src="images/hamada.png" alt="hamada"></div>
+        <div class="swiper-slide"><img src="images/hayet.png" alt="hayet"></div>
+        <div class="swiper-slide"><img src="images/hissar.png" alt="hissar"></div>
+        <div class="swiper-slide"><img src="images/mellouki.png" alt="mellouki"></div>
+        <div class="swiper-slide"><img src="images/memoral.png" alt="memoral"></div>
+        <div class="swiper-slide"><img src="images/necir.png" alt="necir"></div>
+        <div class="swiper-slide"><img src="images/rasheed.png" alt="rasheed"></div>
+        <div class="swiper-slide"><img src="images/romatem.png" alt="romatem"></div>
+        <div class="swiper-slide"><img src="images/royal.png" alt="royal"></div>
+        <div class="swiper-slide"><img src="images/soudi.png" alt="soudi"></div>
+        <div class="swiper-slide"><img src="images/thtc.png" alt="thtc"></div>
+        <div class="swiper-slide"><img src="images/zeghouane.png" alt="zeghouane"></div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- Swiper CSS + JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- CSS داخلي -->
+<style>
+.client-slider .swiper-slide img {
+    width: 120px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.client-slider .swiper-slide img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+</style>
+
+<!-- JS لتشغيل السلايدر -->
+<script>
+const swiper = new Swiper('.client-slider', {
+  loop: true,
+  slidesPerView: 5,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: { slidesPerView: 2 },
+    480: { slidesPerView: 3 },
+    768: { slidesPerView: 4 },
+    1024: { slidesPerView: 5 }
+  }
+});
+</script>
+
+
+
+    
+
+
+
+    
 
 
 
@@ -1383,6 +1439,7 @@ if(contactForm) {
 </body>
 
 </html>
+
 
 
 
