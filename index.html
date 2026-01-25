@@ -983,14 +983,15 @@
 
 
 <!-- Client Section Slider -->
-<section id="clients" style="padding:50px 0; background:#f9f9f9;">
+<section id="clients" style="padding:60px 0; background:#f9f9f9;">
   <div class="container" style="text-align:center;">
     <h3>Our Trusted Clients</h3>
     <p>We are proud to serve hospitals, clinics, and diagnostic centers worldwide.</p>
 
     <!-- Swiper -->
-    <div class="swiper client-slider" style="margin-top:30px;">
+    <div class="swiper client-slider" style="margin-top:40px;">
       <div class="swiper-wrapper">
+
         <div class="swiper-slide"><img src="images/appolo.png" alt="appolo"></div>
         <div class="swiper-slide"><img src="images/batrawi.png" alt="batrawi"></div>
         <div class="swiper-slide"><img src="images/biruni.png" alt="biruni"></div>
@@ -1010,50 +1011,69 @@
         <div class="swiper-slide"><img src="images/soudi.png" alt="soudi"></div>
         <div class="swiper-slide"><img src="images/thtc.png" alt="thtc"></div>
         <div class="swiper-slide"><img src="images/zeghouane.png" alt="zeghouane"></div>
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- Swiper CSS + JS -->
+<!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+<!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-<!-- CSS داخلي -->
+<!-- CSS -->
 <style>
-.client-slider .swiper-slide img {
-    width: 120px;
-    height: 60px;
-    object-fit: contain;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.client-slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Hover effect */
+.client-slider .swiper-slide img {
+    width: 180px;          /* ⬅️ حجم أكبر */
+    height: 90px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
 .client-slider .swiper-slide img:hover {
-    transform: scale(1.2);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transform: scale(1.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .client-slider .swiper-slide img {
+        width: 140px;
+        height: 70px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .client-slider .swiper-slide img {
+        width: 110px;
+        height: 55px;
+    }
 }
 </style>
 
-<!-- JS لتشغيل السلايدر -->
+<!-- JS -->
 <script>
-const swiper = new Swiper('.client-slider', {
+new Swiper('.client-slider', {
   loop: true,
-  slidesPerView: 5,
-  spaceBetween: 30,
+  slidesPerView: 'auto',
+  spaceBetween: 40,
+  centeredSlides: true,
   autoplay: {
-    delay: 2000,
+    delay: 1800,
     disableOnInteraction: false,
-  },
-  breakpoints: {
-    320: { slidesPerView: 2 },
-    480: { slidesPerView: 3 },
-    768: { slidesPerView: 4 },
-    1024: { slidesPerView: 5 }
   }
 });
 </script>
-
 
 
     
@@ -1439,6 +1459,7 @@ if(contactForm) {
 </body>
 
 </html>
+
 
 
 
