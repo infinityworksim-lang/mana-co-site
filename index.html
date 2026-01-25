@@ -1032,7 +1032,7 @@
 }
 
 .client-slider .swiper-slide img {
-    width: 180px;          /* ⬅️ حجم أكبر */
+    width: 180px;
     height: 90px;
     object-fit: contain;
     transition: all 0.3s ease;
@@ -1065,15 +1065,21 @@
 <script>
 new Swiper('.client-slider', {
   loop: true,
-  slidesPerView: 'auto',
+  slidesPerView: 5,      // ✅ أكتر من لوجو
   spaceBetween: 40,
-  centeredSlides: true,
   autoplay: {
     delay: 1800,
     disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: { slidesPerView: 2 },
+    480: { slidesPerView: 3 },
+    768: { slidesPerView: 4 },
+    1024: { slidesPerView: 5 }
   }
 });
 </script>
+
 
 
     
@@ -1459,6 +1465,7 @@ if(contactForm) {
 </body>
 
 </html>
+
 
 
 
