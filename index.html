@@ -130,7 +130,7 @@
 
         /* =========================
            HEADER
-        ========================= */
+        ========================== */
 
         header {
             position: fixed;
@@ -163,12 +163,25 @@
         .logo {
             display: inline-flex;
             align-items: center;
+            gap: 12px;
+
             flex-shrink: 0;
+
+            color: var(--dark);
+            text-decoration: none;
         }
 
         .logo img {
             width: 68px;
             height: auto;
+        }
+
+        .logo-name {
+            color: var(--dark);
+            font-size: 1.05rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
         }
 
         .nav-links {
@@ -232,7 +245,7 @@
 
         /* =========================
            HERO
-        ========================= */
+        ========================== */
 
         .hero {
             position: relative;
@@ -448,7 +461,7 @@
 
         /* =========================
            GENERAL SECTIONS
-        ========================= */
+        ========================== */
 
         section {
             padding: 100px 0;
@@ -486,7 +499,7 @@
 
         /* =========================
            MEDICALSPACE FEATURE
-        ========================= */
+        ========================== */
 
         .medicalspace-section {
             background: var(--white);
@@ -635,7 +648,7 @@
 
         /* =========================
            PLATFORM HIGHLIGHTS
-        ========================= */
+        ========================== */
 
         .highlights-section {
             background: var(--light);
@@ -700,7 +713,7 @@
 
         /* =========================
            SOLUTIONS
-        ========================= */
+        ========================== */
 
         .solutions-section {
             background: var(--white);
@@ -790,7 +803,7 @@
 
         /* =========================
            CLIENTS
-        ========================= */
+        ========================== */
 
         .clients-section {
             padding-bottom: 85px;
@@ -836,7 +849,7 @@
 
         /* =========================
            ABOUT
-        ========================= */
+        ========================== */
 
         .about-section {
             background: var(--white);
@@ -912,7 +925,7 @@
 
         /* =========================
            SECURITY
-        ========================= */
+        ========================== */
 
         .security-section {
             background: var(--light);
@@ -965,7 +978,7 @@
 
         /* =========================
            FINAL CTA
-        ========================= */
+        ========================== */
 
         .cta-section {
             padding: 90px 0;
@@ -1020,7 +1033,7 @@
 
         /* =========================
            CONTACT
-        ========================= */
+        ========================== */
 
         .contact-section {
             background: var(--white);
@@ -1191,7 +1204,7 @@
 
         /* =========================
            FOOTER
-        ========================= */
+        ========================== */
 
         footer {
             padding: 60px 0 25px;
@@ -1297,7 +1310,7 @@
 
         /* =========================
            BACK TO TOP
-        ========================= */
+        ========================== */
 
         .back-to-top {
             position: fixed;
@@ -1344,7 +1357,7 @@
 
         /* =========================
            RESPONSIVE
-        ========================= */
+        ========================== */
 
         @media (max-width: 1100px) {
             .highlight-grid,
@@ -1365,6 +1378,10 @@
 
             .logo img {
                 width: 58px;
+            }
+
+            .logo-name {
+                font-size: 0.98rem;
             }
 
             .mobile-menu-btn {
@@ -1561,7 +1578,15 @@
         <div class="container header-inner">
 
             <a href="#home" class="logo" aria-label="MANA LLC home">
-                <img src="logo.png" alt="MANA LLC logo">
+
+                <img
+                    src="logo.png"
+                    alt="MANA LLC logo">
+
+                <span class="logo-name">
+                    MANA LLC
+                </span>
+
             </a>
 
             <nav class="nav-links" id="primaryNavigation" aria-label="Primary navigation">
