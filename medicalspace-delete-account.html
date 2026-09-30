@@ -8,7 +8,7 @@
     <title>MedicalSpace | Account & Data Deletion</title>
 
     <meta name="description"
-          content="Learn how to delete your MedicalSpace account and request deletion of associated personal and healthcare data.">
+          content="Learn how to request deletion of your MedicalSpace account and associated personal data.">
 
     <meta name="robots" content="index, follow">
 
@@ -322,7 +322,78 @@
 
 
         /* =========================
-           DATA LIST
+           EMAIL BOX
+        ========================== */
+
+        .email-box {
+            margin-top: 25px;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eff6ff,
+                    #ecfeff
+                );
+
+            border: 1px solid #bfdbfe;
+
+            text-align: center;
+        }
+
+
+        .email-box i {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+
+        .email-box p {
+            margin-bottom: 8px;
+        }
+
+
+        .email-box a {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+
+
+        .email-box a:hover {
+            color: var(--primary-dark);
+        }
+
+
+        /* =========================
+           NOTICE
+        ========================== */
+
+        .notice {
+            padding: 20px 25px;
+
+            border-left: 4px solid var(--primary);
+
+            background: #eff6ff;
+
+            border-radius: 8px;
+
+            margin-top: 25px;
+        }
+
+
+        .notice p {
+            margin: 0;
+            color: #334155;
+        }
+
+
+        /* =========================
+           DATA GRID
         ========================== */
 
         .data-grid {
@@ -365,72 +436,6 @@
         .data-item p {
             font-size: 0.95rem;
             margin-bottom: 0;
-        }
-
-
-        /* =========================
-           EMAIL BOX
-        ========================== */
-
-        .email-box {
-            margin-top: 25px;
-
-            padding: 25px;
-
-            border-radius: 12px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #eff6ff,
-                    #ecfeff
-                );
-
-            border: 1px solid #bfdbfe;
-
-            text-align: center;
-        }
-
-
-        .email-box i {
-            color: var(--primary);
-            font-size: 2rem;
-            margin-bottom: 12px;
-        }
-
-
-        .email-box a {
-            color: var(--primary);
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-
-        .email-box a:hover {
-            color: var(--primary-dark);
-        }
-
-
-        /* =========================
-           NOTE
-        ========================== */
-
-        .notice {
-            padding: 20px 25px;
-
-            border-left: 4px solid var(--primary);
-
-            background: #eff6ff;
-
-            border-radius: 8px;
-
-            margin-top: 20px;
-        }
-
-
-        .notice p {
-            margin: 0;
-            color: #334155;
         }
 
 
@@ -696,21 +701,46 @@
 
 
         <!-- =========================
-             HOW TO DELETE
+             REQUEST DELETION
         ========================== -->
 
         <div class="content-card">
 
             <h2>
-                How to Delete Your MedicalSpace Account
+                Request Account Deletion
             </h2>
 
 
             <p>
-                MedicalSpace provides account deletion options for
-                users who wish to stop using the service and request
-                deletion of their account and associated data.
+                MedicalSpace currently processes account deletion
+                requests through MANA LLC support.
             </p>
+
+
+            <p>
+                To request deletion of your MedicalSpace account and
+                associated data, send an email to the address below
+                using the email address associated with your account,
+                whenever possible.
+            </p>
+
+
+            <div class="email-box">
+
+                <i class="fas fa-envelope"></i>
+
+                <p>
+                    Send your account deletion request to:
+                </p>
+
+
+                <a href="mailto:info@mana-co.com?subject=MedicalSpace%20Account%20Deletion%20Request">
+
+                    info@mana-co.com
+
+                </a>
+
+            </div>
 
 
             <div class="steps">
@@ -723,12 +753,12 @@
                     </div>
 
                     <h3>
-                        Open MedicalSpace
+                        Send the Request
                     </h3>
 
                     <p>
-                        Sign in to your MedicalSpace account using
-                        your registered account credentials.
+                        Send an email requesting deletion of your
+                        MedicalSpace account and associated data.
                     </p>
 
                 </div>
@@ -741,12 +771,12 @@
                     </div>
 
                     <h3>
-                        Open Account Settings
+                        Account Verification
                     </h3>
 
                     <p>
-                        Navigate to the account or profile settings
-                        available in the MedicalSpace application.
+                        MANA LLC may verify your identity and account
+                        ownership before processing the request.
                     </p>
 
                 </div>
@@ -759,12 +789,13 @@
                     </div>
 
                     <h3>
-                        Request Account Deletion
+                        Deletion Processing
                     </h3>
 
                     <p>
-                        Select the account deletion option and follow
-                        the confirmation steps provided by the application.
+                        After verification, eligible account data will
+                        be processed for deletion according to applicable
+                        policies and requirements.
                     </p>
 
                 </div>
@@ -777,29 +808,14 @@
 
                 <p>
 
-                    <strong>Can't access your account?</strong>
+                    <strong>Important:</strong>
 
-                    You can contact MANA LLC using the email address
-                    below to request account and data deletion.
+                    For security reasons, MANA LLC may request
+                    additional information when necessary to verify
+                    ownership of the MedicalSpace account before
+                    processing a deletion request.
 
                 </p>
-
-            </div>
-
-
-            <div class="email-box">
-
-                <i class="fas fa-envelope"></i>
-
-                <p>
-                    Account deletion requests:
-                </p>
-
-                <a href="mailto:info@mana-co.com?subject=MedicalSpace%20Account%20Deletion%20Request">
-
-                    info@mana-co.com
-
-                </a>
 
             </div>
 
@@ -808,7 +824,7 @@
 
 
         <!-- =========================
-             WHAT WILL BE DELETED
+             DATA THAT MAY BE DELETED
         ========================== -->
 
         <div class="content-card">
@@ -819,9 +835,9 @@
 
 
             <p>
-                Depending on the user's account, subscription status,
-                and information associated with the account, deletion
-                may include data such as:
+                Depending on the account and the information associated
+                with it, an approved deletion request may include
+                deletion of eligible data such as:
             </p>
 
 
@@ -846,16 +862,15 @@
 
                 <div class="data-item">
 
-                    <i class="fas fa-file-medical"></i>
+                    <i class="fas fa-database"></i>
 
                     <h3>
-                        User-Associated Data
+                        Account-Associated Data
                     </h3>
 
                     <p>
-                        Data associated with the user's MedicalSpace
-                        account, subject to applicable retention
-                        requirements.
+                        Eligible data associated with the user's
+                        MedicalSpace account.
                     </p>
 
                 </div>
@@ -870,9 +885,8 @@
                     </h3>
 
                     <p>
-                        Eligible content and communications associated
-                        with the account may be deleted in accordance
-                        with applicable policies.
+                        Eligible user-generated content associated
+                        with the account may be deleted where applicable.
                     </p>
 
                 </div>
@@ -887,9 +901,8 @@
                     </h3>
 
                     <p>
-                        Account preferences and other information
-                        associated with the user's account may be
-                        removed.
+                        Account preferences and other eligible
+                        account-related information may be removed.
                     </p>
 
                 </div>
@@ -908,30 +921,52 @@
         <div class="content-card">
 
             <h2>
-                Data Retention
+                Information That May Be Retained
             </h2>
 
 
             <p>
-                Some information may need to be retained for a limited
-                period after an account deletion request when required
-                for legal, regulatory, security, fraud-prevention,
-                financial, or dispute-resolution purposes.
+                Certain information may need to be retained for a
+                limited period when required for legal, regulatory,
+                security, fraud-prevention, financial, accounting,
+                dispute-resolution, or other legitimate purposes.
             </p>
 
 
             <p>
-                Where retention is required, the information will be
-                retained only for the period necessary for the applicable
-                purpose and handled according to MANA LLC's privacy and
-                data-management practices.
+                Where retention is required, MANA LLC will retain the
+                information only for the period necessary for the
+                applicable purpose and handle it according to its
+                privacy and data-management practices.
             </p>
 
 
             <p>
-                For additional information about how MedicalSpace
-                collects, uses, stores, and protects information, please
-                review the MedicalSpace Privacy Policy.
+                Account deletion does not necessarily remove information
+                that MANA LLC is legally required or otherwise permitted
+                to retain.
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             PRIVACY POLICY
+        ========================== -->
+
+        <div class="content-card">
+
+            <h2>
+                Privacy Policy
+            </h2>
+
+
+            <p>
+                For more information about the information collected
+                by MedicalSpace, how it is used, stored, protected,
+                and disclosed, please review the MedicalSpace Privacy
+                Policy.
             </p>
 
 
@@ -949,40 +984,6 @@
 
 
         <!-- =========================
-             PROCESSING
-        ========================== -->
-
-        <div class="content-card">
-
-            <h2>
-                Deletion Request Processing
-            </h2>
-
-
-            <p>
-                When a deletion request is submitted, MANA LLC may
-                need to verify the requester's identity and account
-                ownership before processing the request.
-            </p>
-
-
-            <p>
-                This verification helps protect MedicalSpace accounts
-                and prevents unauthorized deletion requests.
-            </p>
-
-
-            <p>
-                Additional information may be requested when reasonably
-                necessary to verify ownership of the account or to
-                comply with applicable legal requirements.
-            </p>
-
-        </div>
-
-
-
-        <!-- =========================
              CONTACT
         ========================== -->
 
@@ -994,8 +995,8 @@
 
 
             <p>
-                If you have questions about account deletion, data
-                deletion, or your MedicalSpace account, please contact
+                If you have questions about your MedicalSpace account,
+                account deletion, or data deletion, please contact
                 MANA LLC.
             </p>
 
