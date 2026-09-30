@@ -398,6 +398,18 @@
             box-shadow: var(--shadow-md);
         }
 
+        .cta-outline {
+            background: transparent;
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.28);
+        }
+
+        .cta-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.50);
+            color: var(--white);
+        }
+
         .hero-visual {
             position: relative;
         }
@@ -1196,15 +1208,15 @@
             padding-bottom: 40px;
         }
 
-       .footer-brand img {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 17px;
+        .footer-brand img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 17px;
 
-    filter: none;
+            filter: none;
 
-    border-radius: 50%;
-}
+            border-radius: 50%;
+        }
 
         .footer-brand p {
             max-width: 360px;
@@ -2539,8 +2551,7 @@
                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </a>
 
-                        <a href="#contact" class="btn btn-outline"
-                           style="background: transparent; color: #fff; border-color: rgba(255,255,255,0.28);">
+                        <a href="#contact" class="btn cta-outline">
                             Talk to MANA
                             <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                         </a>
@@ -2629,11 +2640,6 @@
 
                         <input
                             type="hidden"
-                            name="_autoresponse"
-                            value="Thank you for contacting MANA LLC. We have received your message and will review your request.">
-
-                        <input
-                            type="hidden"
                             name="_template"
                             value="table">
 
@@ -2641,12 +2647,6 @@
                             type="hidden"
                             name="_next"
                             value="https://mana-co.com/">
-
-                        <input
-                            type="hidden"
-                            name="_captcha"
-                            value="false">
-
 
                         <div class="form-row">
 
@@ -2998,11 +2998,13 @@
             ========================== */
 
             function updateHeader() {
+
                 if (window.scrollY > 15) {
                     header.classList.add("scrolled");
                 } else {
                     header.classList.remove("scrolled");
                 }
+
             }
 
             updateHeader();
@@ -3036,6 +3038,7 @@
                 mobileMenuBtn.innerHTML = isOpen
                     ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
                     : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+
             });
 
 
@@ -3087,6 +3090,7 @@
 
                     mobileMenuBtn.innerHTML =
                         '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+
                 }
 
             });
@@ -3141,13 +3145,18 @@
                ACTIVE NAVIGATION
             ========================== */
 
-            const sections = document.querySelectorAll("main section[id]");
-            const navLinks = document.querySelectorAll(".nav-links a");
+            const sections =
+                document.querySelectorAll("main section[id]");
+
+            const navLinks =
+                document.querySelectorAll(".nav-links a");
 
             function updateActiveNavigation() {
 
                 const scrollPosition =
-                    window.scrollY + header.offsetHeight + 120;
+                    window.scrollY +
+                    header.offsetHeight +
+                    120;
 
                 let currentSection = "home";
 
@@ -3161,7 +3170,8 @@
 
                 navLinks.forEach(function (link) {
 
-                    const href = link.getAttribute("href");
+                    const href =
+                        link.getAttribute("href");
 
                     if (href === "#" + currentSection) {
                         link.classList.add("active");
@@ -3282,7 +3292,6 @@
 
                             contactForm.reportValidity();
 
-                            return;
                         }
 
                     }
