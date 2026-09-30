@@ -298,6 +298,34 @@
             gap: 30px;
         }
 
+
+
+        .medicalspace-card {
+    border: 2px solid var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.medicalspace-card::before {
+    content: 'MANA PRODUCT';
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    background: var(--primary);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 6px 40px;
+    transform: rotate(45deg);
+    letter-spacing: 1px;
+}
+
+.medicalspace-card .service-icon {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+
+        
         .service-card {
             background: white;
             border-radius: var(--radius);
@@ -738,6 +766,50 @@
         <div class="container">
             <h2 class="section-title">Our Healthcare Software Solutions</h2>
             <div class="services-grid">
+
+
+
+
+
+
+
+
+                <!-- MedicalSpace -->
+<div class="service-card medicalspace-card">
+    <div class="service-icon">
+        <i class="fas fa-user-md"></i>
+    </div>
+
+    <h4>MedicalSpace</h4>
+
+    <p style="color: var(--gray); font-weight: 600;">
+        AI-Powered Healthcare Platform for Medical Professionals
+    </p>
+
+    <ul>
+        <li>Secure patient and medical record management.</li>
+        <li>AI-assisted clinical workflows and medical information support.</li>
+        <li>Professional communication and doctor-to-doctor medical networking.</li>
+        <li>Voice messages, speech-to-text, translation, and AI voice interaction.</li>
+        <li>Secure management and sharing of medical reports, documents, and DICOM images.</li>
+        <li>Patient follow-up, visits, prescriptions, and clinical documentation.</li>
+        <li>Secure messaging and audio/video communication.</li>
+        <li>Designed for healthcare professionals, clinics, and medical organizations.</li>
+    </ul>
+
+    <div style="margin-top: 25px;">
+        <a href="medicalspace.html" class="btn">
+            Learn More
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+                
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-x-ray"></i>
