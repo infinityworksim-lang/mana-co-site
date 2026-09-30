@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | MANA LLC</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>MedicalSpace | Privacy Policy</title>
+
+    <meta name="description"
+          content="MedicalSpace Privacy Policy describing how MANA LLC collects, uses, stores, processes, shares, protects, retains, and deletes information.">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="author" content="MANA LLC">
+
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="logo.png">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
     <style>
+
         :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
@@ -14,11 +33,13 @@
             --light: #f8fafc;
             --gray: #64748b;
             --gray-light: #e2e8f0;
+            --white: #ffffff;
+
             --transition: all 0.3s ease;
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --radius: 8px;
-            --whatsapp-green: #25D366;
+            --shadow: 0 10px 25px rgba(15, 23, 42, 0.10);
+            --radius: 12px;
         }
+
 
         * {
             margin: 0;
@@ -27,505 +48,3606 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body {
-            background-color: var(--light);
-            color: var(--secondary);
-            line-height: 1.6;
+
+        html {
+            scroll-behavior: smooth;
         }
+
+
+        body {
+            background: var(--light);
+            color: var(--secondary);
+            line-height: 1.75;
+        }
+
 
         .container {
             width: 90%;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 15px;
         }
 
-        /* Header */
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+
+        h2 {
+            scroll-margin-top: 100px;
+        }
+
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
         header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255,255,255,0.98);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
 
+
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 12px 0;
+            gap: 20px;
         }
+
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
             display: flex;
             align-items: center;
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 800;
         }
 
-        .logo i {
+
+        .logo img {
+            height: 70px;
+            width: auto;
             margin-right: 10px;
-            color: var(--accent);
         }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
 
-        .nav-links li {
-            margin-left: 30px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
+        .back-link {
             color: var(--secondary);
             font-weight: 600;
             transition: var(--transition);
-            padding: 5px 0;
         }
 
-        .nav-links a:hover {
+
+        .back-link:hover {
             color: var(--primary);
         }
 
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--secondary);
-            cursor: pointer;
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            padding: 170px 0 80px;
+
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(6,182,212,0.18),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #eff6ff 0%,
+                    #ecfeff 100%
+                );
         }
 
-        /* Legal Page */
-        .legal-page {
-            padding: 150px 0 100px;
-        }
 
-        .legal-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            padding: 50px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-
-        .legal-content h1 {
+        .hero-content {
             text-align: center;
-            margin-bottom: 30px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+
+        .product-badge {
+            display: inline-block;
+
+            background: rgba(37,99,235,0.10);
+
             color: var(--primary);
-            font-size: 2.5rem;
-        }
 
-        .legal-content h2 {
-            margin-top: 40px;
-            color: var(--secondary);
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--gray-light);
-        }
+            padding: 8px 16px;
 
-        .legal-content h3 {
-            margin-top: 30px;
-            color: var(--primary);
-        }
+            border-radius: 30px;
 
-        .legal-list {
-            margin-left: 20px;
+            font-size: 0.85rem;
+
+            font-weight: 700;
+
             margin-bottom: 20px;
         }
 
-        .legal-list li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 10px;
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
         }
 
-        .legal-list li:before {
-            content: "•";
+
+        .hero h1 span {
             color: var(--primary);
-            font-weight: bold;
-            position: absolute;
-            left: -10px;
         }
 
-        .highlight-box {
-            background: #f0f9ff;
-            border-left: 4px solid var(--primary);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 var(--radius) var(--radius) 0;
-        }
 
-        .whatsapp-highlight {
-            background: rgba(37, 211, 102, 0.1);
-            border-left: 4px solid var(--whatsapp-green);
-        }
-
-        .update-date {
-            text-align: center;
+        .hero p {
             color: var(--gray);
-            font-style: italic;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--gray-light);
+            font-size: 1.1rem;
+            max-width: 780px;
+            margin: 0 auto;
         }
 
-        .back-button {
+
+        .last-updated {
+            margin-top: 20px;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================== */
+
+        .section {
+            padding: 70px 0;
+        }
+
+
+        .content-card {
+            background: var(--white);
+
+            border: 1px solid var(--gray-light);
+
+            border-radius: 16px;
+
+            padding: 40px;
+
+            margin-bottom: 25px;
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .content-card h2 {
+            font-size: 1.65rem;
+            margin-bottom: 18px;
+            color: var(--secondary);
+        }
+
+
+        .content-card h3 {
+            font-size: 1.15rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+
+        .content-card p {
+            color: var(--gray);
+        }
+
+
+        .content-card ul {
+            margin: 15px 0 20px 25px;
+            color: var(--gray);
+        }
+
+
+        .content-card li {
+            margin-bottom: 9px;
+        }
+
+
+        .content-card strong {
+            color: #334155;
+        }
+
+
+        .section-number {
+            color: var(--primary);
+            margin-right: 5px;
+        }
+
+
+        /* =========================
+           NOTICE
+        ========================== */
+
+        .notice {
+            padding: 20px 25px;
+
+            border-left: 4px solid var(--primary);
+
+            background: #eff6ff;
+
+            border-radius: 8px;
+
+            margin-top: 25px;
+        }
+
+
+        .notice p {
+            margin: 0;
+            color: #334155;
+        }
+
+
+        /* =========================
+           IMPORTANT NOTICE
+        ========================== */
+
+        .important-notice {
+            padding: 25px;
+
+            border: 1px solid #bfdbfe;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eff6ff,
+                    #ecfeff
+                );
+
+            border-radius: 12px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .important-notice i {
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+
+        .important-notice p {
+            margin-bottom: 0;
+            color: #334155;
+        }
+
+
+        /* =========================
+           TABLE OF CONTENTS
+        ========================== */
+
+        .toc {
+            background: var(--light);
+
+            border: 1px solid var(--gray-light);
+
+            border-radius: 12px;
+
+            padding: 25px 30px;
+
+            margin-top: 25px;
+        }
+
+
+        .toc h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+
+        .toc ul {
+            margin: 0 0 0 20px;
+        }
+
+
+        .toc li {
+            margin-bottom: 7px;
+        }
+
+
+        .toc a {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+
+        .toc a:hover {
+            color: var(--primary-dark);
+        }
+
+
+        /* =========================
+           EMAIL
+        ========================== */
+
+        .email-box {
+            margin-top: 25px;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eff6ff,
+                    #ecfeff
+                );
+
+            border: 1px solid #bfdbfe;
+
+            text-align: center;
+        }
+
+
+        .email-box i {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+
+        .email-box p {
+            margin-bottom: 8px;
+        }
+
+
+        .email-box a {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+
+        .email-box a:hover {
+            color: var(--primary-dark);
+        }
+
+
+        /* =========================
+           DATA GRID
+        ========================== */
+
+        .data-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 18px;
+
+            margin-top: 25px;
+        }
+
+
+        .data-item {
+            padding: 22px;
+
+            background: var(--light);
+
+            border-radius: 12px;
+
+            border: 1px solid var(--gray-light);
+        }
+
+
+        .data-item i {
+            font-size: 1.8rem;
+
+            color: var(--primary);
+
+            margin-bottom: 12px;
+        }
+
+
+        .data-item h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+
+        .data-item p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================== */
+
+        .btn {
             display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
+
+            padding: 13px 28px;
+
             background: var(--primary);
+
             color: white;
-            text-decoration: none;
+
             border-radius: var(--radius);
+
+            font-size: 1rem;
+
+            font-weight: 600;
+
             transition: var(--transition);
+
+            border: 2px solid var(--primary);
+
+            margin-top: 15px;
         }
 
-        .back-button:hover {
+
+        .btn:hover {
             background: var(--primary-dark);
-            transform: translateY(-2px);
+
+            border-color: var(--primary-dark);
+
+            transform: translateY(-3px);
+
+            box-shadow: var(--shadow);
         }
 
-        /* Footer */
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+        }
+
+
+        .btn-outline:hover {
+            color: white;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
         footer {
             background: var(--secondary);
+
             color: white;
-            padding: 50px 0 20px;
-            margin-top: 50px;
+
+            padding: 45px 0 20px;
+
+            margin-top: 30px;
         }
+
 
         .footer-content {
             display: flex;
-            flex-wrap: wrap;
+
             justify-content: space-between;
+
+            flex-wrap: wrap;
+
             gap: 40px;
-            margin-bottom: 40px;
+
+            margin-bottom: 35px;
         }
+
 
         .footer-column {
             flex: 1;
-            min-width: 250px;
+            min-width: 220px;
         }
+
 
         .footer-column h4 {
-            color: white;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
+            margin-bottom: 15px;
         }
 
-        .footer-column h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--accent);
+
+        .footer-column p {
+            color: #cbd5e1;
         }
+
 
         .footer-links {
             list-style: none;
         }
 
+
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
+            color: #cbd5e1;
         }
+
 
         .footer-links a {
             color: #cbd5e1;
-            text-decoration: none;
             transition: var(--transition);
         }
 
+
         .footer-links a:hover {
             color: var(--accent);
-            padding-left: 5px;
         }
 
+
         .copyright {
-            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+            text-align: center;
+
             color: #94a3b8;
+
             font-size: 0.9rem;
         }
 
-        @media (max-width: 992px) {
-            .mobile-menu-btn {
-                display: block;
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: 94%;
             }
-            
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                flex-direction: column;
-                background: white;
-                width: 80%;
-                height: calc(100vh - 80px);
-                box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
-                transition: 0.5s;
-                padding: 30px;
-                z-index: 999;
+
+
+            .hero {
+                padding-top: 140px;
             }
-            
-            .nav-links.active {
-                left: 0;
+
+
+            .hero h1 {
+                font-size: 2.25rem;
             }
-            
-            .nav-links li {
-                margin: 15px 0;
+
+
+            .content-card {
+                padding: 25px;
             }
-            
-            .legal-content {
-                padding: 30px 20px;
+
+
+            .logo img {
+                height: 55px;
             }
+
+
+            .logo {
+                font-size: 1.25rem;
+            }
+
+
+            .back-link {
+                font-size: 0.9rem;
+            }
+
+
+            .navbar {
+                padding: 8px 0;
+            }
+
         }
 
-        @media (max-width: 768px) {
-            .legal-content h1 {
-                font-size: 2rem;
-            }
-            
-            .footer-column {
-                min-width: 100%;
-            }
-        }
     </style>
+
 </head>
+
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-    <img src="logo.png" alt="MANA LLC Logo" style="height: 100px; margin-right: 10px;">
-    MANA LLC
-</a>
-                
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms</a></li>
-                </ul>
-                
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Privacy Policy Content -->
-    <section class="legal-page">
-        <div class="container">
-            <div class="legal-content">
-                <h1>Privacy Policy</h1>
-                <div class="update-date">Last Updated: October 2025</div>
-                
-                <p>MANA LLC ("we," "our," or "us") is committed to protecting the privacy of healthcare providers and their patients. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our healthcare software solutions, including PACS, DICOM, RIS, HIS, and WhatsApp integration services.</p>
-                
-                <div class="highlight-box">
-                    <strong>Important Notice:</strong> As a healthcare software provider, we comply with HIPAA, GDPR, and other healthcare data protection regulations. We never sell patient data to third parties. Our WhatsApp integration requires explicit patient consent for all communications.
-                </div>
-                
-                <h2>1. Information We Collect</h2>
-                
-                <h3>1.1 Healthcare Provider Information:</h3>
-                <ul class="legal-list">
-                    <li>Business name, address, and contact details</li>
-                    <li>Healthcare facility licenses, certifications, and NPI numbers</li>
-                    <li>Administrator and staff contact information</li>
-                    <li>Billing and payment information</li>
-                    <li>Technical support and service request details</li>
-                </ul>
-                
-                <h3>1.2 Patient Data (Processed on behalf of healthcare providers):</h3>
-                <ul class="legal-list">
-                    <li>Protected Health Information (PHI) as defined by HIPAA</li>
-                    <li>Medical records, test results, imaging data (DICOM files)</li>
-                    <li>Patient demographics and contact information</li>
-                    <li>Appointment schedules, treatment records, and medical history</li>
-                    <li>Consent records for communications and data processing</li>
-                </ul>
-                
-                <h3>1.3 Technical Information:</h3>
-                <ul class="legal-list">
-                    <li>IP addresses, device information, and browser type</li>
-                    <li>Usage data, system logs, and error reports</li>
-                    <li>Integration data with medical devices and equipment</li>
-                    <li>API usage statistics and performance metrics</li>
-                </ul>
-                
-                <h2>2. How We Use Your Information</h2>
-                <ul class="legal-list">
-                    <li>To provide, maintain, and improve our healthcare software services</li>
-                    <li>To send medical notifications, test results, and appointment reminders via WhatsApp (with explicit patient consent)</li>
-                    <li>To ensure compliance with HIPAA, GDPR, and other healthcare regulations</li>
-                    <li>To provide technical support, troubleshooting, and system updates</li>
-                    <li>To process payments, manage subscriptions, and send invoices</li>
-                    <li>To monitor system performance, security, and reliability</li>
-                    <li>To develop new features and enhance existing services</li>
-                </ul>
-                
-                <div class="highlight-box whatsapp-highlight">
-                    <h3>WhatsApp Business API Usage</h3>
-                    <p>We use WhatsApp Business API exclusively for healthcare communication purposes:</p>
-                    <ul class="legal-list">
-                        <li><strong>Medical Reports:</strong> Sending test results, diagnostic reports, and imaging findings</li>
-                        <li><strong>Appointment Management:</strong> Reminders, confirmations, and scheduling notifications</li>
-                        <li><strong>Patient Follow-up:</strong> Post-treatment care instructions and follow-up messages</li>
-                        <li><strong>Healthcare Facility Updates:</strong> Service announcements and policy changes</li>
-                    </ul>
-                    <p><strong>Consent Requirement:</strong> We only send WhatsApp messages to patients who have provided explicit, documented consent to receive medical communications via WhatsApp. Each message includes opt-out instructions.</p>
-                </div>
-                
-                <h2>3. Data Protection & Security Measures</h2>
-                <ul class="legal-list">
-                    <li><strong>End-to-End Encryption:</strong> All medical data is encrypted in transit and at rest using AES-256 encryption</li>
-                    <li><strong>HIPAA Compliance:</strong> Our infrastructure, policies, and procedures comply with HIPAA Security and Privacy Rules</li>
-                    <li><strong>Access Controls:</strong> Role-based access, multi-factor authentication, and audit trails</li>
-                    <li><strong>Regular Audits:</strong> Security assessments, vulnerability scanning, and penetration testing</li>
-                    <li><strong>Data Backup:</strong> Regular backups with geographically redundant storage</li>
-                    <li><strong>Incident Response:</strong> Documented procedures for data breach notification and response</li>
-                </ul>
-                
-                <h2>4. Third-Party Disclosures</h2>
-                <p>We do not sell, trade, or rent patient data to third parties. We may share information with:</p>
-                <ul class="legal-list">
-                    <li><strong>Meta (WhatsApp):</strong> For message delivery (messages are end-to-end encrypted)</li>
-                    <li><strong>Payment Processors:</strong> For billing and subscription management</li>
-                    <li><strong>Subprocessors:</strong> Who comply with our data protection agreements and HIPAA requirements</li>
-                    <li><strong>Legal Authorities:</strong> When required by law, court order, or government regulation</li>
-                    <li><strong>Healthcare Providers:</strong> The covered entities who own the patient data</li>
-                </ul>
-                
-                <h2>5. Data Retention Policy</h2>
-                <p>We retain healthcare data according to:</p>
-                <ul class="legal-list">
-                    <li><strong>HIPAA Requirements:</strong> Minimum 6 years for relevant records</li>
-                    <li><strong>Healthcare Provider Instructions:</strong> As specified in our service agreements</li>
-                    <li><strong>Legal Requirements:</strong> State and federal regulations for medical records</li>
-                    <li><strong>Business Needs:</strong> For service delivery and support purposes</li>
-                </ul>
-                <p>Upon termination of service, we securely delete or return all patient data according to the healthcare provider's instructions and regulatory requirements.</p>
-                
-                <h2>6. Your Rights</h2>
-                <ul class="legal-list">
-                    <li><strong>Right to Access:</strong> Request access to your personal information</li>
-                    <li><strong>Right to Correction:</strong> Request correction of inaccurate or incomplete data</li>
-                    <li><strong>Right to Deletion:</strong> Request deletion of data (where permitted by law)</li>
-                    <li><strong>Right to Restriction:</strong> Request restriction of data processing</li>
-                    <li><strong>Right to Object:</strong> Object to certain types of data processing</li>
-                    <li><strong>Right to Data Portability:</strong> Receive your data in a structured, machine-readable format</li>
-                    <li><strong>Right to Withdraw Consent:</strong> Withdraw consent for communications at any time</li>
-                </ul>
-                
-                <h2>7. Business Associate Agreement (BAA)</h2>
-                <p>As a healthcare software provider, we sign Business Associate Agreements with covered entities as required by HIPAA. Our BAA outlines our responsibilities for protecting Protected Health Information (PHI) and complying with HIPAA regulations.</p>
-                
-                <h2>8. International Data Transfers</h2>
-                <p>For healthcare providers outside the United States, we ensure appropriate safeguards for international data transfers, including Standard Contractual Clauses (SCCs) and compliance with local data protection laws.</p>
-                
-                <h2>9. Children's Privacy</h2>
-                <p>Our services are not directed to individuals under 18. We do not knowingly collect personal information from children. If we become aware that a child has provided us with personal information, we will take steps to delete such information.</p>
-                
-                <h2>10. Changes to This Policy</h2>
-                <p>We may update this Privacy Policy periodically to reflect changes in our practices, services, or legal requirements. We will notify healthcare providers of significant changes via email or through our software platform at least 30 days before changes take effect.</p>
-                
-                <h2>11. Contact Us</h2>
-                <p>For privacy-related questions, to exercise your rights, or to request a copy of our Business Associate Agreement:</p>
-                <p><strong>MANA LLC Data Protection Officer</strong><br>
-                Email: <a href="mailto:info@mana-co.com" style="color: var(--primary);">info@mana-co.com</a><br>
-                Phone: +2 (015) 050 90440<br>
-                Address: 1942 Broadway St. STE 314C Boulder CO 80302 US</p>
-                <p>We respond to all legitimate requests within 30 days. For urgent matters regarding patient data or security incidents, please contact our security team at <a href="mailto:info@mana-co.com" style="color: var(--primary);">info@mana-co.com</a>.</p>
-                
-                <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Home</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>MANA LLC</h4>
-                    <p>US-based healthcare software company specializing in PACS, DICOM, RIS, HIS, and secure WhatsApp integration for medical facilities worldwide.</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="index.html#compliance">Compliance</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Legal</h4>
-                    <ul class="footer-links">
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="#">HIPAA Compliance</a></li>
-                        <li><a href="#">Business Associate Agreement</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Contact Us</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Colorado, USA</li>
-                        <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +1 (812) 791-4182</li>
-                        <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Cairo, EGYPT</li>
-                        <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +20 1505090440</li>
-                        <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> info@mana-co.com</li>
-                        <li><i class="fab fa-whatsapp" style="margin-right: 8px;"></i> 20 1007339500</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2025 MANA LLC. All rights reserved. | HIPAA Compliant Healthcare Software Solutions | Meta WhatsApp Business API Approved</p>
-            </div>
-        </div>
-    </footer>
+<!-- =========================
+     HEADER
+========================== -->
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        if(mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                    ? '<i class="fas fa-times"></i>' 
-                    : '<i class="fas fa-bars"></i>';
-            });
-        }
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                if(mobileMenuBtn) mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-    </script>
+<header>
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <a href="medicalspace.html" class="logo">
+
+                <img src="logo.png"
+                     alt="MANA LLC Logo">
+
+                MANA LLC
+
+            </a>
+
+
+            <a href="medicalspace.html"
+               class="back-link">
+
+                <i class="fas fa-arrow-left"></i>
+
+                MedicalSpace
+
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="product-badge">
+
+                <i class="fas fa-shield-alt"></i>
+
+                MedicalSpace Privacy Policy
+
+            </div>
+
+
+            <h1>
+
+                Privacy <span>Policy</span>
+
+            </h1>
+
+
+            <p>
+
+                This Privacy Policy explains how MANA LLC collects,
+                uses, stores, processes, discloses, and protects
+                information in connection with MedicalSpace.
+
+            </p>
+
+
+            <div class="last-updated">
+
+                <strong>Effective Date:</strong> September 2, 2026
+                &nbsp; | &nbsp;
+                <strong>Last Updated:</strong> September 30, 2026
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTENT
+========================== -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <!-- =========================
+             INTRODUCTION
+        ========================== -->
+
+        <div class="content-card">
+
+            <div class="important-notice">
+
+                <p>
+
+                    <i class="fas fa-info-circle"></i>
+
+                    <strong>Important:</strong>
+
+                    MedicalSpace is a business-to-business software
+                    platform designed primarily for healthcare
+                    professionals and other authorized medical-industry
+                    users. MedicalSpace is not intended to provide
+                    medical care directly to patients and does not
+                    operate as a healthcare provider.
+
+                </p>
+
+            </div>
+
+
+            <p>
+
+                This Privacy Policy explains how MANA LLC, a Colorado
+                limited liability company ("MANA", "we", "us", or "our"),
+                collects, uses, stores, processes, discloses, and protects
+                information in connection with MedicalSpace (the
+                "Platform", "Service", or "MedicalSpace").
+
+            </p>
+
+
+            <p>
+
+                By creating an account, accessing, or using MedicalSpace,
+                you acknowledge that you have had the opportunity to
+                review this Privacy Policy.
+
+            </p>
+
+
+            <div class="toc">
+
+                <h3>
+                    Contents
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#scope">
+                            1. Scope
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#healthcare-data">
+                            2. Important Healthcare Data Notice
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#information">
+                            3. Information We Collect
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#content">
+                            4. User-Generated Content and Medical Records
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#communications">
+                            5. Communications and Messages
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#voice">
+                            6. Voice, Microphone, and Audio Data
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#camera">
+                            6A. Camera and Images
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#ai">
+                            7. Artificial Intelligence
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#dicom">
+                            8. DICOM and Medical Imaging
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#video">
+                            9. Video Calls
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#translation">
+                            10. Translation Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#payments">
+                            11. Subscription and Payment Information
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#technical">
+                            12. Technical and Usage Information
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#use">
+                            13. How We Use Information
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#sharing">
+                            14. We Do Not Sell Medical Records
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#providers">
+                            15. Service Providers and Third Parties
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#legal">
+                            16. Disclosure Required by Law
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#transactions">
+                            17. Corporate Transactions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#international">
+                            18. International Data Transfers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#security">
+                            19. Data Security
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#responsibilities">
+                            20. User Security Responsibilities
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#patient-access">
+                            21. Patient Data Access
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#retention">
+                            22. Data Retention and Deletion
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#termination">
+                            23. Account Termination and Patient Data
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#deletion">
+                            23A. Account and Data Deletion Requests
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#rights">
+                            24. Privacy Rights
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#colorado">
+                            25. Colorado Privacy Rights
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#jurisdictions">
+                            26. Privacy Rights in Other Jurisdictions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#provider-responsibilities">
+                            27. Healthcare Provider Responsibilities
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#children">
+                            28. Children
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#changes">
+                            29. Changes to This Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            30. Contact Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#mandatory-rights">
+                            31. No Waiver of Mandatory Rights
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#acknowledgment">
+                            32. Privacy Policy Acknowledgment
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             1
+        ========================== -->
+
+        <div class="content-card" id="scope">
+
+            <h2>
+                <span class="section-number">1.</span>
+                Scope
+            </h2>
+
+
+            <p>
+                This Privacy Policy applies to information processed
+                through:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    the MedicalSpace mobile application;
+                </li>
+
+                <li>
+                    MedicalSpace websites and web services;
+                </li>
+
+                <li>
+                    MedicalSpace APIs and backend services;
+                </li>
+
+                <li>
+                    communications and support services;
+                </li>
+
+                <li>
+                    subscription and billing services;
+                </li>
+
+                <li>
+                    AI-assisted features;
+                </li>
+
+                <li>
+                    voice, transcription, translation, messaging,
+                    and communication features; and
+                </li>
+
+                <li>
+                    other services operated by MANA in connection
+                    with MedicalSpace.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                This Privacy Policy does not necessarily apply to
+                third-party services that have their own privacy
+                policies.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             2
+        ========================== -->
+
+        <div class="content-card" id="healthcare-data">
+
+            <h2>
+                <span class="section-number">2.</span>
+                Important Healthcare Data Notice
+            </h2>
+
+
+            <p>
+
+                MedicalSpace may be used by healthcare professionals
+                to store and process information relating to their
+                patients, including medical records and other
+                health-related information.
+
+            </p>
+
+
+            <p>
+
+                The healthcare professional, clinic, organization,
+                or other MedicalSpace account owner who enters or
+                controls patient information is primarily responsible
+                for determining the lawful basis for collecting,
+                using, disclosing, and otherwise processing that
+                patient information.
+
+            </p>
+
+
+            <p>
+
+                MANA provides the technology infrastructure used to
+                store and process such information on behalf of the
+                applicable MedicalSpace customer.
+
+            </p>
+
+
+            <p>
+
+                Depending on the applicable law and the specific
+                processing activity, MANA may act as a service
+                provider, processor, data processor, controller,
+                or another legally recognized role.
+
+            </p>
+
+
+            <p>
+
+                Nothing in this Privacy Policy is intended to determine
+                the legal classification of MANA or any MedicalSpace
+                customer under a particular jurisdiction where the law
+                requires a different classification.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             3
+        ========================== -->
+
+        <div class="content-card" id="information">
+
+            <h2>
+                <span class="section-number">3.</span>
+                Information We Collect
+            </h2>
+
+
+            <p>
+                We may collect or receive the following categories
+                of information.
+            </p>
+
+
+            <h3>
+                3.1 Account Information
+            </h3>
+
+
+            <p>
+                When a user creates or manages an account, we may collect:
+            </p>
+
+
+            <ul>
+
+                <li>full name;</li>
+
+                <li>email address;</li>
+
+                <li>telephone number;</li>
+
+                <li>professional information;</li>
+
+                <li>professional specialty;</li>
+
+                <li>professional qualifications;</li>
+
+                <li>
+                    professional license or registration information
+                    where provided;
+                </li>
+
+                <li>country and city;</li>
+
+                <li>profile photograph;</li>
+
+                <li>camera-captured images;</li>
+
+                <li>clinic or organization information;</li>
+
+                <li>
+                    account credentials and authentication information;
+                </li>
+
+                <li>language preferences;</li>
+
+                <li>account role;</li>
+
+                <li>subscription information; and</li>
+
+                <li>
+                    information necessary to administer the account.
+                </li>
+
+            </ul>
+
+
+            <h3>
+                3.2 Professional Information
+            </h3>
+
+
+            <p>
+                Healthcare professionals may voluntarily provide
+                information such as:
+            </p>
+
+
+            <ul>
+
+                <li>specialty;</li>
+
+                <li>years of experience;</li>
+
+                <li>professional biography;</li>
+
+                <li>clinic information;</li>
+
+                <li>professional profile information;</li>
+
+                <li>professional services;</li>
+
+                <li>professional contact information;</li>
+
+                <li>profile images and logos; and</li>
+
+                <li>
+                    information displayed to other authorized
+                    MedicalSpace users.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                Users are responsible for ensuring that professional
+                information they publish is accurate and lawful.
+
+            </p>
+
+
+            <h3>
+                3.3 Patient Information
+            </h3>
+
+
+            <p>
+                MedicalSpace may allow healthcare professionals to
+                create and manage patient records.
+            </p>
+
+
+            <p>
+                Such information may include:
+            </p>
+
+
+            <ul>
+
+                <li>patient name;</li>
+
+                <li>age or date of birth;</li>
+
+                <li>telephone number;</li>
+
+                <li>demographic information;</li>
+
+                <li>medical history;</li>
+
+                <li>diagnoses;</li>
+
+                <li>symptoms;</li>
+
+                <li>complaints;</li>
+
+                <li>vital signs;</li>
+
+                <li>medications;</li>
+
+                <li>prescriptions;</li>
+
+                <li>treatment plans;</li>
+
+                <li>clinical notes;</li>
+
+                <li>visits;</li>
+
+                <li>medical documents;</li>
+
+                <li>laboratory results;</li>
+
+                <li>radiology and imaging information;</li>
+
+                <li>DICOM files;</li>
+
+                <li>photographs;</li>
+
+                <li>voice recordings;</li>
+
+                <li>transcriptions;</li>
+
+                <li>follow-up information; and</li>
+
+                <li>
+                    other health-related information entered by
+                    an authorized healthcare professional.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                MANA does not independently determine the medical
+                purposes for which a healthcare professional collects
+                patient information.
+
+            </p>
+
+
+            <p>
+
+                The healthcare professional or organization using
+                MedicalSpace is responsible for ensuring that it has
+                the necessary legal authority, consent, authorization,
+                notice, or other lawful basis required to process
+                patient information.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             4
+        ========================== -->
+
+        <div class="content-card" id="content">
+
+            <h2>
+                <span class="section-number">4.</span>
+                User-Generated Content and Medical Records
+            </h2>
+
+
+            <p>
+
+                Medical records, documents, notes, prescriptions,
+                photographs, recordings, files, messages, and other
+                information uploaded or entered by a MedicalSpace
+                customer remain under the control of that customer,
+                subject to applicable law and the contractual rights
+                necessary for MANA to operate MedicalSpace.
+
+            </p>
+
+
+            <p>
+
+                MANA does not claim ownership of a customer's medical
+                records merely because those records are stored using
+                MedicalSpace.
+
+            </p>
+
+
+            <p>
+
+                MANA processes customer content only as necessary to
+                provide, operate, secure, maintain, troubleshoot,
+                synchronize, back up, and support MedicalSpace and
+                its requested features, and as otherwise permitted
+                or required by applicable law.
+
+            </p>
+
+
+            <p>
+
+                MANA does not sell customer medical records or
+                personal health information.
+
+            </p>
+
+
+            <p>
+
+                MANA does not use customer medical records or personal
+                health information to train general-purpose artificial
+                intelligence or machine-learning models.
+
+            </p>
+
+
+            <p>
+
+                Where information is submitted to an AI-enabled
+                feature, it may be processed by MANA and applicable
+                third-party technology providers only as necessary
+                to provide the requested AI functionality, subject
+                to applicable contractual, technical, and legal
+                safeguards.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             5
+        ========================== -->
+
+        <div class="content-card" id="communications">
+
+            <h2>
+                <span class="section-number">5.</span>
+                Communications and Messages
+            </h2>
+
+
+            <p>
+                MedicalSpace may process information contained in:
+            </p>
+
+
+            <ul>
+
+                <li>direct messages;</li>
+
+                <li>chat communications;</li>
+
+                <li>voice messages;</li>
+
+                <li>translated messages;</li>
+
+                <li>notifications;</li>
+
+                <li>support requests; and</li>
+
+                <li>
+                    other communications transmitted through
+                    the Platform.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                Messages and communications may be stored to provide
+                synchronization, delivery, security, auditing, and
+                other Service functionality.
+
+            </p>
+
+
+            <p>
+
+                Users should not use MedicalSpace to transmit
+                information that they are not legally authorized
+                to transmit.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             6
+        ========================== -->
+
+        <div class="content-card" id="voice">
+
+            <h2>
+                <span class="section-number">6.</span>
+                Voice, Microphone, and Audio Data
+            </h2>
+
+
+            <p>
+
+                Certain MedicalSpace features may allow users to
+                record, upload, or transmit voice or audio information.
+
+            </p>
+
+
+            <p>
+                MedicalSpace may access the device microphone when
+                the user chooses to use features such as:
+            </p>
+
+
+            <ul>
+
+                <li>voice messages;</li>
+
+                <li>voice-based AI features;</li>
+
+                <li>speech-to-text transcription;</li>
+
+                <li>creation of visit notes;</li>
+
+                <li>audio or video communication;</li>
+
+                <li>voice summaries; or</li>
+
+                <li>
+                    other features that require audio input.
+                </li>
+
+            </ul>
+
+
+            <p>
+                Depending on the feature, audio may be processed for
+                purposes including:
+            </p>
+
+
+            <ul>
+
+                <li>speech-to-text transcription;</li>
+
+                <li>creation of visit notes;</li>
+
+                <li>AI-assisted clinical analysis;</li>
+
+                <li>voice summaries;</li>
+
+                <li>text-to-speech generation;</li>
+
+                <li>communication;</li>
+
+                <li>synchronization; and</li>
+
+                <li>
+                    other functionality explicitly requested
+                    by the user.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                Audio and voice information is processed only as
+                necessary to provide the feature requested by the
+                user and to operate, secure, maintain, and support
+                MedicalSpace.
+
+            </p>
+
+
+            <p>
+
+                Users are responsible for obtaining any legally
+                required consent before recording or processing
+                another person's voice.
+
+            </p>
+
+
+            <p>
+
+                MANA does not use customer voice recordings or
+                transcriptions to train general-purpose artificial
+                intelligence or machine-learning models.
+
+            </p>
+
+
+            <p>
+
+                MANA does not guarantee that any particular voice
+                recording, transcription, translation, or AI-generated
+                result will be error-free.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             6A
+        ========================== -->
+
+        <div class="content-card" id="camera">
+
+            <h2>
+                <span class="section-number">6A.</span>
+                Camera and Images
+            </h2>
+
+
+            <p>
+
+                MedicalSpace may access the device camera when the
+                user chooses to capture or update a profile photograph
+                or when a MedicalSpace feature requires image capture.
+
+            </p>
+
+
+            <p>
+
+                Images captured or uploaded by the user may be stored
+                and processed as necessary to provide the requested
+                functionality.
+
+            </p>
+
+
+            <p>
+
+                MedicalSpace may also allow users to upload photographs,
+                medical images, documents, or other visual information
+                as part of patient management, medical records,
+                communication, or other Service features.
+
+            </p>
+
+
+            <p>
+
+                Camera access is not used to continuously monitor
+                users or to collect images when the user has not
+                initiated a feature that requires camera access.
+
+            </p>
+
+
+            <p>
+
+                MANA does not use customer photographs, medical images,
+                or medical records to train general-purpose artificial
+                intelligence or machine-learning models.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             7
+        ========================== -->
+
+        <div class="content-card" id="ai">
+
+            <h2>
+                <span class="section-number">7.</span>
+                Artificial Intelligence
+            </h2>
+
+
+            <p>
+
+                MedicalSpace may provide features that use artificial
+                intelligence and machine-learning technologies.
+
+            </p>
+
+
+            <p>
+                AI-assisted functionality may be used to:
+            </p>
+
+
+            <ul>
+
+                <li>summarize information;</li>
+
+                <li>transcribe voice recordings;</li>
+
+                <li>organize clinical information;</li>
+
+                <li>
+                    analyze information supplied by the user;
+                </li>
+
+                <li>
+                    generate suggested clinical summaries;
+                </li>
+
+                <li>
+                    identify potentially relevant information;
+                </li>
+
+                <li>
+                    review prescriptions or treatment information;
+                </li>
+
+                <li>generate voice summaries;</li>
+
+                <li>assist with documentation; and</li>
+
+                <li>
+                    provide other AI-assisted functionality
+                    explicitly requested by the user.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                When a user submits information to an AI-enabled
+                feature, that information may be processed by MANA
+                and by third-party technology providers used to provide
+                the requested AI functionality.
+
+            </p>
+
+
+            <p>
+
+                MANA uses appropriate contractual and technical
+                measures designed to limit such processing to the
+                purposes necessary to provide the requested functionality
+                and to comply with applicable law.
+
+            </p>
+
+
+            <p>
+
+                MANA does not use customer medical records, personal
+                health information, voice recordings, or other
+                confidential customer content submitted to MedicalSpace
+                to train general-purpose artificial intelligence or
+                machine-learning models.
+
+            </p>
+
+
+            <p>
+
+                MANA may change or replace an underlying AI technology
+                provider from time to time. Where required by applicable
+                law, MANA will provide appropriate notice regarding
+                material changes in how personal information is processed.
+
+            </p>
+
+
+            <h3>
+                AI-Generated Information
+            </h3>
+
+
+            <p>
+                AI-generated information:
+            </p>
+
+
+            <ul>
+
+                <li>is not medical advice;</li>
+
+                <li>is not a diagnosis;</li>
+
+                <li>is not a prescription;</li>
+
+                <li>
+                    is not a substitute for professional medical judgment;
+                </li>
+
+                <li>
+                    is not a substitute for clinical examination;
+                </li>
+
+                <li>
+                    is not guaranteed to be accurate, complete,
+                    current, or appropriate;
+                </li>
+
+                <li>
+                    must be independently reviewed by a qualified
+                    healthcare professional before being relied upon; and
+                </li>
+
+                <li>
+                    must not be used as the sole basis for any
+                    medical decision.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                Users remain responsible for reviewing AI-generated
+                information and for all clinical decisions and actions
+                taken based on information generated through MedicalSpace.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             8
+        ========================== -->
+
+        <div class="content-card" id="dicom">
+
+            <h2>
+                <span class="section-number">8.</span>
+                DICOM and Medical Imaging
+            </h2>
+
+
+            <p>
+
+                MedicalSpace may allow users to upload, view, store,
+                or process medical imaging files, including DICOM files.
+
+            </p>
+
+
+            <p>
+
+                MANA provides technical functionality and does not
+                independently interpret, diagnose, or validate
+                medical images.
+
+            </p>
+
+
+            <p>
+
+                Any image interpretation, diagnosis, or clinical
+                decision remains the responsibility of the appropriately
+                qualified healthcare professional.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             9
+        ========================== -->
+
+        <div class="content-card" id="video">
+
+            <h2>
+                <span class="section-number">9.</span>
+                Video Calls
+            </h2>
+
+
+            <p>
+
+                MedicalSpace may use third-party communication
+                infrastructure to provide video or audio calling.
+
+            </p>
+
+
+            <p>
+
+                Depending on the feature, call-related information
+                may be processed by third-party service providers
+                necessary to establish and operate the communication.
+
+            </p>
+
+
+            <p>
+
+                Users are responsible for ensuring that their use
+                of video or audio communication complies with
+                applicable professional, privacy, licensing, and
+                consent requirements.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             10
+        ========================== -->
+
+        <div class="content-card" id="translation">
+
+            <h2>
+                <span class="section-number">10.</span>
+                Translation Services
+            </h2>
+
+
+            <p>
+
+                MedicalSpace may provide automatic translation of
+                text or voice communications.
+
+            </p>
+
+
+            <p>
+
+                Automated translations may contain errors, omissions,
+                or incorrect medical terminology.
+
+            </p>
+
+
+            <p>
+
+                Users remain responsible for reviewing translations
+                before relying on them for medical, legal,
+                administrative, or other important purposes.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             11
+        ========================== -->
+
+        <div class="content-card" id="payments">
+
+            <h2>
+                <span class="section-number">11.</span>
+                Subscription and Payment Information
+            </h2>
+
+
+            <p>
+
+                MedicalSpace may use third-party payment providers,
+                including Stripe, to process subscriptions and payments.
+
+            </p>
+
+
+            <p>
+
+                MANA generally does not need to receive or store
+                full payment card numbers.
+
+            </p>
+
+
+            <p>
+                Payment providers may independently process:
+            </p>
+
+
+            <ul>
+
+                <li>card information;</li>
+
+                <li>billing information;</li>
+
+                <li>transaction information;</li>
+
+                <li>payment status;</li>
+
+                <li>invoices;</li>
+
+                <li>subscription information; and</li>
+
+                <li>fraud-prevention information.</li>
+
+            </ul>
+
+
+            <p>
+
+                Payment processing is subject to the applicable
+                payment provider's terms and privacy policy.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             12
+        ========================== -->
+
+        <div class="content-card" id="technical">
+
+            <h2>
+                <span class="section-number">12.</span>
+                Technical and Usage Information
+            </h2>
+
+
+            <p>
+                We may automatically collect technical information such as:
+            </p>
+
+
+            <ul>
+
+                <li>device type;</li>
+
+                <li>operating system;</li>
+
+                <li>application version;</li>
+
+                <li>IP address;</li>
+
+                <li>crash information;</li>
+
+                <li>diagnostic information;</li>
+
+                <li>timestamps;</li>
+
+                <li>session information;</li>
+
+                <li>authentication information;</li>
+
+                <li>performance information;</li>
+
+                <li>feature usage;</li>
+
+                <li>logs;</li>
+
+                <li>security events; and</li>
+
+                <li>
+                    other information necessary to maintain and
+                    secure the Platform.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- =========================
+             13
+        ========================== -->
+
+        <div class="content-card" id="use">
+
+            <h2>
+                <span class="section-number">13.</span>
+                How We Use Information
+            </h2>
+
+
+            <p>
+                We may process information to:
+            </p>
+
+
+            <ul>
+
+                <li>create and manage accounts;</li>
+
+                <li>authenticate users;</li>
+
+                <li>provide MedicalSpace functionality;</li>
+
+                <li>store and synchronize records;</li>
+
+                <li>provide patient-management functionality;</li>
+
+                <li>provide communication services;</li>
+
+                <li>provide voice and transcription services;</li>
+
+                <li>provide AI-assisted functionality;</li>
+
+                <li>provide translation services;</li>
+
+                <li>process subscriptions and payments;</li>
+
+                <li>provide customer support;</li>
+
+                <li>
+                    maintain the security, reliability,
+                    functionality, and performance of MedicalSpace;
+                </li>
+
+                <li>
+                    detect fraud, abuse, unauthorized access,
+                    and security threats;
+                </li>
+
+                <li>troubleshoot technical problems;</li>
+
+                <li>comply with legal obligations;</li>
+
+                <li>enforce our agreements;</li>
+
+                <li>
+                    protect the rights, property, safety, and
+                    security of MANA, users, patients, and others;
+                </li>
+
+                <li>perform backups and disaster recovery;</li>
+
+                <li>generate operational and security logs; and</li>
+
+                <li>
+                    perform other purposes disclosed at or before
+                    the time information is collected.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                MANA does not use customer medical records or personal
+                health information for advertising purposes or to train
+                general-purpose artificial intelligence or machine-learning
+                models.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             14
+        ========================== -->
+
+        <div class="content-card" id="sharing">
+
+            <h2>
+                <span class="section-number">14.</span>
+                We Do Not Sell Medical Records
+            </h2>
+
+
+            <p>
+
+                MANA does not sell patient medical records or
+                personal health information.
+
+            </p>
+
+
+            <p>
+
+                MANA does not use personal health information for
+                targeted advertising.
+
+            </p>
+
+
+            <p>
+
+                MANA may disclose or provide access to information
+                to service providers and other third parties where
+                necessary to:
+            </p>
+
+
+            <ul>
+
+                <li>operate MedicalSpace;</li>
+
+                <li>
+                    provide a feature requested by the user;
+                </li>
+
+                <li>process payments;</li>
+
+                <li>
+                    provide AI, voice, transcription, translation,
+                    communication, storage, hosting, security,
+                    or other technical services;
+                </li>
+
+                <li>comply with applicable law;</li>
+
+                <li>protect the Service and its users; or</li>
+
+                <li>
+                    perform another lawful purpose described in
+                    this Privacy Policy.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                Service providers that process information on behalf
+                of MANA are expected to process such information only
+                as necessary to provide the applicable services and
+                subject to appropriate contractual, technical, and
+                legal safeguards.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             15
+        ========================== -->
+
+        <div class="content-card" id="providers">
+
+            <h2>
+                <span class="section-number">15.</span>
+                Service Providers and Third Parties
+            </h2>
+
+
+            <p>
+
+                MANA may use third-party service providers to operate
+                and support MedicalSpace, including providers for:
+
+            </p>
+
+
+            <ul>
+
+                <li>cloud hosting;</li>
+
+                <li>databases;</li>
+
+                <li>authentication;</li>
+
+                <li>storage;</li>
+
+                <li>payment processing;</li>
+
+                <li>artificial intelligence;</li>
+
+                <li>speech recognition;</li>
+
+                <li>text-to-speech;</li>
+
+                <li>communication;</li>
+
+                <li>video and audio calls;</li>
+
+                <li>email;</li>
+
+                <li>analytics, where used;</li>
+
+                <li>security;</li>
+
+                <li>monitoring;</li>
+
+                <li>crash reporting;</li>
+
+                <li>customer support; and</li>
+
+                <li>infrastructure management.</li>
+
+            </ul>
+
+
+            <p>
+
+                Depending on the service, a provider may process
+                information on behalf of MANA based on MANA's
+                instructions, or may process certain information
+                independently where permitted by applicable law.
+
+            </p>
+
+
+            <p>
+                Examples include:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    payment providers processing payment and
+                    billing information;
+                </li>
+
+                <li>
+                    AI and speech technology providers processing
+                    information submitted to an AI or voice feature;
+                </li>
+
+                <li>
+                    communication providers processing information
+                    necessary to deliver messages or establish calls; and
+                </li>
+
+                <li>
+                    infrastructure providers storing or transmitting
+                    information necessary to operate MedicalSpace.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                MANA seeks to use appropriate contractual, technical,
+                and organizational safeguards for third-party service
+                providers where required by applicable law.
+
+            </p>
+
+
+            <p>
+
+                MANA does not authorize third-party providers to use
+                customer medical records or personal health information
+                to train general-purpose AI models on MANA's behalf.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             16
+        ========================== -->
+
+        <div class="content-card" id="legal">
+
+            <h2>
+                <span class="section-number">16.</span>
+                Disclosure Required by Law
+            </h2>
+
+
+            <p>
+                MANA may disclose information when reasonably necessary to:
+            </p>
+
+
+            <ul>
+
+                <li>comply with applicable law;</li>
+
+                <li>
+                    comply with a court order or legal process;
+                </li>
+
+                <li>
+                    respond to lawful governmental requests;
+                </li>
+
+                <li>
+                    protect the safety of an individual;
+                </li>
+
+                <li>investigate fraud or abuse;</li>
+
+                <li>enforce our Terms &amp; Conditions;</li>
+
+                <li>protect MANA's legal rights;</li>
+
+                <li>
+                    prevent or investigate security incidents; or
+                </li>
+
+                <li>
+                    protect the rights, property, or safety of users,
+                    patients, MANA, or others.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                We may disclose only information reasonably necessary
+                for the applicable purpose where required by law.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             17
+        ========================== -->
+
+        <div class="content-card" id="transactions">
+
+            <h2>
+                <span class="section-number">17.</span>
+                Corporate Transactions
+            </h2>
+
+
+            <p>
+
+                If MANA is involved in a merger, acquisition, financing,
+                restructuring, sale of assets, bankruptcy, or similar
+                transaction, information processed through MedicalSpace
+                may be transferred as part of that transaction, subject
+                to applicable law.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             18
+        ========================== -->
+
+        <div class="content-card" id="international">
+
+            <h2>
+                <span class="section-number">18.</span>
+                International Data Transfers
+            </h2>
+
+
+            <p>
+
+                MedicalSpace may be operated using infrastructure
+                located in countries other than the country where
+                the user or patient resides.
+
+            </p>
+
+
+            <p>
+
+                Accordingly, information may be transferred
+                across borders.
+
+            </p>
+
+
+            <p>
+
+                Where applicable law requires specific safeguards
+                for international transfers of personal information,
+                MANA intends to implement appropriate contractual,
+                technical, organizational, or other legally required
+                safeguards.
+
+            </p>
+
+
+            <p>
+
+                Healthcare professionals are responsible for determining
+                whether their use of MedicalSpace and any cross-border
+                processing of patient data satisfies the laws and
+                professional requirements applicable to their practice.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             19
+        ========================== -->
+
+        <div class="content-card" id="security">
+
+            <h2>
+                <span class="section-number">19.</span>
+                Data Security
+            </h2>
+
+
+            <p>
+
+                MANA uses reasonable technical, administrative,
+                and organizational measures designed to protect
+                information against unauthorized access, loss,
+                misuse, alteration, disclosure, or destruction.
+
+            </p>
+
+
+            <p>
+                Security measures may include, depending on the
+                applicable system:
+            </p>
+
+
+            <ul>
+
+                <li>authentication controls;</li>
+
+                <li>access controls;</li>
+
+                <li>authorization mechanisms;</li>
+
+                <li>encryption or encrypted transport;</li>
+
+                <li>logging;</li>
+
+                <li>monitoring;</li>
+
+                <li>backups;</li>
+
+                <li>infrastructure security;</li>
+
+                <li>least-privilege access;</li>
+
+                <li>security updates; and</li>
+
+                <li>incident response procedures.</li>
+
+            </ul>
+
+
+            <p>
+
+                However, no electronic system, Internet transmission,
+                storage system, or security mechanism can be guaranteed
+                to be completely secure.
+
+            </p>
+
+
+            <p>
+
+                MANA therefore cannot guarantee absolute security.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             20
+        ========================== -->
+
+        <div class="content-card" id="responsibilities">
+
+            <h2>
+                <span class="section-number">20.</span>
+                User Security Responsibilities
+            </h2>
+
+
+            <p>
+                Users are responsible for:
+            </p>
+
+
+            <ul>
+
+                <li>protecting passwords;</li>
+
+                <li>protecting authentication credentials;</li>
+
+                <li>maintaining the security of their devices;</li>
+
+                <li>using appropriate access controls;</li>
+
+                <li>not sharing accounts improperly;</li>
+
+                <li>
+                    assigning appropriate permissions to employees
+                    and members;
+                </li>
+
+                <li>
+                    promptly disabling access for former employees
+                    or members;
+                </li>
+
+                <li>reviewing account activity;</li>
+
+                <li>
+                    maintaining appropriate patient consent
+                    and authorization; and
+                </li>
+
+                <li>
+                    reporting suspected unauthorized access.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                An account owner is responsible for actions performed
+                by authorized members of that account to the extent
+                permitted by law.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             21
+        ========================== -->
+
+        <div class="content-card" id="patient-access">
+
+            <h2>
+                <span class="section-number">21.</span>
+                Patient Data Access
+            </h2>
+
+
+            <p>
+
+                MANA seeks to provide access controls designed to
+                restrict patient information to authorized users.
+
+            </p>
+
+
+            <p>
+
+                However, MANA cannot control information that a
+                healthcare professional intentionally or unintentionally
+                discloses outside the Platform.
+
+            </p>
+
+
+            <p>
+
+                MedicalSpace customers are responsible for configuring
+                user roles and permissions appropriately.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             22
+        ========================== -->
+
+        <div class="content-card" id="retention">
+
+            <h2>
+                <span class="section-number">22.</span>
+                Data Retention and Deletion
+            </h2>
+
+
+            <p>
+
+                MANA retains information only for as long as reasonably
+                necessary for the purposes described in this Privacy
+                Policy, unless a longer retention period is required
+                or permitted by applicable law.
+
+            </p>
+
+
+            <p>
+
+                When an individual user requests deletion of their
+                MedicalSpace account, MANA will delete the personal
+                information associated with that user account, subject
+                to applicable legal, regulatory, security,
+                fraud-prevention, accounting, dispute-resolution,
+                or other lawful retention requirements.
+
+            </p>
+
+
+            <p>
+
+                Where MedicalSpace is used by a clinic, organization,
+                or other account owner to manage patient records,
+                patient records may be subject to separate
+                medical-record retention requirements. Deletion of
+                an individual user's MedicalSpace account does not
+                automatically require deletion of patient records
+                that are lawfully maintained by the applicable
+                healthcare provider or organization.
+
+            </p>
+
+
+            <p>
+
+                Where applicable, MANA may retain limited information
+                necessary to comply with legal obligations, protect
+                the security of MedicalSpace, prevent fraud or abuse,
+                resolve disputes, or enforce legal rights.
+
+            </p>
+
+
+            <p>
+
+                Information retained for these purposes will be
+                limited to what is reasonably necessary for the
+                applicable purpose and will be deleted or anonymized
+                when the applicable retention period ends.
+
+            </p>
+
+
+            <p>
+
+                Information deleted from active systems may remain
+                temporarily in encrypted backups until those backups
+                are overwritten or securely deleted in accordance
+                with MANA's backup and disaster-recovery procedures.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             23
+        ========================== -->
+
+        <div class="content-card" id="termination">
+
+            <h2>
+                <span class="section-number">23.</span>
+                Account Termination and Patient Data
+            </h2>
+
+
+            <p>
+
+                Users may request deletion of their MedicalSpace
+                account through the account and data deletion process
+                made available by MANA.
+
+            </p>
+
+
+            <p>
+
+                When an account deletion request is received,
+                MANA will process the request within a reasonably
+                prompt period and will delete the personal information
+                associated with the applicable user account, subject
+                to the retention exceptions described in Section 22.
+
+            </p>
+
+
+            <p>
+
+                Where patient records are maintained by a healthcare
+                professional, clinic, or organization, those records
+                may be subject to legal, regulatory, medical-record
+                retention, or contractual requirements that prevent
+                immediate deletion.
+
+            </p>
+
+
+            <p>
+
+                The healthcare professional, clinic, or organization
+                responsible for the patient records remains responsible
+                for determining the applicable retention requirements
+                for those records.
+
+            </p>
+
+
+            <p>
+
+                MANA does not guarantee indefinite availability of
+                information after account deletion or termination.
+
+            </p>
+
+
+            <p>
+
+                Users are responsible for exporting or otherwise
+                obtaining records they are legally required to retain
+                before requesting account deletion or terminating
+                their account.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             23A
+        ========================== -->
+
+        <div class="content-card" id="deletion">
+
+            <h2>
+                <span class="section-number">23A.</span>
+                Account and Data Deletion Requests
+            </h2>
+
+
+            <p>
+
+                MedicalSpace provides users with a method to request
+                deletion of their account and associated personal
+                information.
+
+            </p>
+
+
+            <p>
+
+                Users may request account and data deletion through
+                the MedicalSpace account deletion web page:
+
+            </p>
+
+
+            <div class="email-box">
+
+                <i class="fas fa-user-slash"></i>
+
+                <p>
+                    MedicalSpace Account &amp; Data Deletion
+                </p>
+
+
+                <a href="medicalspace-delete-account.html">
+
+                    Request Account &amp; Data Deletion
+
+                </a>
+
+            </div>
+
+
+            <p style="margin-top:25px;">
+
+                Users who cannot access the MedicalSpace application
+                may use the web-based deletion request process without
+                needing to access the application.
+
+            </p>
+
+
+            <p>
+
+                Deletion requests may also be submitted directly by
+                contacting:
+
+            </p>
+
+
+            <div class="email-box">
+
+                <i class="fas fa-envelope"></i>
+
+                <p>
+                    MedicalSpace Support
+                </p>
+
+
+                <a href="mailto:info@mana-co.com?subject=MedicalSpace%20Account%20Deletion%20Request">
+
+                    info@mana-co.com
+
+                </a>
+
+            </div>
+
+
+            <p style="margin-top:25px;">
+
+                The deletion process may require reasonable verification
+                of account ownership before a request is completed.
+
+            </p>
+
+
+            <p>
+
+                The account deletion process is intended to delete the
+                personal information associated with the user's
+                MedicalSpace account, subject to information that MANA
+                is legally required or permitted to retain as described
+                in Section 22.
+
+            </p>
+
+
+            <p>
+
+                Where applicable, MANA may retain limited information
+                necessary for legal compliance, medical-record retention
+                requirements, fraud prevention, security, dispute
+                resolution, accounting, or enforcement of legal rights.
+
+            </p>
+
+
+            <p>
+
+                Patient medical records maintained on behalf of a
+                healthcare provider or organization may be subject to
+                separate legal or regulatory retention requirements.
+                Such records will be handled in accordance with the
+                applicable healthcare provider's instructions and
+                applicable law.
+
+            </p>
+
+
+            <p>
+
+                If a user requests deletion of information that cannot
+                legally be deleted immediately, MANA will explain the
+                applicable limitation where required by law.
+
+            </p>
+
+
+            <p>
+
+                MANA will process valid deletion requests within a
+                reasonably prompt period and in accordance with
+                applicable legal requirements.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             24
+        ========================== -->
+
+        <div class="content-card" id="rights">
+
+            <h2>
+                <span class="section-number">24.</span>
+                Privacy Rights
+            </h2>
+
+
+            <p>
+
+                Depending on the user's location and applicable law,
+                individuals may have rights relating to their personal
+                information, including rights to:
+
+            </p>
+
+
+            <ul>
+
+                <li>access;</li>
+
+                <li>correction;</li>
+
+                <li>deletion;</li>
+
+                <li>restriction;</li>
+
+                <li>objection;</li>
+
+                <li>portability;</li>
+
+                <li>
+                    withdrawal of consent where applicable;
+                </li>
+
+                <li>
+                    information regarding processing; and
+                </li>
+
+                <li>
+                    other rights granted by applicable law.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                Certain rights may be subject to legal exceptions.
+
+            </p>
+
+
+            <p>
+
+                Requests relating to a patient's medical record should
+                generally be directed first to the healthcare professional
+                or organization responsible for that medical record.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             25
+        ========================== -->
+
+        <div class="content-card" id="colorado">
+
+            <h2>
+                <span class="section-number">25.</span>
+                Colorado Privacy Rights
+            </h2>
+
+
+            <p>
+
+                Where applicable, MANA will comply with the Colorado
+                Privacy Act and other applicable Colorado privacy
+                requirements.
+
+            </p>
+
+
+            <p>
+
+                Colorado law provides protections concerning certain
+                personal data and sensitive data, including health-related
+                information, subject to applicable legal requirements
+                and exceptions.
+
+            </p>
+
+
+            <p>
+
+                Nothing in this Privacy Policy limits rights that
+                cannot legally be waived.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             26
+        ========================== -->
+
+        <div class="content-card" id="jurisdictions">
+
+            <h2>
+                <span class="section-number">26.</span>
+                Privacy Rights in Other Jurisdictions
+            </h2>
+
+
+            <p>
+
+                MedicalSpace may be used by professionals and
+                organizations located in different countries.
+
+            </p>
+
+
+            <p>
+
+                Where mandatory privacy legislation applies to MANA's
+                processing activities, MANA intends to comply with
+                the applicable requirements to the extent legally required.
+
+            </p>
+
+
+            <p>
+
+                Because privacy and health-data laws differ substantially
+                between jurisdictions, the rights and obligations
+                applicable to a particular user or patient may differ.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             27
+        ========================== -->
+
+        <div class="content-card" id="provider-responsibilities">
+
+            <h2>
+                <span class="section-number">27.</span>
+                Healthcare Provider Responsibilities
+            </h2>
+
+
+            <p>
+                The healthcare professional or organization using
+                MedicalSpace is responsible for:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    determining the lawful basis for processing
+                    patient data;
+                </li>
+
+                <li>
+                    obtaining required consent or authorization;
+                </li>
+
+                <li>
+                    providing required privacy notices to patients;
+                </li>
+
+                <li>
+                    maintaining professional confidentiality;
+                </li>
+
+                <li>
+                    complying with medical-record retention requirements;
+                </li>
+
+                <li>
+                    complying with applicable health-data laws;
+                </li>
+
+                <li>
+                    configuring permissions correctly;
+                </li>
+
+                <li>
+                    limiting access to authorized personnel;
+                </li>
+
+                <li>
+                    reviewing AI-generated information;
+                </li>
+
+                <li>
+                    ensuring clinical accuracy;
+                </li>
+
+                <li>
+                    ensuring lawful cross-border processing;
+                </li>
+
+                <li>
+                    responding to patient requests where legally required;
+                </li>
+
+                <li>
+                    complying with professional licensing requirements.
+                </li>
+
+            </ul>
+
+
+            <p>
+
+                MANA is a technology provider and does not assume
+                the healthcare provider's professional, regulatory,
+                fiduciary, or clinical obligations.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             28
+        ========================== -->
+
+        <div class="content-card" id="children">
+
+            <h2>
+                <span class="section-number">28.</span>
+                Children
+            </h2>
+
+
+            <p>
+
+                MedicalSpace is intended primarily for professional
+                and business use.
+
+            </p>
+
+
+            <p>
+
+                The Service is not intended to be used by children
+                to create independent user accounts.
+
+            </p>
+
+
+            <p>
+
+                Healthcare professionals may nevertheless have patients
+                who are minors. In such cases, the healthcare professional
+                or organization is responsible for complying with all
+                applicable laws concerning minors' medical information
+                and obtaining any legally required parental or guardian
+                authorization.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             29
+        ========================== -->
+
+        <div class="content-card" id="changes">
+
+            <h2>
+                <span class="section-number">29.</span>
+                Changes to This Privacy Policy
+            </h2>
+
+
+            <p>
+
+                MANA may update this Privacy Policy from time to time.
+
+            </p>
+
+
+            <p>
+
+                When changes are material, MANA may provide notice
+                through the Platform, email, or another reasonable method.
+
+            </p>
+
+
+            <p>
+
+                The updated Privacy Policy will become effective on
+                the date stated at the beginning of the updated policy.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             30
+        ========================== -->
+
+        <div class="content-card" id="contact">
+
+            <h2>
+                <span class="section-number">30.</span>
+                Contact Us
+            </h2>
+
+
+            <p>
+
+                For privacy-related questions, privacy requests, or
+                account and data deletion requests, contact:
+
+            </p>
+
+
+            <p>
+
+                <strong>MANA LLC</strong><br>
+                Colorado, USA<br>
+                Email: info@mana-co.com
+
+            </p>
+
+
+            <div class="email-box">
+
+                <i class="fas fa-envelope"></i>
+
+                <p>
+                    Privacy &amp; MedicalSpace Support
+                </p>
+
+
+                <a href="mailto:info@mana-co.com">
+
+                    info@mana-co.com
+
+                </a>
+
+            </div>
+
+
+            <p style="margin-top:25px;">
+
+                Account deletion requests may also be submitted through
+                the MedicalSpace account deletion page.
+
+            </p>
+
+
+            <div style="text-align:center;">
+
+                <a href="medicalspace-delete-account.html"
+                   class="btn">
+
+                    <i class="fas fa-user-slash"></i>
+
+                    Account &amp; Data Deletion
+
+                </a>
+
+            </div>
+
+
+            <p style="margin-top:25px;">
+
+                For requests concerning a patient's medical records,
+                MANA may require the requester to contact the healthcare
+                provider or organization responsible for the record.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             31
+        ========================== -->
+
+        <div class="content-card" id="mandatory-rights">
+
+            <h2>
+                <span class="section-number">31.</span>
+                No Waiver of Mandatory Rights
+            </h2>
+
+
+            <p>
+
+                Nothing in this Privacy Policy is intended to remove,
+                limit, or waive any right or protection that cannot
+                legally be removed, limited, or waived under applicable law.
+
+            </p>
+
+
+            <p>
+
+                If any provision of this Privacy Policy conflicts with
+                mandatory applicable law, the mandatory law will control
+                to the extent of the conflict.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             32
+        ========================== -->
+
+        <div class="content-card" id="acknowledgment">
+
+            <h2>
+                <span class="section-number">32.</span>
+                Privacy Policy Acknowledgment
+            </h2>
+
+
+            <p>
+
+                By accessing or using MedicalSpace, users acknowledge
+                that they have had the opportunity to review this
+                Privacy Policy and understand how information may be
+                processed as described herein.
+
+            </p>
+
+
+            <p>
+
+                Where applicable law requires consent or another legal
+                basis for processing personal information, MANA will
+                process such information on the applicable lawful basis.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             FINAL LINKS
+        ========================== -->
+
+        <div class="content-card">
+
+            <div style="text-align:center;">
+
+                <a href="medicalspace.html"
+                   class="btn btn-outline">
+
+                    <i class="fas fa-arrow-left"></i>
+
+                    Back to MedicalSpace
+
+                </a>
+
+
+                <a href="terms.html"
+                   class="btn">
+
+                    <i class="fas fa-file-contract"></i>
+
+                    Terms &amp; Conditions
+
+                </a>
+
+
+                <a href="medicalspace-delete-account.html"
+                   class="btn">
+
+                    <i class="fas fa-user-slash"></i>
+
+                    Account &amp; Data Deletion
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+
+            <div class="footer-column">
+
+                <h4>
+                    MANA LLC
+                </h4>
+
+                <p>
+                    Healthcare technology company developing software
+                    solutions for healthcare professionals, clinics,
+                    hospitals, and diagnostic organizations.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    MedicalSpace
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="medicalspace.html">
+                            MedicalSpace
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="medicalspace.html#features">
+                            Features
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="medicalspace.html#ai">
+                            AI
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="medicalspace.html#security">
+                            Security
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Legal
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="privacy.html">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="terms.html">
+                            Terms &amp; Conditions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="medicalspace-delete-account.html">
+                            Account &amp; Data Deletion
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+
+                        <i class="fas fa-envelope"></i>
+
+                        <a href="mailto:info@mana-co.com">
+                            info@mana-co.com
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="fas fa-map-marker-alt"></i>
+
+                        Colorado, USA
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 MANA LLC. All rights reserved.
+                MedicalSpace is a product of MANA LLC.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
 </body>
-
 </html>
-
