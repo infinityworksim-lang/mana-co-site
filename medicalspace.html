@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MedicalSpace | AI-Powered Healthcare Platform</title>
+    <title>MedicalSpace | Healthcare Technology Platform by MANA LLC</title>
 
     <meta name="description"
-          content="MedicalSpace is an AI-powered healthcare platform designed for doctors and healthcare professionals to manage patients, medical records, communication, medical content, and clinical workflows securely.">
+          content="MedicalSpace is a healthcare technology platform by MANA LLC that helps doctors and healthcare professionals manage patients, medical information, communication, imaging, and AI-assisted workflows.">
 
     <meta name="keywords"
-          content="MedicalSpace, healthcare platform, medical software, doctor app, patient management, medical AI, DICOM, healthcare communication">
+          content="MedicalSpace, MANA LLC, healthcare platform, medical software, doctor software, patient management, medical AI, DICOM, healthcare communication">
 
     <meta name="author" content="MANA LLC">
     <meta name="robots" content="index, follow">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="canonical"
+          href="https://mana-co.com/medicalspace.html">
+
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="logo.png">
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,37 +30,60 @@
     <style>
 
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #0f172a;
-            --accent: #06b6d4;
-            --accent-dark: #0891b2;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --gray-light: #e2e8f0;
+            --primary: #4A90E2;
+            --primary-dark: #3678c5;
+
+            --accent: #c0a76e;
+
+            --dark: #17212b;
+            --dark-blue: #0d1722;
+
+            --light: #f7f9fb;
+            --gray: #66727d;
+            --gray-light: #e3e8ed;
+
             --white: #ffffff;
 
             --transition: all 0.3s ease;
-            --shadow: 0 10px 25px rgba(15, 23, 42, 0.10);
-            --radius: 12px;
+
+            --shadow:
+                0 10px 30px rgba(23, 33, 43, 0.10);
+
+            --shadow-lg:
+                0 20px 50px rgba(23, 33, 43, 0.14);
+
+            --radius: 14px;
         }
+
+
+        /* =========================
+           RESET
+        ========================== */
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family:
+                'Segoe UI',
+                Tahoma,
+                Geneva,
+                Verdana,
+                sans-serif;
         }
+
 
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
             background: var(--light);
-            color: var(--secondary);
+            color: var(--dark);
             line-height: 1.7;
         }
+
 
         .container {
             width: 90%;
@@ -62,175 +92,282 @@
             padding: 0 15px;
         }
 
-        h1, h2, h3, h4 {
+
+        h1,
+        h2,
+        h3,
+        h4 {
             font-weight: 700;
             line-height: 1.3;
         }
+
 
         p {
             margin-bottom: 1rem;
         }
 
+
         a {
             text-decoration: none;
         }
+
 
         /* =========================
            BUTTONS
         ========================== */
 
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+
             padding: 14px 30px;
+
             background: var(--primary);
-            color: white;
+            color: var(--white);
+
             border-radius: var(--radius);
+
             font-size: 1rem;
             font-weight: 600;
-            transition: var(--transition);
+
             border: 2px solid var(--primary);
+
+            transition: var(--transition);
         }
+
 
         .btn:hover {
             background: var(--primary-dark);
             border-color: var(--primary-dark);
+
             transform: translateY(-3px);
+
             box-shadow: var(--shadow);
         }
+
 
         .btn-outline {
             background: transparent;
             color: var(--primary);
         }
 
+
         .btn-outline:hover {
-            color: white;
+            color: var(--white);
         }
+
 
         /* =========================
            HEADER
         ========================== */
 
         header {
-            background: rgba(255,255,255,0.98);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            background: rgba(255, 255, 255, 0.98);
+
+            box-shadow:
+                0 2px 12px rgba(0, 0, 0, 0.07);
+
             position: fixed;
+
             width: 100%;
             top: 0;
+
             z-index: 1000;
         }
+
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 0;
+
+            min-height: 86px;
         }
+
 
         .logo {
-            display: flex;
+            display: inline-flex;
             align-items: center;
+
+            gap: 12px;
+
             color: var(--primary);
-            font-size: 1.5rem;
+
+            font-size: 1.3rem;
             font-weight: 800;
+
+            white-space: nowrap;
         }
 
+
         .logo img {
-            height: 70px;
-            width: auto;
-            margin-right: 10px;
+            width: 68px;
+            height: auto;
         }
+
+
+        .logo-name {
+            color: var(--primary);
+
+            font-size: 1.3rem;
+            font-weight: 800;
+
+            letter-spacing: 0.02em;
+        }
+
 
         .nav-links {
             display: flex;
+
             list-style: none;
+
             gap: 30px;
         }
 
+
         .nav-links a {
-            color: var(--secondary);
+            color: var(--dark);
+
             font-weight: 600;
+
             transition: var(--transition);
         }
+
 
         .nav-links a:hover {
             color: var(--primary);
         }
 
+
         .mobile-menu-btn {
             display: none;
+
             background: none;
             border: none;
+
             font-size: 1.5rem;
-            color: var(--secondary);
+
+            color: var(--dark);
+
             cursor: pointer;
         }
+
 
         /* =========================
            HERO
         ========================== */
 
         .hero {
-            padding: 170px 0 100px;
+            padding: 165px 0 105px;
+
             background:
-                radial-gradient(circle at 80% 20%, rgba(6,182,212,0.18), transparent 35%),
-                linear-gradient(135deg, #eff6ff 0%, #ecfeff 100%);
+                radial-gradient(
+                    circle at 82% 18%,
+                    rgba(74, 144, 226, 0.16),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 20% 85%,
+                    rgba(192, 167, 110, 0.09),
+                    transparent 32%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #f2f7fc 0%,
+                    #ffffff 100%
+                );
         }
+
 
         .hero-content {
             display: flex;
+
             align-items: center;
+
             gap: 70px;
         }
+
 
         .hero-text {
             flex: 1;
         }
 
+
         .hero-image {
             flex: 1;
+
             text-align: center;
         }
+
 
         .hero-image img {
             max-width: 100%;
             max-height: 520px;
+
             border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(15,23,42,0.15);
+
+            box-shadow: var(--shadow-lg);
         }
 
+
         .product-badge {
-            display: inline-block;
-            background: rgba(37,99,235,0.10);
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            background:
+                rgba(74, 144, 226, 0.10);
+
             color: var(--primary);
+
             padding: 8px 16px;
+
             border-radius: 30px;
+
             font-size: 0.85rem;
             font-weight: 700;
+
             margin-bottom: 20px;
         }
+
 
         .hero h1 {
             font-size: 3.7rem;
+
             margin-bottom: 20px;
         }
+
 
         .hero h1 span {
             color: var(--primary);
         }
 
+
         .hero p {
             color: var(--gray);
-            font-size: 1.2rem;
-            max-width: 650px;
+
+            font-size: 1.18rem;
+
+            max-width: 680px;
+
             margin-bottom: 30px;
         }
 
+
         .hero-buttons {
             display: flex;
+
             gap: 15px;
+
             flex-wrap: wrap;
         }
+
 
         /* =========================
            SECTION
@@ -240,26 +377,36 @@
             padding: 100px 0;
         }
 
+
         .section-white {
-            background: white;
+            background: var(--white);
         }
+
 
         .section-title {
             text-align: center;
+
             margin-bottom: 60px;
         }
 
+
         .section-title h2 {
             font-size: 2.5rem;
+
             margin-bottom: 15px;
         }
 
+
         .section-title p {
             color: var(--gray);
-            max-width: 750px;
+
+            max-width: 760px;
+
             margin: 0 auto;
+
             font-size: 1.05rem;
         }
+
 
         /* =========================
            INTRO
@@ -267,33 +414,45 @@
 
         .intro {
             display: flex;
+
             align-items: center;
-            gap: 60px;
+
+            gap: 65px;
         }
+
 
         .intro-text {
             flex: 1;
         }
 
+
         .intro-text h2 {
             font-size: 2.4rem;
+
             margin-bottom: 20px;
         }
+
 
         .intro-text p {
             color: var(--gray);
         }
 
+
         .intro-image {
             flex: 1;
+
             text-align: center;
         }
 
+
         .intro-image img {
             max-width: 100%;
+
             border-radius: 18px;
-            box-shadow: var(--shadow);
+
+            box-shadow: var(--shadow-lg);
         }
+
 
         /* =========================
            FEATURES
@@ -301,46 +460,75 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(270px, 1fr));
+
             gap: 25px;
         }
 
+
         .feature-card {
-            background: white;
+            background: var(--white);
+
             padding: 30px;
+
             border: 1px solid var(--gray-light);
+
             border-radius: var(--radius);
+
             transition: var(--transition);
         }
 
+
         .feature-card:hover {
             transform: translateY(-7px);
+
             border-color: var(--primary);
+
             box-shadow: var(--shadow);
         }
+
 
         .feature-icon {
             width: 65px;
             height: 65px;
+
             border-radius: 16px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--primary-dark)
+                );
+
+            color: var(--white);
+
             font-size: 1.6rem;
+
             margin-bottom: 20px;
         }
 
+
         .feature-card h3 {
             margin-bottom: 12px;
+
             font-size: 1.3rem;
         }
 
+
         .feature-card p {
             color: var(--gray);
+
             font-size: 0.95rem;
         }
+
 
         /* =========================
            AI SECTION
@@ -348,60 +536,104 @@
 
         .ai-section {
             background:
-                linear-gradient(135deg, #0f172a 0%, #172554 100%);
-            color: white;
+                linear-gradient(
+                    135deg,
+                    #0d1722 0%,
+                    #14283b 100%
+                );
+
+            color: var(--white);
         }
+
 
         .ai-content {
             display: flex;
+
             align-items: center;
+
             gap: 60px;
         }
+
 
         .ai-text {
             flex: 1;
         }
 
+
         .ai-text h2 {
             font-size: 2.6rem;
+
             margin-bottom: 20px;
         }
 
+
         .ai-text p {
-            color: #cbd5e1;
+            color: #cbd5df;
         }
+
 
         .ai-list {
             list-style: none;
+
             margin-top: 25px;
         }
 
+
         .ai-list li {
             margin-bottom: 15px;
+
             display: flex;
+
             gap: 12px;
-            color: #e2e8f0;
+
+            color: #e5ebf0;
         }
 
+
         .ai-list i {
-            color: #22d3ee;
+            color: var(--accent);
+
             margin-top: 5px;
         }
 
+
         .ai-box {
             flex: 1;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.12);
+
+            background:
+                rgba(255, 255, 255, 0.06);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.12);
+
             border-radius: 20px;
+
             padding: 45px;
+
             text-align: center;
         }
 
+
         .ai-box i {
             font-size: 6rem;
-            color: #22d3ee;
+
+            color: var(--primary);
+
             margin-bottom: 25px;
         }
+
+
+        .ai-box h3 {
+            font-size: 1.5rem;
+        }
+
+
+        .ai-box p {
+            color: #cbd5e1;
+
+            margin-top: 15px;
+        }
+
 
         /* =========================
            SECURITY
@@ -409,119 +641,188 @@
 
         .security-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(260px, 1fr));
+
             gap: 25px;
         }
 
+
         .security-item {
             padding: 30px;
+
             background: var(--light);
+
+            border:
+                1px solid var(--gray-light);
+
             border-radius: var(--radius);
+
             text-align: center;
         }
 
+
         .security-item i {
             font-size: 2.5rem;
+
             color: var(--primary);
+
             margin-bottom: 20px;
         }
+
 
         .security-item h3 {
             margin-bottom: 10px;
         }
 
+
         .security-item p {
             color: var(--gray);
+
             font-size: 0.95rem;
         }
+
 
         /* =========================
            CTA
         ========================== */
 
         .cta {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--primary-dark)
+                );
+
+            color: var(--white);
+
             text-align: center;
         }
 
+
         .cta h2 {
             font-size: 2.7rem;
+
             margin-bottom: 15px;
         }
 
+
         .cta p {
-            max-width: 700px;
+            max-width: 720px;
+
             margin: 0 auto 30px;
+
             opacity: 0.95;
         }
 
+
         .cta .btn {
-            background: white;
+            background: var(--white);
+
             color: var(--primary);
-            border-color: white;
+
+            border-color: var(--white);
         }
 
+
         .cta .btn:hover {
-            background: #f8fafc;
+            background: #f5f8fb;
+
+            color: var(--primary-dark);
+
             transform: translateY(-3px);
         }
+
 
         /* =========================
            FOOTER
         ========================== */
 
         footer {
-            background: var(--secondary);
-            color: white;
+            background: var(--dark-blue);
+
+            color: var(--white);
+
             padding: 60px 0 20px;
         }
 
+
         .footer-content {
             display: flex;
+
             justify-content: space-between;
+
             flex-wrap: wrap;
+
             gap: 40px;
+
             margin-bottom: 40px;
         }
 
+
         .footer-column {
             flex: 1;
+
             min-width: 220px;
         }
+
 
         .footer-column h4 {
             margin-bottom: 20px;
         }
 
+
         .footer-column p {
             color: #cbd5e1;
         }
+
 
         .footer-links {
             list-style: none;
         }
 
+
         .footer-links li {
             margin-bottom: 10px;
+
+            color: #cbd5e1;
         }
+
 
         .footer-links a {
             color: #cbd5e1;
+
             transition: var(--transition);
         }
 
+
         .footer-links a:hover {
-            color: var(--accent);
+            color: var(--primary);
         }
 
+
+        .footer-links i {
+            width: 20px;
+
+            margin-right: 5px;
+        }
+
+
         .copyright {
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top:
+                1px solid rgba(255, 255, 255, 0.10);
+
             padding-top: 20px;
+
             text-align: center;
+
             color: #94a3b8;
+
             font-size: 0.9rem;
         }
+
 
         /* =========================
            RESPONSIVE
@@ -535,49 +836,70 @@
                 flex-direction: column;
             }
 
+
             .hero {
                 padding-top: 140px;
             }
 
+
             .hero-text {
                 text-align: center;
             }
+
 
             .hero p {
                 margin-left: auto;
                 margin-right: auto;
             }
 
+
             .hero-buttons {
                 justify-content: center;
             }
+
 
             .hero h1 {
                 font-size: 2.8rem;
             }
 
+
             .mobile-menu-btn {
                 display: block;
             }
 
+
             .nav-links {
                 position: fixed;
-                top: 94px;
+
+                top: 86px;
+
                 left: -100%;
+
                 width: 80%;
-                height: calc(100vh - 94px);
-                background: white;
+
+                height:
+                    calc(100vh - 86px);
+
+                background: var(--white);
+
                 flex-direction: column;
+
                 padding: 30px;
+
                 gap: 20px;
+
                 transition: 0.4s;
-                box-shadow: 5px 0 20px rgba(0,0,0,0.1);
+
+                box-shadow:
+                    5px 0 20px rgba(0, 0, 0, 0.10);
             }
+
 
             .nav-links.active {
                 left: 0;
             }
         }
+
 
         @media (max-width: 600px) {
 
@@ -585,31 +907,89 @@
                 width: 94%;
             }
 
+
+            .navbar {
+                min-height: 78px;
+            }
+
+
+            .logo img {
+                width: 58px;
+            }
+
+
+            .logo-name {
+                font-size: 1.1rem;
+            }
+
+
+            .hero {
+                padding-top: 125px;
+            }
+
+
             .hero h1 {
                 font-size: 2.3rem;
             }
+
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+
+            .section {
+                padding: 75px 0;
+            }
+
 
             .section-title h2 {
                 font-size: 2rem;
             }
 
+
+            .intro-text h2 {
+                font-size: 2rem;
+            }
+
+
             .ai-text h2 {
                 font-size: 2rem;
             }
+
 
             .cta h2 {
                 font-size: 2.1rem;
             }
 
-            .logo img {
-                height: 55px;
+
+            .ai-box {
+                padding: 35px 25px;
+            }
+
+
+            .ai-box i {
+                font-size: 4.5rem;
+            }
+
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+
+            .hero-buttons .btn {
+                width: 100%;
             }
         }
 
     </style>
+
 </head>
 
+
 <body>
+
 
 <!-- =========================
      HEADER
@@ -621,41 +1001,70 @@
 
         <nav class="navbar">
 
-            <a href="index.html" class="logo">
-                <img src="logo.png" alt="MANA LLC Logo">
-                MANA LLC
+            <a href="index.html"
+               class="logo"
+               aria-label="MANA LLC home">
+
+                <img
+                    src="logo.png"
+                    alt="MANA LLC logo">
+
+                <span class="logo-name">
+                    MANA LLC
+                </span>
+
             </a>
+
 
             <ul class="nav-links">
 
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html">
+                        Home
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#features">Features</a>
+                    <a href="#features">
+                        Features
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#ai">AI</a>
+                    <a href="#ai">
+                        AI
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#security">Security</a>
+                    <a href="#security">
+                        Security
+                    </a>
                 </li>
 
                 <li>
-                    <a href="privacy.html">Privacy</a>
+                    <a href="privacy.html">
+                        Privacy
+                    </a>
                 </li>
 
                 <li>
-                    <a href="terms.html">Terms</a>
+                    <a href="terms.html">
+                        Terms
+                    </a>
                 </li>
 
             </ul>
 
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open navigation menu"
+                type="button">
+
                 <i class="fas fa-bars"></i>
+
             </button>
 
         </nav>
@@ -675,33 +1084,50 @@
 
         <div class="hero-content">
 
+
             <div class="hero-text">
 
                 <div class="product-badge">
+
                     <i class="fas fa-hospital-user"></i>
-                    MANA Healthcare Platform
+
+                    MANA Flagship Healthcare Platform
+
                 </div>
+
 
                 <h1>
                     Meet <span>MedicalSpace</span>
                 </h1>
 
+
                 <p>
-                    An AI-powered healthcare platform designed for doctors
-                    and healthcare professionals to manage patients,
-                    medical information, communication, and clinical
-                    workflows from one secure environment.
+                    A healthcare technology platform designed for
+                    doctors and healthcare professionals to manage
+                    patients, medical information, communication,
+                    imaging, and AI-assisted workflows from one
+                    connected environment.
                 </p>
+
 
                 <div class="hero-buttons">
 
-                    <a href="#features" class="btn">
+                    <a
+                        href="#features"
+                        class="btn">
+
                         Explore MedicalSpace
+
                     </a>
 
-                   <a href="index.html#contact" class="btn btn-outline">
-    Contact MANA
-</a>
+
+                    <a
+                        href="index.html#contact"
+                        class="btn btn-outline">
+
+                        Contact MANA
+
+                    </a>
 
                 </div>
 
@@ -710,10 +1136,12 @@
 
             <div class="hero-image">
 
-                <img src="1.png"
-                     alt="MedicalSpace Healthcare Platform">
+                <img
+                    src="1.png"
+                    alt="MedicalSpace healthcare platform">
 
             </div>
+
 
         </div>
 
@@ -732,11 +1160,13 @@
 
         <div class="intro">
 
+
             <div class="intro-text">
 
                 <h2>
                     One Platform for Modern Healthcare
                 </h2>
+
 
                 <p>
                     MedicalSpace brings essential healthcare workflows
@@ -744,15 +1174,17 @@
                     professionals.
                 </p>
 
+
                 <p>
                     Doctors can manage patient information, clinical
                     documentation, communication, medical content,
-                    imaging, and AI-assisted workflows while maintaining
-                    control over their professional and patient data.
+                    imaging, and AI-assisted workflows within a
+                    connected healthcare environment.
                 </p>
 
+
                 <p>
-                    MedicalSpace is designed primarily for healthcare
+                    MedicalSpace is primarily designed for healthcare
                     professionals and authorized medical-industry users.
                 </p>
 
@@ -761,10 +1193,12 @@
 
             <div class="intro-image">
 
-                <img src="2.png"
-                     alt="MedicalSpace healthcare software">
+                <img
+                    src="2.png"
+                    alt="MedicalSpace healthcare software">
 
             </div>
+
 
         </div>
 
@@ -777,9 +1211,12 @@
      FEATURES
 ========================== -->
 
-<section class="section" id="features">
+<section
+    class="section"
+    id="features">
 
     <div class="container">
+
 
         <div class="section-title">
 
@@ -798,22 +1235,30 @@
         <div class="features-grid">
 
 
+            <!-- Patient Management -->
+
             <div class="feature-card">
 
                 <div class="feature-icon">
                     <i class="fas fa-user-injured"></i>
                 </div>
 
-                <h3>Patient Management</h3>
+
+                <h3>
+                    Patient Management
+                </h3>
+
 
                 <p>
-                    Organize patient information, visits, clinical notes,
-                    prescriptions, follow-ups, and other healthcare
-                    information in one place.
+                    Organize patient information, visits, clinical
+                    notes, prescriptions, follow-ups, and other
+                    healthcare information in one place.
                 </p>
 
             </div>
 
+
+            <!-- Medical Records -->
 
             <div class="feature-card">
 
@@ -821,7 +1266,11 @@
                     <i class="fas fa-file-medical"></i>
                 </div>
 
-                <h3>Medical Records</h3>
+
+                <h3>
+                    Medical Records
+                </h3>
+
 
                 <p>
                     Manage clinical documentation, medical reports,
@@ -832,21 +1281,29 @@
             </div>
 
 
+            <!-- DICOM -->
+
             <div class="feature-card">
 
                 <div class="feature-icon">
                     <i class="fas fa-x-ray"></i>
                 </div>
 
-                <h3>DICOM & Medical Imaging</h3>
+
+                <h3>
+                    DICOM & Medical Imaging
+                </h3>
+
 
                 <p>
-                    Work with medical imaging and DICOM content as part
-                    of supported healthcare workflows.
+                    Work with medical imaging and DICOM content as
+                    part of supported healthcare workflows.
                 </p>
 
             </div>
 
+
+            <!-- Communication -->
 
             <div class="feature-card">
 
@@ -854,24 +1311,34 @@
                     <i class="fas fa-comments"></i>
                 </div>
 
-                <h3>Professional Communication</h3>
+
+                <h3>
+                    Professional Communication
+                </h3>
+
 
                 <p>
-                    Communicate securely with other healthcare
-                    professionals using messaging and supported
-                    communication features.
+                    Communicate with other healthcare professionals
+                    through messaging and supported communication
+                    features.
                 </p>
 
             </div>
 
 
+            <!-- Network -->
+
             <div class="feature-card">
 
                 <div class="feature-icon">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-user-md"></i>
                 </div>
 
-                <h3>Medical Professional Network</h3>
+
+                <h3>
+                    Medical Professional Network
+                </h3>
+
 
                 <p>
                     Connect with other doctors, share professional
@@ -882,22 +1349,30 @@
             </div>
 
 
+            <!-- Voice -->
+
             <div class="feature-card">
 
                 <div class="feature-icon">
                     <i class="fas fa-microphone"></i>
                 </div>
 
-                <h3>Voice & Speech</h3>
+
+                <h3>
+                    Voice & Speech
+                </h3>
+
 
                 <p>
                     Use supported voice features including voice
                     messages, speech-to-text, and AI voice interaction
-                    to improve documentation and communication.
+                    to support documentation and communication.
                 </p>
 
             </div>
 
+
+            <!-- Translation -->
 
             <div class="feature-card">
 
@@ -905,7 +1380,11 @@
                     <i class="fas fa-language"></i>
                 </div>
 
-                <h3>Medical Translation</h3>
+
+                <h3>
+                    Medical Translation
+                </h3>
+
 
                 <p>
                     Translate supported medical content and
@@ -915,17 +1394,23 @@
             </div>
 
 
+            <!-- Audio / Video -->
+
             <div class="feature-card">
 
                 <div class="feature-icon">
                     <i class="fas fa-video"></i>
                 </div>
 
-                <h3>Audio & Video Communication</h3>
+
+                <h3>
+                    Audio & Video Communication
+                </h3>
+
 
                 <p>
-                    Support healthcare communication through available
-                    audio and video communication features.
+                    Support healthcare communication through
+                    available audio and video communication features.
                 </p>
 
             </div>
@@ -942,11 +1427,14 @@
      AI
 ========================== -->
 
-<section class="section ai-section" id="ai">
+<section
+    class="section ai-section"
+    id="ai">
 
     <div class="container">
 
         <div class="ai-content">
+
 
             <div class="ai-text">
 
@@ -954,47 +1442,88 @@
                     AI-Assisted Healthcare Workflows
                 </h2>
 
+
                 <p>
                     MedicalSpace includes AI-powered functionality
                     designed to assist healthcare professionals with
-                    information processing, documentation, communication,
-                    and clinical workflows.
+                    information processing, documentation,
+                    communication, and clinical workflows.
                 </p>
+
 
                 <ul class="ai-list">
 
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        AI-assisted medical information and clinical workflows
-                    </li>
 
                     <li>
+
                         <i class="fas fa-check-circle"></i>
-                        Voice-based AI interaction
+
+                        <span>
+                            AI-assisted medical information and
+                            clinical workflows
+                        </span>
+
                     </li>
 
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Medical text processing and translation
-                    </li>
 
                     <li>
+
                         <i class="fas fa-check-circle"></i>
-                        Assistance with clinical documentation
+
+                        <span>
+                            Voice-based AI interaction
+                        </span>
+
                     </li>
 
+
                     <li>
+
                         <i class="fas fa-check-circle"></i>
-                        Support for healthcare information workflows
+
+                        <span>
+                            Medical text processing and translation
+                        </span>
+
                     </li>
+
+
+                    <li>
+
+                        <i class="fas fa-check-circle"></i>
+
+                        <span>
+                            Assistance with clinical documentation
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="fas fa-check-circle"></i>
+
+                        <span>
+                            Support for healthcare information workflows
+                        </span>
+
+                    </li>
+
 
                 </ul>
 
-                <p style="margin-top:25px; font-size:0.9rem;">
+
+                <p
+                    style="
+                        margin-top:25px;
+                        font-size:0.9rem;
+                    ">
+
                     AI-generated information is intended to assist
                     qualified healthcare professionals and does not
                     replace professional medical judgment, diagnosis,
                     treatment, or clinical decision-making.
+
                 </p>
 
             </div>
@@ -1004,16 +1533,19 @@
 
                 <i class="fas fa-brain"></i>
 
+
                 <h3>
                     Intelligent Healthcare Assistance
                 </h3>
 
-                <p style="color:#cbd5e1; margin-top:15px;">
+
+                <p>
                     Designed to help healthcare professionals work
                     with medical information more efficiently.
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1026,9 +1558,12 @@
      SECURITY
 ========================== -->
 
-<section class="section section-white" id="security">
+<section
+    class="section section-white"
+    id="security">
 
     <div class="container">
+
 
         <div class="section-title">
 
@@ -1037,8 +1572,9 @@
             </h2>
 
             <p>
-                MedicalSpace is designed with healthcare privacy,
-                security, and controlled access in mind.
+                MedicalSpace is designed with privacy, security,
+                controlled access, and responsible data handling
+                in mind.
             </p>
 
         </div>
@@ -1047,13 +1583,17 @@
         <div class="security-grid">
 
 
+            <!-- Secure Data -->
+
             <div class="security-item">
 
                 <i class="fas fa-lock"></i>
 
+
                 <h3>
                     Secure Data Handling
                 </h3>
+
 
                 <p>
                     Security measures are used to protect information
@@ -1063,51 +1603,64 @@
             </div>
 
 
+            <!-- Access -->
+
             <div class="security-item">
 
                 <i class="fas fa-user-shield"></i>
+
 
                 <h3>
                     Access Control
                 </h3>
 
+
                 <p>
                     Access to healthcare information is controlled
-                    according to user roles, permissions, and supported
-                    authorization mechanisms.
+                    according to user roles, permissions, and
+                    supported authorization mechanisms.
                 </p>
 
             </div>
 
 
+            <!-- Data -->
+
             <div class="security-item">
 
                 <i class="fas fa-database"></i>
+
 
                 <h3>
                     Data Management
                 </h3>
 
+
                 <p>
                     Medical and professional information is handled
-                    according to the applicable MedicalSpace privacy
+                    according to applicable MedicalSpace privacy
                     and data-management policies.
                 </p>
 
             </div>
 
 
+            <!-- Privacy -->
+
             <div class="security-item">
 
                 <i class="fas fa-shield-alt"></i>
+
 
                 <h3>
                     Privacy by Design
                 </h3>
 
+
                 <p>
-                    MedicalSpace is developed with privacy and security
-                    considerations throughout its healthcare workflows.
+                    MedicalSpace is developed with privacy and
+                    security considerations throughout its
+                    healthcare workflows.
                 </p>
 
             </div>
@@ -1121,28 +1674,37 @@
 
 
 <!-- =========================
-     DOWNLOAD / ACCESS
+     ACCESS / CTA
 ========================== -->
 
 <section class="section cta">
 
     <div class="container">
 
+
         <h2>
             Bring Your Healthcare Workflow Together
         </h2>
 
+
         <p>
-            MedicalSpace provides healthcare professionals with a
-            unified environment for patient management, communication,
-            medical information, and AI-assisted workflows.
+            MedicalSpace provides healthcare professionals with
+            a connected environment for patient management,
+            communication, medical information, imaging, and
+            AI-assisted workflows.
         </p>
 
-        <a href="https://play.google.com/"
-           class="btn">
+
+        <a
+            href="https://play.google.com/"
+            class="btn">
+
             <i class="fab fa-google-play"></i>
-            Google Play
+
+            MedicalSpace on Google Play
+
         </a>
+
 
     </div>
 
@@ -1157,50 +1719,77 @@
 
     <div class="container">
 
+
         <div class="footer-content">
 
 
+            <!-- MANA -->
+
             <div class="footer-column">
 
-                <h4>MANA LLC</h4>
+                <h4>
+                    MANA LLC
+                </h4>
+
 
                 <p>
-                    Healthcare technology company developing
-                    software solutions for healthcare professionals,
-                    clinics, hospitals, and diagnostic organizations.
+                    A U.S.-based healthcare technology company
+                    developing software solutions for healthcare
+                    professionals and healthcare organizations.
                 </p>
 
             </div>
 
 
+            <!-- MedicalSpace -->
+
             <div class="footer-column">
 
-                <h4>MedicalSpace</h4>
+                <h4>
+                    MedicalSpace
+                </h4>
+
 
                 <ul class="footer-links">
 
-                    <li>
-                        <a href="#features">Features</a>
-                    </li>
 
                     <li>
-                        <a href="#ai">AI</a>
+                        <a href="#features">
+                            Features
+                        </a>
                     </li>
 
+
                     <li>
-                        <a href="#security">Security</a>
+                        <a href="#ai">
+                            AI
+                        </a>
                     </li>
+
+
+                    <li>
+                        <a href="#security">
+                            Privacy & Security
+                        </a>
+                    </li>
+
 
                 </ul>
 
             </div>
 
 
+            <!-- Legal -->
+
             <div class="footer-column">
 
-                <h4>Legal</h4>
+                <h4>
+                    Legal
+                </h4>
+
 
                 <ul class="footer-links">
+
 
                     <li>
                         <a href="privacy.html">
@@ -1208,11 +1797,13 @@
                         </a>
                     </li>
 
+
                     <li>
                         <a href="terms.html">
                             Terms & Conditions
                         </a>
                     </li>
+
 
                     <li>
                         <a href="medicalspace-delete-account.html">
@@ -1220,32 +1811,51 @@
                         </a>
                     </li>
 
+
                 </ul>
 
             </div>
 
+
+            <!-- Contact -->
 
             <div class="footer-column">
 
-                <h4>Contact</h4>
+                <h4>
+                    Contact
+                </h4>
+
 
                 <ul class="footer-links">
 
-                   <li>
-    <i class="fas fa-envelope"></i>
-    <a href="mailto:info@mana-co.com">
-        info@mana-co.com
-    </a>
-</li>
 
                     <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        Colorado, USA
+
+                        <i class="fas fa-envelope"></i>
+
+                        <a
+                            href="mailto:info@mana-co.com">
+
+                            info@mana-co.com
+
+                        </a>
+
                     </li>
+
+
+                    <li>
+
+                        <i class="fas fa-map-marker-alt"></i>
+
+                        Colorado, USA
+
+                    </li>
+
 
                 </ul>
 
             </div>
+
 
         </div>
 
@@ -1258,6 +1868,7 @@
             </p>
 
         </div>
+
 
     </div>
 
@@ -1277,33 +1888,43 @@
         document.querySelector('.nav-links');
 
 
-    mobileMenuBtn.addEventListener('click', function () {
+    mobileMenuBtn.addEventListener(
+        'click',
+        function () {
 
-        navLinks.classList.toggle('active');
-
-        mobileMenuBtn.innerHTML =
-            navLinks.classList.contains('active')
-            ? '<i class="fas fa-times"></i>'
-            : '<i class="fas fa-bars"></i>';
-
-    });
+            navLinks.classList.toggle('active');
 
 
-    document.querySelectorAll('.nav-links a')
+            mobileMenuBtn.innerHTML =
+                navLinks.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+
+        }
+    );
+
+
+    document
+        .querySelectorAll('.nav-links a')
         .forEach(function (link) {
 
-            link.addEventListener('click', function () {
+            link.addEventListener(
+                'click',
+                function () {
 
-                navLinks.classList.remove('active');
+                    navLinks.classList.remove('active');
 
-                mobileMenuBtn.innerHTML =
-                    '<i class="fas fa-bars"></i>';
 
-            });
+                    mobileMenuBtn.innerHTML =
+                        '<i class="fas fa-bars"></i>';
+
+                }
+            );
 
         });
 
 </script>
+
 
 </body>
 </html>
