@@ -3,32 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MANA LLC | Healthcare Software Solutions</title>
-    <meta name="description" content="MANA LLC provides advanced healthcare software solutions including PACS, DICOM, RIS, HIS, and secure WhatsApp Business API integration for healthcare providers worldwide.">
 
-<meta name="keywords" content="Healthcare Software, PACS, DICOM, RIS, HIS, WhatsApp Business API Healthcare, Medical Software Solutions">
+    <title>MedicalSpace | MANA LLC Healthcare Technology</title>
 
-<meta name="author" content="MANA LLC">
-<meta name="robots" content="index, follow">
-<link rel="icon" type="image/png" sizes="32x32" href="/logo.png">
+    <meta name="description"
+          content="MedicalSpace is MANA LLC's healthcare platform for medical professionals, clinics, and healthcare organizations, combining patient management, AI-assisted tools, medical records, communication, imaging, and professional collaboration.">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="keywords"
+          content="MedicalSpace, MANA LLC, healthcare software, medical software, physician platform, patient management, AI healthcare, medical records, DICOM, PACS, RIS, HIS, healthcare technology">
+
+    <meta name="author" content="MANA LLC">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="MedicalSpace | MANA LLC">
+    <meta property="og:description"
+          content="A connected healthcare platform built for medical professionals and healthcare organizations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mana-co.com/">
+    <meta property="og:image" content="https://mana-co.com/1.png">
+
+    <link rel="canonical" href="https://mana-co.com/">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo.png">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
     <style>
+
         :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
             --secondary: #0f172a;
             --accent: #06b6d4;
             --accent-dark: #0891b2;
+
             --light: #f8fafc;
             --gray: #64748b;
+            --gray-dark: #475569;
             --gray-light: #e2e8f0;
+
             --success: #10b981;
-            --transition: all 0.3s ease;
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --radius: 8px;
+
+            --medical-blue: #2563eb;
+            --medical-cyan: #06b6d4;
+
             --whatsapp-green: #25D366;
             --whatsapp-dark: #128C7E;
+
+            --transition: all 0.3s ease;
+
+            --shadow: 0 10px 30px rgba(15, 23, 42, 0.10);
+            --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.14);
+
+            --radius: 12px;
+            --radius-lg: 20px;
         }
 
         * {
@@ -43,9 +75,23 @@
         }
 
         body {
-            background-color: var(--light);
+            background: var(--light);
             color: var(--secondary);
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            padding-left: 20px;
         }
 
         .container {
@@ -55,61 +101,57 @@
             padding: 0 15px;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-weight: 700;
             line-height: 1.3;
-            margin-bottom: 1rem;
         }
 
-        h1 { font-size: 3.5rem; }
-        h2 { font-size: 2.5rem; }
-        h3 { font-size: 2rem; }
-        h4 { font-size: 1.5rem; }
-
-        p { margin-bottom: 1.2rem; }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
+        p {
+            margin-bottom: 1.2rem;
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
 
         .btn {
-            display: inline-block;
-            padding: 14px 32px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+
+            padding: 14px 28px;
+
             background: var(--primary);
             color: white;
-            border: none;
-            border-radius: var(--radius);
+
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+
             font-size: 1rem;
-            font-weight: 600;
+            font-weight: 700;
+
             cursor: pointer;
             transition: var(--transition);
-            text-decoration: none;
+
             text-align: center;
         }
 
         .btn:hover {
             background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            color: white;
             transform: translateY(-3px);
             box-shadow: var(--shadow);
         }
 
         .btn-outline {
             background: transparent;
-            border: 2px solid var(--primary);
             color: var(--primary);
         }
 
@@ -118,62 +160,145 @@
             color: white;
         }
 
+        .btn-light {
+            background: white;
+            border-color: white;
+            color: var(--primary);
+        }
+
+        .btn-light:hover {
+            background: #f8fafc;
+            border-color: #f8fafc;
+            color: var(--primary-dark);
+        }
+
         .btn-whatsapp {
             background: var(--whatsapp-green);
+            border-color: var(--whatsapp-green);
             color: white;
         }
 
         .btn-whatsapp:hover {
             background: var(--whatsapp-dark);
+            border-color: var(--whatsapp-dark);
         }
 
-        /* Header */
+        /* =========================================================
+           SECTION TITLES
+        ========================================================= */
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--secondary);
+            font-size: 2.5rem;
+        }
+
+        .section-subtitle {
+            max-width: 760px;
+            margin: 0 auto 50px;
+            text-align: center;
+            color: var(--gray);
+            font-size: 1.08rem;
+        }
+
+        .section-title-wrap {
+            margin-bottom: 55px;
+        }
+
+        .section-title-wrap .section-title {
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title-wrap .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            width: 70px;
+            height: 4px;
+
+            background: linear-gradient(
+                90deg,
+                var(--primary),
+                var(--accent)
+            );
+
+            border-radius: 10px;
+        }
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
         header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
-            width: 100%;
             top: 0;
+            left: 0;
+            width: 100%;
+
+            background: rgba(255, 255, 255, 0.97);
+
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+
             z-index: 1000;
+
+            transition: var(--transition);
         }
 
         .navbar {
+            min-height: 86px;
+
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            justify-content: space-between;
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
             display: flex;
             align-items: center;
+
+            color: var(--primary);
+
+            font-size: 1.55rem;
+            font-weight: 800;
+
+            white-space: nowrap;
         }
 
-        .logo i {
+        .logo img {
+            height: 68px;
+            width: auto;
             margin-right: 10px;
-            color: var(--accent);
         }
 
         .nav-links {
             display: flex;
+            align-items: center;
+
             list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
         .nav-links li {
-            margin-left: 30px;
+            margin-left: 26px;
         }
 
         .nav-links a {
-            text-decoration: none;
-            color: var(--secondary);
-            font-weight: 600;
-            transition: var(--transition);
-            padding: 5px 0;
             position: relative;
+
+            color: var(--secondary);
+
+            font-size: 0.95rem;
+            font-weight: 650;
+
+            padding: 8px 0;
+
+            transition: var(--transition);
         }
 
         .nav-links a:hover {
@@ -182,12 +307,16 @@
 
         .nav-links a::after {
             content: '';
+
             position: absolute;
-            bottom: 0;
             left: 0;
+            bottom: 0;
+
             width: 0;
             height: 2px;
+
             background: var(--primary);
+
             transition: var(--transition);
         }
 
@@ -195,311 +324,1025 @@
             width: 100%;
         }
 
+        .nav-links .medicalspace-nav a {
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .nav-links .medicalspace-nav a::before {
+            content: '';
+            display: inline-block;
+
+            width: 7px;
+            height: 7px;
+
+            margin-right: 6px;
+
+            border-radius: 50%;
+
+            background: var(--accent);
+        }
+
         .mobile-menu-btn {
             display: none;
-            background: none;
+
+            background: transparent;
             border: none;
-            font-size: 1.5rem;
+
+            font-size: 1.6rem;
             color: var(--secondary);
+
             cursor: pointer;
         }
 
-        /* Hero */
+        /* =========================================================
+           HERO
+        ========================================================= */
+
         .hero {
-            padding: 180px 0 100px;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            position: relative;
+
+            padding: 165px 0 95px;
+
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(6, 182, 212, 0.15),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 15% 80%,
+                    rgba(37, 99, 235, 0.10),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #f0f9ff 0%,
+                    #e0f2fe 100%
+                );
+
             overflow: hidden;
         }
 
+        .hero::before {
+            content: '';
+
+            position: absolute;
+
+            width: 420px;
+            height: 420px;
+
+            border-radius: 50%;
+
+            background: rgba(37, 99, 235, 0.05);
+
+            top: -220px;
+            right: -150px;
+        }
+
         .hero-content {
-            display: flex;
+            position: relative;
+            z-index: 1;
+
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+
             align-items: center;
-            justify-content: space-between;
-            gap: 40px;
+
+            gap: 70px;
         }
 
-        .hero-text {
-            flex: 1;
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 8px 15px;
+
+            border-radius: 30px;
+
+            background: rgba(37, 99, 235, 0.10);
+
+            color: var(--primary);
+
+            font-size: 0.82rem;
+            font-weight: 800;
+
+            letter-spacing: 0.4px;
+
+            margin-bottom: 20px;
         }
 
-        .hero-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
+        .hero-badge i {
+            color: var(--accent);
         }
 
         .hero h1 {
-            margin-bottom: 20px;
+            font-size: 3.55rem;
+            margin-bottom: 22px;
             color: var(--secondary);
         }
 
-        .hero p {
-            font-size: 1.2rem;
+        .hero h1 .highlight {
+            color: var(--primary);
+        }
+
+        .hero h1 .gradient {
+            background: linear-gradient(
+                90deg,
+                var(--primary),
+                var(--accent)
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .hero-text > p {
+            max-width: 650px;
+
+            font-size: 1.18rem;
             color: var(--gray);
+
             margin-bottom: 30px;
+        }
+
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            margin-bottom: 32px;
+        }
+
+        .hero-feature {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+
+            padding: 7px 11px;
+
+            background: rgba(255, 255, 255, 0.72);
+
+            border: 1px solid rgba(37, 99, 235, 0.12);
+
+            border-radius: 30px;
+
+            color: var(--gray-dark);
+
+            font-size: 0.84rem;
+            font-weight: 600;
+        }
+
+        .hero-feature i {
+            color: var(--success);
         }
 
         .cta-buttons {
             display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image::before {
+            content: '';
+
+            position: absolute;
+
+            width: 90%;
+            height: 85%;
+
+            left: 5%;
+            top: 8%;
+
+            background: linear-gradient(
+                135deg,
+                rgba(37, 99, 235, 0.15),
+                rgba(6, 182, 212, 0.15)
+            );
+
+            filter: blur(25px);
+            border-radius: 30px;
+
+            z-index: 0;
+        }
+
+        .hero-image img {
+            position: relative;
+            z-index: 1;
+
+            max-width: 100%;
+
+            border-radius: 18px;
+
+            box-shadow: 0 25px 60px rgba(15, 23, 42, 0.18);
+        }
+
+        /* =========================================================
+           MEDICALSPACE FEATURED
+        ========================================================= */
+
+        .medicalspace-feature {
+            padding: 105px 0;
+
+            background: white;
+
+            position: relative;
+        }
+
+        .medicalspace-feature::before {
+            content: '';
+
+            position: absolute;
+
+            left: 0;
+            top: 0;
+
+            width: 100%;
+            height: 5px;
+
+            background: linear-gradient(
+                90deg,
+                var(--primary),
+                var(--accent)
+            );
+        }
+
+        .medicalspace-main {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 65px;
+
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8fbff 0%,
+                    #ffffff 100%
+                );
+
+            border: 1px solid #dbeafe;
+
+            border-radius: 24px;
+
+            padding: 55px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .medicalspace-visual {
+            position: relative;
+
+            min-height: 390px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 22px;
+
+            background:
+                radial-gradient(
+                    circle at 30% 30%,
+                    rgba(6, 182, 212, 0.25),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #172554
+                );
+
+            overflow: hidden;
+        }
+
+        .medicalspace-visual::before {
+            content: '';
+
+            position: absolute;
+
+            width: 280px;
+            height: 280px;
+
+            border-radius: 50%;
+
+            background: rgba(37, 99, 235, 0.25);
+
+            filter: blur(10px);
+        }
+
+        .medicalspace-symbol {
+            position: relative;
+            z-index: 2;
+
+            width: 180px;
+            height: 180px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 45px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--accent)
+                );
+
+            color: white;
+
+            font-size: 5rem;
+
+            box-shadow:
+                0 25px 60px rgba(6, 182, 212, 0.25);
+        }
+
+        .floating-card {
+            position: absolute;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 12px 15px;
+
+            border-radius: 12px;
+
+            background: rgba(255, 255, 255, 0.96);
+
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+
+            color: var(--secondary);
+
+            font-size: 0.82rem;
+            font-weight: 700;
+
+            z-index: 3;
+        }
+
+        .floating-card i {
+            color: var(--primary);
+        }
+
+        .floating-card.one {
+            top: 35px;
+            left: 25px;
+        }
+
+        .floating-card.two {
+            right: 25px;
+            top: 90px;
+        }
+
+        .floating-card.three {
+            left: 35px;
+            bottom: 40px;
+        }
+
+        .floating-card.four {
+            right: 30px;
+            bottom: 35px;
+        }
+
+        .medicalspace-content .product-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 7px 13px;
+
+            background: #eff6ff;
+
+            color: var(--primary);
+
+            border-radius: 20px;
+
+            font-size: 0.78rem;
+            font-weight: 800;
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 15px;
+        }
+
+        .medicalspace-content h2 {
+            font-size: 2.65rem;
+            color: var(--secondary);
+            margin-bottom: 18px;
+        }
+
+        .medicalspace-content h2 span {
+            color: var(--primary);
+        }
+
+        .medicalspace-content > p {
+            color: var(--gray);
+            font-size: 1.05rem;
+        }
+
+        .medicalspace-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
             gap: 15px;
+
+            margin: 28px 0 32px;
+
+            list-style: none;
+            padding: 0;
+        }
+
+        .medicalspace-grid li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+
+            color: var(--gray-dark);
+
+            font-size: 0.92rem;
+        }
+
+        .medicalspace-grid li i {
+            margin-top: 4px;
+
+            color: var(--success);
+        }
+
+        .product-links {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
             flex-wrap: wrap;
         }
 
-        /* WhatsApp Feature */
-        .whatsapp-feature {
-            background: linear-gradient(135deg, var(--whatsapp-green) 0%, var(--whatsapp-dark) 100%);
-            color: white;
-            padding: 60px 0;
-            margin: 50px 0;
+        /* =========================================================
+           PLATFORM HIGHLIGHTS
+        ========================================================= */
+
+        .platform-highlights {
+            padding: 90px 0;
+
+            background: #f8fafc;
         }
 
-        .whatsapp-feature .container {
+        .platform-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .platform-card {
+            padding: 28px 24px;
+
+            background: white;
+
+            border: 1px solid var(--gray-light);
+
+            border-radius: var(--radius);
+
+            transition: var(--transition);
+        }
+
+        .platform-card:hover {
+            transform: translateY(-7px);
+
+            border-color: #bfdbfe;
+
+            box-shadow: var(--shadow);
+        }
+
+        .platform-icon {
+            width: 52px;
+            height: 52px;
+
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 30px;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: linear-gradient(
+                135deg,
+                #eff6ff,
+                #ecfeff
+            );
+
+            color: var(--primary);
+
+            font-size: 1.35rem;
+
+            margin-bottom: 18px;
         }
 
-        .whatsapp-text {
-            flex: 2;
+        .platform-card h4 {
+            font-size: 1.05rem;
+            margin-bottom: 9px;
         }
 
-        .whatsapp-icon {
-            flex: 1;
-            text-align: center;
-            font-size: 8rem;
-            color: white;
-            opacity: 0.9;
+        .platform-card p {
+            color: var(--gray);
+
+            font-size: 0.9rem;
+
+            margin-bottom: 0;
         }
 
-        .compliance-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
-            border-radius: 30px;
-            margin-top: 20px;
-            font-weight: 600;
-        }
+        /* =========================================================
+           SOLUTIONS
+        ========================================================= */
 
-        /* Services */
         .services {
-            padding: 100px 0;
+            padding: 105px 0;
+
             background: white;
+        }
+
+        .solutions-intro {
+            max-width: 850px;
+
+            margin: -15px auto 45px;
+
+            text-align: center;
+
+            color: var(--gray);
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
         }
 
-
-
-
-
-
-
-
-
-        
-
-      .medicalspace-card {
-    border: 2px solid var(--primary);
-    position: relative;
-    overflow: hidden;
-}
-
-.medicalspace-card::before {
-    content: 'MANA PRODUCT';
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: var(--primary);
-    color: white;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 6px 12px;
-    border-radius: 20px;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-    z-index: 2;
-}
-
-.medicalspace-card .service-icon {
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-}
-
-
-
-
-
-
-        
-
-        
         .service-card {
+            position: relative;
+
             background: white;
-            border-radius: var(--radius);
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
+
             border: 1px solid var(--gray-light);
+
+            border-radius: var(--radius-lg);
+
+            padding: 30px;
+
+            box-shadow: 0 5px 20px rgba(15, 23, 42, 0.04);
+
+            transition: var(--transition);
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-7px);
+
             box-shadow: var(--shadow);
-            border-color: var(--primary);
+
+            border-color: #bfdbfe;
         }
 
         .service-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            border-radius: 50%;
+            width: 62px;
+            height: 62px;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--accent)
+                );
+
+            border-radius: 16px;
+
             color: white;
-            font-size: 1.8rem;
+
+            font-size: 1.45rem;
+
+            margin-bottom: 20px;
         }
 
-        /* About */
+        .service-card h3,
+        .service-card h4 {
+            color: var(--secondary);
+
+            font-size: 1.25rem;
+
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.92rem;
+        }
+
+        .service-card ul {
+            color: var(--gray-dark);
+
+            font-size: 0.88rem;
+
+            margin: 0;
+        }
+
+        .service-card li {
+            margin-bottom: 8px;
+        }
+
+        .medicalspace-mini {
+            grid-column: span 2;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eff6ff,
+                    #ecfeff
+                );
+
+            border: 2px solid var(--primary);
+        }
+
+        .medicalspace-mini::before {
+            content: 'FLAGSHIP PRODUCT';
+
+            position: absolute;
+
+            top: 18px;
+            right: 18px;
+
+            padding: 6px 11px;
+
+            border-radius: 20px;
+
+            background: var(--primary);
+
+            color: white;
+
+            font-size: 0.67rem;
+            font-weight: 800;
+
+            letter-spacing: 0.5px;
+        }
+
+        /* =========================================================
+           WHATSAPP
+        ========================================================= */
+
+        .whatsapp-feature {
+            padding: 75px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #128c7e,
+                    #25d366
+                );
+
+            color: white;
+        }
+
+        .whatsapp-content {
+            display: grid;
+
+            grid-template-columns: 1fr 180px;
+
+            align-items: center;
+
+            gap: 40px;
+        }
+
+        .whatsapp-feature h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .whatsapp-feature p {
+            max-width: 850px;
+
+            color: rgba(255, 255, 255, 0.93);
+        }
+
+        .whatsapp-badge {
+            display: inline-flex;
+
+            align-items: center;
+            gap: 8px;
+
+            padding: 9px 16px;
+
+            margin-top: 8px;
+
+            background: rgba(255, 255, 255, 0.16);
+
+            border: 1px solid rgba(255, 255, 255, 0.24);
+
+            border-radius: 30px;
+
+            font-size: 0.84rem;
+            font-weight: 700;
+        }
+
+        .whatsapp-icon {
+            text-align: center;
+
+            font-size: 7rem;
+
+            opacity: 0.9;
+        }
+
+        /* =========================================================
+           CLIENTS
+        ========================================================= */
+
+        .clients {
+            padding: 75px 0;
+
+            background: #f8fafc;
+        }
+
+        .client-slider {
+            margin-top: 35px;
+        }
+
+        .client-slider .swiper-slide {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            height: 100px;
+        }
+
+        .client-slider .swiper-slide img {
+            width: 180px;
+            height: 90px;
+
+            object-fit: contain;
+
+            transition: var(--transition);
+
+            filter: grayscale(10%);
+
+            opacity: 0.85;
+        }
+
+        .client-slider .swiper-slide img:hover {
+            transform: scale(1.08);
+
+            filter: grayscale(0);
+
+            opacity: 1;
+        }
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
         .about {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 105px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8fafc,
+                    #f1f5f9
+                );
         }
 
         .about-content {
-            display: flex;
+            display: grid;
+
+            grid-template-columns: 1.05fr 0.95fr;
+
+            gap: 65px;
+
             align-items: center;
-            gap: 50px;
         }
 
-        .about-text {
-            flex: 1;
+        .about-text > p {
+            color: var(--gray);
+
+            font-size: 1.02rem;
+        }
+
+        .about-image img {
+            width: 100%;
+
+            border-radius: 18px;
+
+            box-shadow: var(--shadow-lg);
         }
 
         .about-stats {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-            flex-wrap: wrap;
-            gap: 20px;
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 15px;
+
+            margin-top: 35px;
         }
 
         .stat {
             text-align: center;
-            flex: 1;
-            min-width: 150px;
+
+            padding: 18px 10px;
+
+            background: white;
+
+            border-radius: 12px;
+
+            border: 1px solid var(--gray-light);
         }
 
         .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
             color: var(--primary);
-            margin-bottom: 5px;
+
+            font-size: 1.65rem;
+
+            font-weight: 800;
+
+            margin-bottom: 4px;
         }
 
         .stat-label {
             color: var(--gray);
-            font-weight: 600;
+
+            font-size: 0.75rem;
+
+            font-weight: 700;
         }
 
-        .about-image {
-            flex: 1;
-            text-align: center;
-        }
+        /* =========================================================
+           COMPLIANCE & SECURITY
+        ========================================================= */
 
-        .about-image img {
-            max-width: 100%;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-
-        /* Compliance */
         .compliance {
-            padding: 100px 0;
+            padding: 105px 0;
+
             background: white;
         }
 
         .compliance-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 25px;
         }
 
         .compliance-item {
+            padding: 30px 24px;
+
             text-align: center;
-            padding: 30px;
-            border-radius: var(--radius);
+
             background: var(--light);
+
+            border: 1px solid var(--gray-light);
+
+            border-radius: var(--radius);
+
             transition: var(--transition);
         }
 
         .compliance-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
+
             box-shadow: var(--shadow);
+
+            border-color: #bfdbfe;
         }
 
         .compliance-icon {
-            font-size: 3rem;
+            width: 68px;
+            height: 68px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 20px;
+
+            border-radius: 50%;
+
+            background: #eff6ff;
+
             color: var(--primary);
-            margin-bottom: 20px;
+
+            font-size: 1.7rem;
         }
 
-        /* Contact */
+        .compliance-item h3 {
+            font-size: 1.1rem;
+
+            margin-bottom: 10px;
+        }
+
+        .compliance-item p {
+            color: var(--gray);
+
+            font-size: 0.88rem;
+
+            margin-bottom: 0;
+        }
+
+        /* =========================================================
+           FINAL MEDICALSPACE CTA
+        ========================================================= */
+
+        .medicalspace-cta {
+            padding: 90px 0;
+
+            background:
+                radial-gradient(
+                    circle at 15% 50%,
+                    rgba(6, 182, 212, 0.28),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 85% 30%,
+                    rgba(37, 99, 235, 0.35),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #172554
+                );
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .medicalspace-cta h2 {
+            font-size: 2.65rem;
+
+            margin-bottom: 15px;
+        }
+
+        .medicalspace-cta p {
+            max-width: 720px;
+
+            margin: 0 auto 30px;
+
+            color: #cbd5e1;
+
+            font-size: 1.05rem;
+        }
+
+        .medicalspace-cta .cta-buttons {
+            justify-content: center;
+        }
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
         .contact {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 105px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f0f9ff,
+                    #e0f2fe
+                );
         }
 
         .contact-content {
-            display: flex;
-            gap: 50px;
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 55px;
         }
 
-        .contact-info {
-            flex: 1;
+        .contact-info h3 {
+            font-size: 2rem;
+
+            margin-bottom: 15px;
         }
 
-        .contact-form {
-            flex: 1;
-            background: white;
-            padding: 40px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
+        .contact-info > p {
+            color: var(--gray);
 
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid var(--gray-light);
-            border-radius: var(--radius);
             font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
 
         .contact-details {
@@ -508,132 +1351,264 @@
 
         .contact-item {
             display: flex;
-            align-items: center;
-            margin-bottom: 20px;
+
+            align-items: flex-start;
+
+            margin-bottom: 22px;
         }
 
         .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+
+            flex-shrink: 0;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
+            margin-right: 14px;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+
             color: white;
-            font-size: 1.2rem;
-            margin-right: 15px;
-            flex-shrink: 0;
         }
 
-        /* Footer */
+        .contact-item h4 {
+            font-size: 1rem;
+
+            margin-bottom: 2px;
+        }
+
+        .contact-item p {
+            color: var(--gray);
+
+            margin-bottom: 0;
+
+            font-size: 0.9rem;
+        }
+
+        .contact-form {
+            background: white;
+
+            padding: 40px;
+
+            border-radius: var(--radius-lg);
+
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: var(--secondary);
+
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .form-control {
+            width: 100%;
+
+            padding: 12px 14px;
+
+            border: 1px solid var(--gray-light);
+
+            border-radius: 9px;
+
+            background: white;
+
+            color: var(--secondary);
+
+            font-size: 0.95rem;
+
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+
+            border-color: var(--primary);
+
+            box-shadow:
+                0 0 0 3px rgba(37, 99, 235, 0.10);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+        }
+
+        .form-note {
+            margin-top: 15px;
+
+            color: var(--gray);
+
+            font-size: 0.82rem;
+        }
+
+        .form-note a {
+            color: var(--primary);
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
         footer {
             background: var(--secondary);
+
             color: white;
+
             padding: 70px 0 20px;
         }
 
         .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
+            display: grid;
 
-        .footer-column {
-            flex: 1;
-            min-width: 250px;
+            grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+
+            gap: 40px;
+
+            margin-bottom: 45px;
         }
 
         .footer-column h4 {
             color: white;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
+
+            margin-bottom: 22px;
+
+            font-size: 1.05rem;
         }
 
-        .footer-column h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--accent);
+        .footer-column > p {
+            color: #cbd5e1;
+
+            font-size: 0.9rem;
+
+            max-width: 340px;
         }
 
         .footer-links {
             list-style: none;
+
+            padding: 0;
         }
 
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: 11px;
+
+            color: #cbd5e1;
+
+            font-size: 0.88rem;
         }
 
         .footer-links a {
             color: #cbd5e1;
-            text-decoration: none;
+
             transition: var(--transition);
         }
 
         .footer-links a:hover {
             color: var(--accent);
-            padding-left: 5px;
+            padding-left: 4px;
+        }
+
+        .footer-brand {
+            color: white;
+
+            font-size: 1.35rem;
+
+            font-weight: 800;
+
+            margin-bottom: 12px;
+        }
+
+        .footer-brand span {
+            color: var(--accent);
         }
 
         .social-links {
             display: flex;
-            gap: 15px;
-            margin-top: 20px;
+
+            gap: 10px;
+
+            margin-top: 18px;
         }
 
         .social-links a {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.09);
+
             color: white;
-            text-decoration: none;
+
             transition: var(--transition);
         }
 
         .social-links a:hover {
             background: var(--primary);
+
             transform: translateY(-3px);
         }
 
         .copyright {
-            text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+            border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+            text-align: center;
+
             color: #94a3b8;
-            font-size: 0.9rem;
+
+            font-size: 0.82rem;
         }
 
-        /* Back to Top */
+        /* =========================================================
+           BACK TO TOP
+        ========================================================= */
+
         .back-to-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 48px;
+            height: 48px;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
-            font-size: 1.5rem;
+
+            background: var(--primary);
+
+            color: white;
+
+            border-radius: 50%;
+
             box-shadow: var(--shadow);
-            transition: var(--transition);
-            z-index: 100;
+
             opacity: 0;
             visibility: hidden;
+
+            transition: var(--transition);
+
+            z-index: 900;
         }
 
         .back-to-top.active {
@@ -643,935 +1618,2479 @@
 
         .back-to-top:hover {
             background: var(--primary-dark);
-            transform: translateY(-5px);
+
+            transform: translateY(-4px);
         }
 
-        /* Responsive */
-        @media (max-width: 992px) {
-            h1 { font-size: 2.8rem; }
-            h2 { font-size: 2.2rem; }
-            
-            .hero-content, .about-content, .contact-content, .whatsapp-feature .container {
-                flex-direction: column;
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 1100px) {
+
+            .nav-links li {
+                margin-left: 18px;
             }
-            
-            .hero {
-                padding: 150px 0 80px;
+
+            .hero h1 {
+                font-size: 3rem;
             }
-            
-            .cta-buttons {
-                justify-content: center;
+
+            .platform-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-            
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .medicalspace-mini {
+                grid-column: span 2;
+            }
+
+            .compliance-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             .nav-links {
                 position: fixed;
-                top: 80px;
+
+                top: 86px;
                 left: -100%;
-                flex-direction: column;
-                background: white;
-                width: 80%;
-                height: calc(100vh - 80px);
-                box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
-                transition: 0.5s;
+
+                width: 82%;
+                height: calc(100vh - 86px);
+
                 padding: 30px;
-                z-index: 999;
+
+                flex-direction: column;
+                align-items: flex-start;
+
+                background: white;
+
+                box-shadow: 5px 0 25px rgba(0, 0, 0, 0.12);
+
+                transition: 0.4s ease;
+
+                overflow-y: auto;
             }
-            
+
             .nav-links.active {
                 left: 0;
             }
-            
+
             .nav-links li {
-                margin: 15px 0;
+                width: 100%;
+
+                margin: 12px 0;
+            }
+
+            .nav-links a {
+                display: block;
+
+                width: 100%;
+
+                padding: 8px 0;
+
+                font-size: 1rem;
+            }
+
+            .hero-content,
+            .medicalspace-main,
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 140px;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-text > p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-features,
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .medicalspace-content {
+                text-align: center;
+            }
+
+            .medicalspace-grid {
+                text-align: left;
+            }
+
+            .product-links {
+                justify-content: center;
+            }
+
+            .about-text {
+                order: 1;
+            }
+
+            .about-image {
+                order: 2;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+
+            .contact-item {
+                text-align: left;
+            }
+
+            .whatsapp-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .whatsapp-icon {
+                display: none;
             }
         }
 
-        @media (max-width: 768px) {
-            h1 { font-size: 2.3rem; }
-            h2 { font-size: 2rem; }
-            
-            .section-title::after {
-                width: 60px;
+        @media (max-width: 650px) {
+
+            .container {
+                width: 94%;
+                padding: 0 10px;
             }
-            
-            .footer-column {
-                min-width: 100%;
+
+            .logo {
+                font-size: 1.25rem;
+            }
+
+            .logo img {
+                height: 58px;
+            }
+
+            .hero {
+                padding: 125px 0 70px;
+            }
+
+            .hero h1 {
+                font-size: 2.35rem;
+            }
+
+            .hero-text > p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .medicalspace-main {
+                padding: 25px;
+            }
+
+            .medicalspace-content h2 {
+                font-size: 2rem;
+            }
+
+            .medicalspace-visual {
+                min-height: 300px;
+            }
+
+            .medicalspace-symbol {
+                width: 135px;
+                height: 135px;
+
+                font-size: 3.8rem;
+            }
+
+            .floating-card {
+                padding: 8px 10px;
+
+                font-size: 0.7rem;
+            }
+
+            .floating-card.one {
+                top: 18px;
+                left: 10px;
+            }
+
+            .floating-card.two {
+                top: 55px;
+                right: 10px;
+            }
+
+            .floating-card.three {
+                left: 10px;
+                bottom: 18px;
+            }
+
+            .floating-card.four {
+                right: 10px;
+                bottom: 18px;
+            }
+
+            .medicalspace-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .platform-grid,
+            .services-grid,
+            .compliance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .medicalspace-mini {
+                grid-column: span 1;
+            }
+
+            .about-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 25px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .cta-buttons {
+                width: 100%;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+            }
+
+            .client-slider .swiper-slide img {
+                width: 120px;
+                height: 65px;
             }
         }
+
     </style>
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9S1386L3FS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-9S1386L3FS');
-</script>
+    <!-- Google Analytics -->
+    <script async
+            src="https://www.googletagmanager.com/gtag/js?id=G-9S1386L3FS"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-9S1386L3FS');
+    </script>
+
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">
-    <img src="logo.png" alt="MANA LLC Logo" style="height: 100px; margin-right: 10px;">
-    MANA LLC
-</a>
-                
-                <ul class="nav-links">
-                    <li><a href="index.html#home">Home</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#compliance">Compliance</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                    <li><a href="privacy.html">Privacy</a></li>
-                    <li><a href="terms.html">Terms</a></li>
-                </ul>
-                
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Advanced <span style="color: var(--primary);">Healthcare</span> Software Solutions</h1>
-                    <p>MANA LLC delivers cutting-edge medical software solutions including PACS, DICOM, RIS, HIS, and secure WhatsApp integration for healthcare providers worldwide.</p>
-                    <div class="cta-buttons">
-                        <a href="#contact" class="btn">Start Your Project</a>
-                        <a href="#compliance" class="btn btn-outline">View Compliance</a>
-                        <a href="#whatsapp" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp API</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="1.png" alt="Healthcare Software Solutions">
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-    <!-- WhatsApp Feature Section -->
-    <section id="whatsapp" class="whatsapp-feature">
-        <div class="container">
-            <div class="whatsapp-text">
-                <h3>Meta-Approved WhatsApp Business API for Healthcare</h3>
-                <p><strong>Approved Use Case:</strong> "We use WhatsApp Business API to send medical notifications, reports, and support messages to registered users only. All communications are HIPAA-compliant and require explicit patient consent."</p>
-                <p>Our WhatsApp integration is specifically designed for healthcare communication, ensuring patient privacy, data security, and regulatory compliance.</p>
-                <div class="compliance-badge">
-                    <i class="fab fa-whatsapp"></i> Meta Business API Approved • HIPAA Compliant
-                </div>
-            </div>
-            <div class="whatsapp-icon">
-                <i class="fab fa-whatsapp"></i>
-            </div>
-        </div>
-    </section>
+<header id="siteHeader">
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Our Healthcare Software Solutions</h2>
-            <div class="services-grid">
+    <div class="container">
 
+        <nav class="navbar">
 
+            <a href="index.html" class="logo" aria-label="MANA LLC Home">
 
+                <img
+                    src="logo.png"
+                    alt="MANA LLC Logo">
 
+                MANA LLC
 
+            </a>
 
+            <ul class="nav-links">
 
+                <li>
+                    <a href="#home">Home</a>
+                </li>
 
-                <!-- MedicalSpace -->
-<div class="service-card medicalspace-card">
-    <div class="service-icon">
-        <i class="fas fa-user-md"></i>
+                <li class="medicalspace-nav">
+                    <a href="medicalspace.html">MedicalSpace</a>
+                </li>
+
+                <li>
+                    <a href="#solutions">Solutions</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#compliance">Security</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+                <li>
+                    <a href="privacy.html">Privacy</a>
+                </li>
+
+                <li>
+                    <a href="terms.html">Terms</a>
+                </li>
+
+            </ul>
+
+            <button
+                class="mobile-menu-btn"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+        </nav>
+
     </div>
 
-    <h4>MedicalSpace</h4>
-
-    <p style="color: var(--gray); font-weight: 600;">
-        AI-Powered Healthcare Platform for Medical Professionals
-    </p>
-
-    <ul>
-        <li>Secure patient and medical record management.</li>
-        <li>AI-assisted clinical workflows and medical information support.</li>
-        <li>Professional communication and doctor-to-doctor medical networking.</li>
-        <li>Voice messages, speech-to-text, translation, and AI voice interaction.</li>
-        <li>Secure management and sharing of medical reports, documents, and DICOM images.</li>
-        <li>Patient follow-up, visits, prescriptions, and clinical documentation.</li>
-        <li>Secure messaging and audio/video communication.</li>
-        <li>Designed for healthcare professionals, clinics, and medical organizations.</li>
-    </ul>
-
-    <div style="margin-top: 25px;">
-        <a href="medicalspace.html" class="btn">
-            Learn More
-        </a>
-    </div>
-</div>
+</header>
 
 
+<!-- =========================================================
+     HERO
+========================================================= -->
 
+<section id="home" class="hero">
 
+    <div class="container">
 
+        <div class="hero-content">
 
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-x-ray"></i>
-                    </div>
-<h4>PACS Solutions</h4>
-<ul>
-  <li>A comprehensive system for archiving images and communications.</li>
-  <li>Full DICOM compliance for storing, retrieving, and sharing medical images across healthcare networks.</li>
-  <li>AI-generated impressions and recommendations.</li>
-  <li>Converting images and reports to PDF files.</li>
-</ul>
-</div>
+            <div class="hero-text">
 
-                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <h4>Radiology Information System (RIS)</h4>
-<ul>
-  <li>Comprehensive RIS for managing radiology and medical imaging departments.</li>
-  <li>Smart patient scheduling and workflow optimization.</li>
-  <li>Study tracking, reporting, and performance monitoring.</li>
-  <li>Integrated billing and revenue management.</li>
-</ul>
+                <div class="hero-badge">
+
+                    <i class="fas fa-circle-nodes"></i>
+
+                    MANA LLC's Healthcare Platform
+
                 </div>
 
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fab fa-whatsapp"></i>
+                <h1>
+
+                    Meet
+                    <span class="highlight">MedicalSpace</span>.
+
+                    <br>
+
+                    <span class="gradient">
+                        Healthcare, Connected.
+                    </span>
+
+                </h1>
+
+                <p>
+
+                    A modern healthcare platform built for physicians,
+                    healthcare professionals, clinics, and medical organizations.
+                    MedicalSpace brings patient management, medical workflows,
+                    AI-assisted tools, professional collaboration, communication,
+                    and medical information together in one connected environment.
+
+                </p>
+
+                <div class="hero-features">
+
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        Patient Management
                     </div>
-                    <h3>WhatsApp Medical Sender</h3>
-<ul>
-  <li>Secure, HIPAA-compliant WhatsApp Business API integration.</li>
-  <li>Sending medical reports and test results to patients with consent.</li>
-  <li>Automated appointment reminders via WhatsApp.</li>
-  <li>Real-time notifications and patient updates.</li>
-  <li>Ensuring data privacy and regulatory compliance.</li>
-</ul>
-                </div>
-                
-               
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hospital"></i>
+
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        AI-Assisted Tools
                     </div>
-                    <h4>Hospital Information System (HIS)</h4>
-<ul>
-  <li>All-in-one Hospital Management System for clinical and administrative operations.</li>
-  <li>Electronic Health Records (EHR) and patient lifecycle management.</li>
-  <li>Billing, insurance, and financial workflows.</li>
-  <li>Inventory and pharmacy management.</li>
-</ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
+
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        Medical Records
                     </div>
-                    <h4>Healthcare Data Security</h4>
-<ul>
-  <li>End-to-end data encryption and secure communication.</li>
-  <li>Advanced access control and user permission management.</li>
-  <li>Full audit logging and compliance reporting.</li>
-  <li>HIPAA, GDPR, and HITECH compliant security framework.</li>
-</ul>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
+
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        Professional Collaboration
                     </div>
-                    <h4>Cloud & Telemedicine</h4>
-<ul>
-  <li>Secure cloud hosting tailored for healthcare applications and patient data.</li>
-  <li>Telemedicine platforms enabling virtual consultations and remote care.</li>
-  <li>Remote patient monitoring solutions for continuous health tracking.</li>
-  <li>Scalable and reliable infrastructure for hospitals, clinics, and diagnostic centers.</li>
-  <li>Compliance with healthcare data protection standards to ensure privacy and security.</li>
-</ul>
+
                 </div>
 
+                <div class="cta-buttons">
 
+                    <a
+                        href="medicalspace.html"
+                        class="btn">
 
+                        <i class="fas fa-arrow-right"></i>
 
-   <div class="service-card">
-                    <div class="service-icon">
-                       <i class="fas fa-print"></i>
-                    </div>
-                    <h4>Real-Size Dicom Print</h4>
+                        Explore MedicalSpace
 
-<ul>
-  <li>Print radiology images at their actual size with 1:1 scale accuracy.</li>
-  <li>Preserve image dimensions and proportions for precise diagnostics.</li>
-  <li>Compatible with PACS and RIS systems for seamless workflow.</li>
-  <li>High-quality prints suitable for clinical use and patient records.</li>
-  <li>Supports a variety of medical imaging formats including X-ray, MRI, and CT scans.</li>
-</ul>
-  </div>
+                    </a>
 
-                
+                    <a
+                        href="#contact"
+                        class="btn btn-outline">
 
-                 <div class="service-card">
-                    <div class="service-icon">
-                       <i class="fas fa-print"></i>
-                    </div>
-                    <h4>DICOM Print Server</h4>
+                        Talk to MANA
 
-<ul>
-  <li>Print radiology images directly from PACS to Windows printers.</li>
-  <li>Supports standard DICOM printing protocols for seamless integration.</li>
-  <li>High-quality prints with accurate image resolution and scaling.</li>
-  <li>Real-time job tracking and status monitoring for efficient workflow.</li>
-  <li>Compatible with multiple printer models commonly used in medical facilities.</li>
-  <li>Secure and compliant with healthcare data protection standards.</li>
-</ul>
-  </div>
+                    </a>
 
+                </div>
 
-                
-
-
-                
-  <div class="service-card">
-                    <div class="service-icon">
-                       <i class="fas fa-image"></i>
-                    </div>
-                    <h4>Images Stitching</h4>
-
-<ul>
-  <li>Seamlessly merge multiple radiology images into a single, comprehensive view.</li>
-  <li>Supports X-ray, CT, MRI, and other imaging modalities.</li>
-  <li>Maintains image resolution, scale, and diagnostic accuracy.</li>
-  <li>Ideal for full-body scans or long anatomical structures.</li>
-  <li>Integrates smoothly with PACS and RIS systems.</li>
-  <li>Enhances diagnostic workflow and report clarity for medical professionals.</li>
-</ul>
-  </div>
-
-
-
-
-
-
-
- <div class="service-card">
-                    <div class="service-icon">
-                       <i class="fas fa-language"></i>
-                    </div>
-                    <h4>AI Translation</h4>
-
-<ul>
-  <li>Accurate translation of medical texts, reports, and prescriptions to and from any language.</li>
-  <li>Supports multilingual communication between healthcare providers and patients.</li>
-  <li>Maintains medical terminology and context for reliable understanding.</li>
-  <li>Real-time translation for patient instructions, lab results, and imaging reports.</li>
-  <li>Seamless integration with hospital and diagnostic center workflows.</li>
-  <li>Enhances patient engagement and reduces language barriers in healthcare.</li>
-</ul>
-  </div>
-
-
-
-
-
-
-
- <div class="service-card">
-                    <div class="service-icon">
-                       <i class="fas fa-microphone"></i>
-                    </div>
-                    <h4> Speech-to-Text</h4>
-
-<ul>
-  <li>Convert spoken medical consultations, dictations, and notes into accurate text.</li>
-  <li>Supports multiple languages and medical terminology.</li>
-  <li>Real-time transcription for faster documentation and reporting.</li>
-  <li>Integrates seamlessly with EHR, RIS, and PACS systems.</li>
-  <li>Enhances efficiency for doctors, radiologists, and medical staff.</li>
-  <li>Reduces manual entry errors and improves record accuracy.</li>
-</ul>
-  </div>
-
-
-
-
-
-
-
- <div class="service-card">
-                    <div class="service-icon">
-                       <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h4>Medical Mobile App</h4>
-
-<ul>
-  <li>Access medical reports, imaging, and patient data anytime, anywhere via a secure mobile app.</li>
-  <li>Receive appointment reminders, notifications, and test results in real-time.</li>
-  <li>Supports secure messaging and patient communication with consent.</li>
-  <li>View imaging and diagnostic reports with high-quality display optimized for mobile.</li>
-  <li>Integrates seamlessly with hospital systems, PACS, and EHR platforms.</li>
-  <li>Available on iOS and Android for doctors, staff, and patients.</li>
-</ul>
-  </div>
-                
-                
-
-                
-
-                 <div class="service-card">
-                    <div class="service-icon">
-                       <i class="fas fa-brain"></i>
-                    </div>
-                    <h4>AI-Powered Medical Assistant</h4>
-<ul>
-  <li>AI-powered medical assistant answering patient inquiries instantly.</li>
-  <li>Automated appointment booking and reminders.</li>
-  <li>Translation of medical texts, reports, and prescriptions.</li>
-  <li>Smart reading and interpretation of lab results and prescriptions.</li>
-  <li>Real-time tracking of patient reports, imaging, and test results.</li>
-  <li>Secure, HIPAA-compliant communication with patients.</li>
-  <li>Personalized follow-ups and educational guidance for patients.</li>
-  <li>Seamless integration with hospital and clinic systems.</li>
-</ul>
-
-   </div>
-
-                
             </div>
+
+            <div class="hero-image">
+
+                <img
+                    src="1.png"
+                    alt="MedicalSpace healthcare software platform">
+
+            </div>
+
         </div>
-    </section>
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- Client Section Slider -->
-<section id="clients" style="padding:60px 0; background:#f9f9f9;">
-  <div class="container" style="text-align:center;">
-    <h3>Our Trusted Clients</h3>
-    <p>We are proud to serve hospitals, clinics, and diagnostic centers worldwide.</p>
-
-    <!-- Swiper -->
-    <div class="swiper client-slider" style="margin-top:40px;">
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide"><img src="images/appolo.png" alt="appolo"></div>
-        <div class="swiper-slide"><img src="images/batrawi.png" alt="batrawi"></div>
-        <div class="swiper-slide"><img src="images/biruni.png" alt="biruni"></div>
-        <div class="swiper-slide"><img src="images/boukerrou.png" alt="boukerrou"></div>
-        <div class="swiper-slide"><img src="images/essalem.png" alt="essalem"></div>
-        <div class="swiper-slide"><img src="images/fouad.png" alt="fouad"></div>
-        <div class="swiper-slide"><img src="images/halassother.png" alt="halassother"></div>
-        <div class="swiper-slide"><img src="images/hamada.png" alt="hamada"></div>
-        <div class="swiper-slide"><img src="images/hayet.png" alt="hayet"></div>
-        <div class="swiper-slide"><img src="images/hissar.png" alt="hissar"></div>
-        <div class="swiper-slide"><img src="images/mellouki.png" alt="mellouki"></div>
-        <div class="swiper-slide"><img src="images/memoral.png" alt="memoral"></div>
-        <div class="swiper-slide"><img src="images/necir.png" alt="necir"></div>
-        <div class="swiper-slide"><img src="images/rasheed.png" alt="rasheed"></div>
-        <div class="swiper-slide"><img src="images/romatem.png" alt="romatem"></div>
-        <div class="swiper-slide"><img src="images/royal.png" alt="royal"></div>
-        <div class="swiper-slide"><img src="images/soudi.png" alt="soudi"></div>
-        <div class="swiper-slide"><img src="images/thtc.png" alt="thtc"></div>
-        <div class="swiper-slide"><img src="images/zeghouane.png" alt="zeghouane"></div>
-
-      </div>
     </div>
-  </div>
+
 </section>
 
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- =========================================================
+     FEATURED MEDICALSPACE
+========================================================= -->
 
-<!-- CSS -->
-<style>
-.client-slider .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+<section class="medicalspace-feature" id="medicalspace">
 
-.client-slider .swiper-slide img {
-    width: 180px;
-    height: 90px;
-    object-fit: contain;
-    transition: all 0.3s ease;
-}
-
-/* Hover Effect */
-.client-slider .swiper-slide img:hover {
-    transform: scale(1.15);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-    .client-slider .swiper-slide img {
-        width: 140px;
-        height: 70px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    .client-slider .swiper-slide img {
-        width: 110px;
-        height: 55px;
-    }
-}
-</style>
-
-<!-- JS -->
-<script>
-new Swiper('.client-slider', {
-  loop: true,
-  slidesPerView: 5,      // ✅ أكتر من لوجو
-  spaceBetween: 40,
-  autoplay: {
-    delay: 1800,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    320: { slidesPerView: 2 },
-    480: { slidesPerView: 3 },
-    768: { slidesPerView: 4 },
-    1024: { slidesPerView: 5 }
-  }
-});
-</script>
-
-
-
-    
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About MANA LLC</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>MANA LLC is a US-based healthcare technology company founded in January 2025, specializing in advanced medical software solutions for hospitals, clinics, diagnostic centers, and radiology practices worldwide.</p>
-                    <p>Our team combines deep expertise in healthcare regulations, medical software development, data security, and patient communication to deliver compliant, reliable solutions that improve patient care and operational efficiency.</p>
-                    
-                    <div class="about-stats">
-                        <div class="stat">
-                            <div class="stat-number">60+</div>
-                            <div class="stat-label">Healthcare Clients</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">150+</div>
-                            <div class="stat-label">Projects Deployed</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">HIPAA</div>
-                            <div class="stat-label">Compliant</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">24/7</div>
-                            <div class="stat-label">Support</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="2.png" alt="MANA LLC Healthcare Technology">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Compliance Section -->
-    <section id="compliance" class="compliance">
-        <div class="container">
-            <h2 class="section-title">Compliance & Certifications</h2>
-            <div class="compliance-grid">
-                <div class="compliance-item">
-                    <div class="compliance-icon">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h3>HIPAA Compliant</h3>
-                    <p>All solutions comply with Health Insurance Portability and Accountability Act requirements for healthcare data security and privacy.</p>
-                </div>
-                
-                <div class="compliance-item">
-                    <div class="compliance-icon">
-                        <i class="fas fa-globe-europe"></i>
-                    </div>
-                    <h3>GDPR Ready</h3>
-                    <p>Designed with General Data Protection Regulation compliance for international healthcare providers and patient data protection.</p>
-                </div>
-                
-                <div class="compliance-item">
-                    <div class="compliance-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <h3>Meta Business API</h3>
-                    <p>Approved WhatsApp Business API partner for healthcare notifications with explicit user consent and secure messaging.</p>
-                </div>
-                
-                <div class="compliance-item">
-                    <div class="compliance-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>End-to-End Encryption</h3>
-                    <p>All patient data, medical records, and communications are encrypted in transit and at rest.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-<section id="contact" class="contact">
     <div class="container">
-        <h2 class="section-title">Contact Us</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>Start Your Healthcare Digital Transformation</h3>
-                <p>Get in touch to discuss how our healthcare software solutions can improve your medical services, patient communication, and operational efficiency.</p>
-                
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+
+        <div class="section-title-wrap">
+
+            <h2 class="section-title">
+                The MANA Healthcare Platform
+            </h2>
+
+            <p class="section-subtitle">
+
+                MedicalSpace is the central product of MANA LLC,
+                designed to bring the everyday digital tools used by
+                medical professionals into one connected platform.
+
+            </p>
+
+        </div>
+
+
+        <div class="medicalspace-main">
+
+            <div class="medicalspace-visual">
+
+                <div class="floating-card one">
+                    <i class="fas fa-user-injured"></i>
+                    Patient Management
+                </div>
+
+                <div class="floating-card two">
+                    <i class="fas fa-brain"></i>
+                    AI-Assisted Tools
+                </div>
+
+                <div class="floating-card three">
+                    <i class="fas fa-comments"></i>
+                    Professional Discussions
+                </div>
+
+                <div class="floating-card four">
+                    <i class="fas fa-x-ray"></i>
+                    Medical Imaging
+                </div>
+
+                <div class="medicalspace-symbol">
+                    <i class="fas fa-user-doctor"></i>
+                </div>
+
+            </div>
+
+
+            <div class="medicalspace-content">
+
+                <div class="product-label">
+
+                    <i class="fas fa-star"></i>
+
+                    MANA FLAGSHIP PRODUCT
+
+                </div>
+
+                <h2>
+
+                    One platform for
+                    <span>modern healthcare teams.</span>
+
+                </h2>
+
+                <p>
+
+                    MedicalSpace connects clinical workflows,
+                    patient information, professional communication,
+                    medical content, and AI-assisted capabilities
+                    within a single healthcare environment.
+
+                </p>
+
+                <ul class="medicalspace-grid">
+
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Patient and medical record management
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        AI-assisted clinical workflows
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Visits, prescriptions and documentation
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Doctor-to-doctor collaboration
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Medical posts and clinical cases
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Voice, audio and video communication
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Medical documents and DICOM images
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Speech-to-text and multilingual tools
+                    </li>
+
+                </ul>
+
+                <div class="product-links">
+
+                    <a
+                        href="medicalspace.html"
+                        class="btn">
+
+                        Discover MedicalSpace
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="btn btn-outline">
+
+                        Contact MANA
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PLATFORM HIGHLIGHTS
+========================================================= -->
+
+<section class="platform-highlights">
+
+    <div class="container">
+
+        <div class="section-title-wrap">
+
+            <h2 class="section-title">
+                Built Around the Medical Professional
+            </h2>
+
+            <p class="section-subtitle">
+
+                MedicalSpace brings together the tools physicians and
+                healthcare organizations need throughout their daily
+                digital workflows.
+
+            </p>
+
+        </div>
+
+
+        <div class="platform-grid">
+
+            <div class="platform-card">
+
+                <div class="platform-icon">
+                    <i class="fas fa-user-injured"></i>
+                </div>
+
+                <h4>Patient Management</h4>
+
+                <p>
+                    Organize patients, visits, medical information,
+                    prescriptions, and clinical documentation.
+                </p>
+
+            </div>
+
+
+            <div class="platform-card">
+
+                <div class="platform-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+
+                <h4>AI-Assisted Healthcare</h4>
+
+                <p>
+                    AI-assisted tools designed to support healthcare
+                    professionals in information and workflow tasks.
+                </p>
+
+            </div>
+
+
+            <div class="platform-card">
+
+                <div class="platform-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+
+                <h4>Professional Network</h4>
+
+                <p>
+                    Connect with other medical professionals and
+                    participate in professional medical discussions.
+                </p>
+
+            </div>
+
+
+            <div class="platform-card">
+
+                <div class="platform-icon">
+                    <i class="fas fa-file-medical"></i>
+                </div>
+
+                <h4>Medical Information</h4>
+
+                <p>
+                    Manage medical documents, reports, imaging,
+                    and information within connected workflows.
+                </p>
+
+            </div>
+
+
+            <div class="platform-card">
+
+                <div class="platform-icon">
+                    <i class="fas fa-microphone"></i>
+                </div>
+
+                <h4>Voice & Language</h4>
+
+                <p>
+                    Voice interaction, speech-to-text, translation,
+                    and multilingual communication capabilities.
+                </p>
+
+            </div>
+
+
+            <div class="platform-card">
+
+                <div class="platform-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+
+                <h4>Communication</h4>
+
+                <p>
+                    Support secure professional messaging and
+                    audio/video communication workflows.
+                </p>
+
+            </div>
+
+
+            <div class="platform-card">
+
+                <div class="platform-icon">
+                    <i class="fas fa-x-ray"></i>
+                </div>
+
+                <h4>Medical Imaging</h4>
+
+                <p>
+                    Support medical images and DICOM-based workflows
+                    alongside clinical information.
+                </p>
+
+            </div>
+
+
+            <div class="platform-card">
+
+                <div class="platform-icon">
+                    <i class="fas fa-mobile-screen-button"></i>
+                </div>
+
+                <h4>Connected Access</h4>
+
+                <p>
+                    Designed to provide healthcare professionals with
+                    connected access to their workflows and information.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     HEALTHCARE SOLUTIONS
+========================================================= -->
+
+<section id="solutions" class="services">
+
+    <div class="container">
+
+        <div class="section-title-wrap">
+
+            <h2 class="section-title">
+                Healthcare Solutions & Infrastructure
+            </h2>
+
+            <p class="section-subtitle">
+
+                MedicalSpace is our flagship healthcare platform.
+                MANA LLC also develops and supports specialized healthcare
+                technologies that can complement clinical and operational
+                environments.
+
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <!-- MedicalSpace -->
+            <div class="service-card medicalspace-mini">
+
+                <div class="service-icon">
+                    <i class="fas fa-user-doctor"></i>
+                </div>
+
+                <h3>MedicalSpace</h3>
+
+                <p>
+
+                    MANA LLC's primary healthcare platform for
+                    medical professionals, clinics, and healthcare
+                    organizations.
+
+                </p>
+
+                <ul>
+
+                    <li>Patient and medical record management.</li>
+
+                    <li>AI-assisted healthcare workflows.</li>
+
+                    <li>Professional medical collaboration.</li>
+
+                    <li>Medical posts and clinical cases.</li>
+
+                    <li>Voice, messaging and communication tools.</li>
+
+                    <li>Medical documents and imaging workflows.</li>
+
+                </ul>
+
+                <div style="margin-top:25px;">
+
+                    <a
+                        href="medicalspace.html"
+                        class="btn">
+
+                        Explore MedicalSpace
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PACS -->
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-x-ray"></i>
+                </div>
+
+                <h4>PACS & DICOM Solutions</h4>
+
+                <p>
+                    Medical imaging infrastructure supporting
+                    storage, retrieval, communication, and
+                    DICOM-based workflows.
+                </p>
+
+                <ul>
+
+                    <li>DICOM image management.</li>
+
+                    <li>Medical image storage and retrieval.</li>
+
+                    <li>Image and report workflows.</li>
+
+                    <li>PDF conversion and sharing capabilities.</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- RIS -->
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+
+                <h4>Radiology Information Systems</h4>
+
+                <p>
+                    Digital tools supporting radiology department
+                    scheduling, workflow, reporting, and operations.
+                </p>
+
+                <ul>
+
+                    <li>Patient scheduling.</li>
+
+                    <li>Study tracking.</li>
+
+                    <li>Reporting workflows.</li>
+
+                    <li>Operational monitoring.</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- HIS -->
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-hospital"></i>
+                </div>
+
+                <h4>Hospital Information Systems</h4>
+
+                <p>
+                    Healthcare information and operational software
+                    designed for hospital environments.
+                </p>
+
+                <ul>
+
+                    <li>Patient lifecycle management.</li>
+
+                    <li>Clinical and administrative workflows.</li>
+
+                    <li>Billing and financial workflows.</li>
+
+                    <li>Inventory and pharmacy workflows.</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- WhatsApp -->
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+
+                <h4>Healthcare Messaging</h4>
+
+                <p>
+                    WhatsApp Business Platform integrations for
+                    healthcare notifications and communication workflows.
+                </p>
+
+                <ul>
+
+                    <li>Medical report notifications.</li>
+
+                    <li>Appointment reminders.</li>
+
+                    <li>Patient notifications.</li>
+
+                    <li>Consent-based communication workflows.</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- DICOM Print -->
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-print"></i>
+                </div>
+
+                <h4>DICOM Printing</h4>
+
+                <p>
+                    Specialized printing solutions for medical
+                    imaging environments.
+                </p>
+
+                <ul>
+
+                    <li>Real-size medical image printing.</li>
+
+                    <li>DICOM Print Server workflows.</li>
+
+                    <li>PACS-to-printer integration.</li>
+
+                    <li>Image scaling and resolution support.</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Image Stitching -->
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-images"></i>
+                </div>
+
+                <h4>Medical Image Stitching</h4>
+
+                <p>
+                    Tools for combining multiple medical images
+                    into larger continuous views.
+                </p>
+
+                <ul>
+
+                    <li>Long anatomical structures.</li>
+
+                    <li>Full-body imaging workflows.</li>
+
+                    <li>Image resolution preservation.</li>
+
+                    <li>Integration with imaging workflows.</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Translation -->
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+
+                <h4>AI Translation</h4>
+
+                <p>
+                    Multilingual tools for medical text and
+                    healthcare communication workflows.
+                </p>
+
+                <ul>
+
+                    <li>Medical text translation.</li>
+
+                    <li>Multilingual communication.</li>
+
+                    <li>Medical terminology support.</li>
+
+                    <li>Healthcare document workflows.</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Speech -->
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fas fa-microphone"></i>
+                </div>
+
+                <h4>Speech-to-Text</h4>
+
+                <p>
+                    Voice transcription capabilities for
+                    healthcare documentation workflows.
+                </p>
+
+                <ul>
+
+                    <li>Medical dictation.</li>
+
+                    <li>Clinical notes.</li>
+
+                    <li>Multilingual transcription.</li>
+
+                    <li>Documentation workflows.</li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHATSAPP
+========================================================= -->
+
+<section id="whatsapp" class="whatsapp-feature">
+
+    <div class="container">
+
+        <div class="whatsapp-content">
+
+            <div>
+
+                <h2>
+                    Healthcare Communication Through WhatsApp
+                </h2>
+
+                <p>
+
+                    MANA LLC develops WhatsApp Business Platform
+                    integrations that can support healthcare notification
+                    and communication workflows, including medical reports,
+                    appointment reminders, and other authorized messages.
+
+                </p>
+
+                <div class="whatsapp-badge">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                    WhatsApp Business Platform Integration
+
+                </div>
+
+            </div>
+
+            <div class="whatsapp-icon">
+
+                <i class="fab fa-whatsapp"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CLIENTS
+========================================================= -->
+
+<section id="clients" class="clients">
+
+    <div class="container">
+
+        <div class="section-title-wrap">
+
+            <h2 class="section-title">
+                Healthcare Organizations We Serve
+            </h2>
+
+            <p class="section-subtitle">
+
+                MANA technologies are designed for hospitals,
+                clinics, diagnostic centers, radiology practices,
+                and other healthcare environments.
+
+            </p>
+
+        </div>
+
+
+        <div class="swiper client-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="images/appolo.png" alt="Appolo">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/batrawi.png" alt="Batrawi">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/biruni.png" alt="Biruni">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/boukerrou.png" alt="Boukerrou">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/essalem.png" alt="Essalem">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/fouad.png" alt="Fouad">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/halassother.png" alt="Halassother">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/hamada.png" alt="Hamada">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/hayet.png" alt="Hayet">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/hissar.png" alt="Hissar">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/mellouki.png" alt="Mellouki">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/memoral.png" alt="Memoral">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/necir.png" alt="Necir">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/rasheed.png" alt="Rasheed">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/romatem.png" alt="Romatem">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/royal.png" alt="Royal">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/soudi.png" alt="Soudi">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/thtc.png" alt="THTC">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="images/zeghouane.png" alt="Zeghouane">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT MANA
+========================================================= -->
+
+<section id="about" class="about">
+
+    <div class="container">
+
+        <div class="section-title-wrap">
+
+            <h2 class="section-title">
+                About MANA LLC
+            </h2>
+
+            <p class="section-subtitle">
+
+                Building connected healthcare technology for
+                professionals and organizations.
+
+            </p>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <div class="about-text">
+
+                <p>
+
+                    MANA LLC is a US-based healthcare technology
+                    company focused on developing software and
+                    digital infrastructure for healthcare environments.
+
+                </p>
+
+                <p>
+
+                    Our primary product, MedicalSpace, brings
+                    patient management, medical workflows,
+                    AI-assisted tools, professional collaboration,
+                    communication, and medical information together
+                    in one connected platform.
+
+                </p>
+
+                <p>
+
+                    Alongside MedicalSpace, MANA develops specialized
+                    technologies for medical imaging, healthcare
+                    information systems, communication, and digital
+                    workflow integration.
+
+                </p>
+
+
+                <div class="about-stats">
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            60+
                         </div>
-                        <div>
-                            <h4>Address</h4>
-                            <p>1942 Broadway St. STE 314C Boulder CO 80302 US</p>
+
+                        <div class="stat-label">
+                            Healthcare Clients
                         </div>
+
                     </div>
-                    
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            150+
+                        </div>
+
+                        <div class="stat-label">
+                            Projects Deployed
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            2025
+                        </div>
+
+                        <div class="stat-label">
+                            Founded
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">
+                            Global
+                        </div>
+
+                        <div class="stat-label">
+                            Healthcare Focus
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-image">
+
+                <img
+                    src="2.png"
+                    alt="MANA LLC healthcare technology">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECURITY & COMPLIANCE
+========================================================= -->
+
+<section id="compliance" class="compliance">
+
+    <div class="container">
+
+        <div class="section-title-wrap">
+
+            <h2 class="section-title">
+                Security, Privacy & Responsible Technology
+            </h2>
+
+            <p class="section-subtitle">
+
+                Healthcare software requires careful handling of
+                sensitive information. MANA designs its systems with
+                security, access control, privacy, and responsible
+                data handling in mind.
+
+            </p>
+
+        </div>
+
+
+        <div class="compliance-grid">
+
+
+            <div class="compliance-item">
+
+                <div class="compliance-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+
+                <h3>
+                    Healthcare Privacy
+                </h3>
+
+                <p>
+
+                    Our healthcare products are designed with
+                    privacy and controlled access to sensitive
+                    healthcare information in mind.
+
+                </p>
+
+            </div>
+
+
+            <div class="compliance-item">
+
+                <div class="compliance-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+
+                <h3>
+                    Data Security
+                </h3>
+
+                <p>
+
+                    Security controls, authentication, access
+                    management, and protected communications are
+                    incorporated into our software architecture.
+
+                </p>
+
+            </div>
+
+
+            <div class="compliance-item">
+
+                <div class="compliance-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+
+                <h3>
+                    Controlled Access
+                </h3>
+
+                <p>
+
+                    Healthcare workflows can require different
+                    permissions and roles. Our systems support
+                    role-based access and controlled functionality.
+
+                </p>
+
+            </div>
+
+
+            <div class="compliance-item">
+
+                <div class="compliance-icon">
+                    <i class="fas fa-file-shield"></i>
+                </div>
+
+                <h3>
+                    Responsible Data Handling
+                </h3>
+
+                <p>
+
+                    MANA's privacy practices and data handling
+                    commitments are described in our Privacy Policy.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MEDICALSPACE CTA
+========================================================= -->
+
+<section class="medicalspace-cta">
+
+    <div class="container">
+
+        <h2>
+            Healthcare. Connected. Intelligent.
+        </h2>
+
+        <p>
+
+            Discover MedicalSpace, MANA LLC's primary healthcare
+            platform for medical professionals and healthcare organizations.
+
+        </p>
+
+        <div class="cta-buttons">
+
+            <a
+                href="medicalspace.html"
+                class="btn btn-light">
+
+                Explore MedicalSpace
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+            <a
+                href="#contact"
+                class="btn"
+                style="
+                    background:transparent;
+                    border-color:rgba(255,255,255,0.45);
+                    color:white;
+                ">
+
+                Talk to MANA
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="section-title-wrap">
+
+            <h2 class="section-title">
+                Contact MANA LLC
+            </h2>
+
+            <p class="section-subtitle">
+
+                Tell us about your healthcare technology needs,
+                MedicalSpace deployment, or integration requirements.
+
+            </p>
+
+        </div>
+
+
+        <div class="contact-content">
+
+
+            <div class="contact-info">
+
+                <h3>
+                    Let's Build Better Healthcare Technology
+                </h3>
+
+                <p>
+
+                    Whether you are evaluating MedicalSpace,
+                    planning a healthcare software project, or
+                    looking for medical systems integration,
+                    our team can discuss your requirements.
+
+                </p>
+
+
+                <div class="contact-details">
+
+
                     <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+
+                        <div>
+
+                            <h4>
+                                MANA LLC
+                            </h4>
+
+                            <p>
+                                Colorado, USA
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
+
                         <div>
-                            <h4>Phone</h4>
-                            <p>+2 (012) 234 72183</p>
+
+                            <h4>
+                                Phone
+                            </h4>
+
+                            <p>
+                                +1 (812) 791-4182
+                            </p>
+
                         </div>
+
                     </div>
-                    
+
+
                     <div class="contact-item">
+
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
+
                         <div>
-                            <h4>Email</h4>
-                            <p>info@mana-co.com</p>
+
+                            <h4>
+                                Email
+                            </h4>
+
+                            <p>
+                                info@mana-co.com
+                            </p>
+
                         </div>
+
                     </div>
-                    
+
+
                     <div class="contact-item">
+
                         <div class="contact-icon">
                             <i class="fab fa-whatsapp"></i>
                         </div>
+
                         <div>
-                            <h4>WhatsApp Business API</h4>
-                            <p>For healthcare integration inquiries and API access</p>
+
+                            <h4>
+                                WhatsApp Business
+                            </h4>
+
+                            <p>
+                                Healthcare integration inquiries
+                            </p>
+
                         </div>
+
                     </div>
+
+
                 </div>
-                
+
+
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+                    <a
+                        href="#"
+                        aria-label="Twitter">
+
+                        <i class="fab fa-twitter"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="LinkedIn">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Facebook">
+
+                        <i class="fab fa-facebook-f"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="WhatsApp">
+
+                        <i class="fab fa-whatsapp"></i>
+
+                    </a>
+
                 </div>
+
             </div>
-            
+
+
             <div class="contact-form">
-                <!-- استبدل YOUR_EMAIL_HERE بإيميلك الحقيقي -->
-                <form id="contactForm" action="https://formsubmit.co/info@mana-co.com" method="POST">
-                    <!-- Hidden Fields for FormSubmit -->
-                    <input type="hidden" name="_subject" value="New Contact - MANA LLC Healthcare Software">
-                    <input type="hidden" name="_autoresponse" value="Thank you for contacting MANA LLC. We will respond within 24 hours.">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://formsubmit.co/thank_you">
-                    <input type="hidden" name="_captcha" value="false">
-                    
+
+                <form
+                    id="contactForm"
+                    action="https://formsubmit.co/info@mana-co.com"
+                    method="POST">
+
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Contact - MANA LLC / MedicalSpace">
+
+                    <input
+                        type="hidden"
+                        name="_autoresponse"
+                        value="Thank you for contacting MANA LLC. We will review your message and respond as soon as possible.">
+
+                    <input
+                        type="hidden"
+                        name="_template"
+                        value="table">
+
+                    <input
+                        type="hidden"
+                        name="_next"
+                        value="https://mana-co.com/">
+
+                    <input
+                        type="hidden"
+                        name="_captcha"
+                        value="false">
+
+
                     <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
+
+                        <label for="name">
+                            Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="form-control"
+                            autocomplete="name"
+                            required>
+
                     </div>
-                    
+
+
                     <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
+
+                        <label for="email">
+                            Email Address *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-control"
+                            autocomplete="email"
+                            required>
+
                     </div>
-                    
+
+
                     <div class="form-group">
-                        <label for="company">Healthcare Facility / Organization</label>
-                        <input type="text" id="company" name="company" class="form-control">
+
+                        <label for="company">
+                            Healthcare Facility / Organization
+                        </label>
+
+                        <input
+                            type="text"
+                            id="company"
+                            name="company"
+                            class="form-control"
+                            autocomplete="organization">
+
                     </div>
-                    
+
+
                     <div class="form-group">
-                        <label for="service">Service Needed</label>
-                        <select id="service" name="service" class="form-control">
-                            <option value="">Select Service</option>
-                            <option value="pacs">PACS/DICOM Solutions</option>
-                            <option value="whatsapp">WhatsApp Medical Integration</option>
-                            <option value="ris">RIS System</option>
-                            <option value="his">HIS System</option>
-                            <option value="security">Healthcare Data Security</option>
-                            <option value="other">Other Healthcare Software</option>
+
+                        <label for="service">
+                            What are you interested in?
+                        </label>
+
+                        <select
+                            id="service"
+                            name="service"
+                            class="form-control">
+
+                            <option value="">
+                                Select an option
+                            </option>
+
+                            <option value="medicalspace">
+                                MedicalSpace
+                            </option>
+
+                            <option value="pacs">
+                                PACS / DICOM
+                            </option>
+
+                            <option value="ris">
+                                RIS
+                            </option>
+
+                            <option value="his">
+                                HIS
+                            </option>
+
+                            <option value="whatsapp">
+                                WhatsApp Healthcare Integration
+                            </option>
+
+                            <option value="ai">
+                                AI Healthcare Solutions
+                            </option>
+
+                            <option value="other">
+                                Other Healthcare Technology
+                            </option>
+
                         </select>
+
                     </div>
-                    
+
+
                     <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" class="form-control" rows="5" placeholder="Please describe your healthcare software needs..." required></textarea>
+
+                        <label for="message">
+                            Message *
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            class="form-control"
+                            rows="6"
+                            placeholder="Tell us about your healthcare technology needs..."
+                            required></textarea>
+
                     </div>
-                    
-                    <button type="submit" class="btn">Send Message</button>
-                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--gray);">
-                        <i class="fas fa-shield-alt"></i> This form is secure and HIPAA-compliant for general inquiries.
+
+
+                    <button
+                        type="submit"
+                        class="btn">
+
+                        <i class="fas fa-paper-plane"></i>
+
+                        Send Message
+
+                    </button>
+
+
+                    <p class="form-note">
+
+                        Please do not submit emergency requests or
+                        sensitive patient information through this
+                        general contact form.
+
                     </p>
-                    <p style="margin-top: 5px; font-size: 0.9rem; color: var(--gray);">
-                        By submitting this form, you agree to our <a href="privacy.html" style="color: var(--primary);">Privacy Policy</a> and <a href="terms.html" style="color: var(--primary);">Terms & Conditions</a>.
+
+                    <p class="form-note">
+
+                        By submitting this form, you agree to our
+
+                        <a href="privacy.html">
+                            Privacy Policy
+                        </a>
+
+                        and
+
+                        <a href="terms.html">
+                            Terms & Conditions
+                        </a>.
+
                     </p>
+
                 </form>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h4>MANA LLC</h4>
-                    <p>US-based healthcare software company specializing in PACS, DICOM, RIS, HIS, and secure WhatsApp integration for medical facilities worldwide.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+
+            <div class="footer-column">
+
+                <div class="footer-brand">
+                    MANA <span>LLC</span>
                 </div>
-                
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="index.html#compliance">Compliance</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
+
+                <p>
+
+                    A US-based healthcare technology company developing
+                    connected software solutions for medical professionals,
+                    healthcare organizations, and medical environments.
+
+                </p>
+
+                <p style="margin-top:10px;">
+
+                    <strong style="color:white;">
+                        MedicalSpace
+                    </strong>
+                    is MANA's primary healthcare platform.
+
+                </p>
+
+
+                <div class="social-links">
+
+                    <a
+                        href="#"
+                        aria-label="Twitter">
+
+                        <i class="fab fa-twitter"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="LinkedIn">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="WhatsApp">
+
+                        <i class="fab fa-whatsapp"></i>
+
+                    </a>
+
                 </div>
-                
-                <div class="footer-column">
-                    <h4>Legal</h4>
-                    <ul class="footer-links">
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="#">HIPAA Compliance</a></li>
-                        <li><a href="#">Business Associate Agreement</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Contact Us</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Colorado, USA</li>
-                        <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +1 (812) 791-4182</li>
-                        <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Cairo, EGYPT</li>
-                        <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +20 1223472183</li>
-                        <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> info@mana-co.com</li>
-                        <li><i class="fab fa-whatsapp" style="margin-right: 8px;"></i> 20 1007339500</li>
-                    </ul>
-                </div>
+
             </div>
-            
-            <div class="copyright">
-                <p>&copy; 2025 MANA LLC. All rights reserved. | HIPAA Compliant Healthcare Software Solutions | Meta WhatsApp Business API Approved</p>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="medicalspace.html">
+                            MedicalSpace
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#solutions">
+                            Healthcare Solutions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            About MANA
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
             </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Legal
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="privacy.html">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="terms.html">
+                            Terms & Conditions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="medicalspace-delete-account.html">
+                            Account & Data Deletion
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <i
+                            class="fas fa-location-dot"
+                            style="margin-right:8px;">
+                        </i>
+
+                        Colorado, USA
+                    </li>
+
+                    <li>
+                        <i
+                            class="fas fa-phone"
+                            style="margin-right:8px;">
+                        </i>
+
+                        +1 (812) 791-4182
+                    </li>
+
+                    <li>
+                        <i
+                            class="fas fa-envelope"
+                            style="margin-right:8px;">
+                        </i>
+
+                        info@mana-co.com
+                    </li>
+
+                    <li>
+                        <i
+                            class="fab fa-whatsapp"
+                            style="margin-right:8px;">
+                        </i>
+
+                        WhatsApp Business
+                    </li>
+
+                </ul>
+
+            </div>
+
+
         </div>
-    </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
+        <div class="copyright">
+
+            <p>
+
+                &copy; 2026 MANA LLC.
+                All rights reserved.
+
+                &nbsp;|&nbsp;
+
+                MedicalSpace Healthcare Platform
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<a
+    href="#"
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back to top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</a>
+
+
+<!-- =========================================================
+     SWIPER
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+<script>
+
+    /* =========================================================
+       MOBILE MENU
+    ========================================================= */
+
+    const mobileMenuBtn =
+        document.querySelector('.mobile-menu-btn');
+
+    const navLinks =
+        document.querySelector('.nav-links');
+
+    if (mobileMenuBtn && navLinks) {
+
+        mobileMenuBtn.addEventListener('click', function () {
+
+            const isActive =
+                navLinks.classList.toggle('active');
+
+            mobileMenuBtn.setAttribute(
+                'aria-expanded',
+                isActive ? 'true' : 'false'
+            );
+
+            mobileMenuBtn.innerHTML = isActive
+                ? '<i class="fas fa-times"></i>'
                 : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-        
-// Contact Form Submission
-const contactForm = document.getElementById('contactForm');
 
-if(contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        // التحقق من صحة البيانات قبل الإرسال
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        // التحقق من الحقول المطلوبة
-        if (!name || !email || !message) {
-            alert('Please fill in all required fields marked with *.');
-            e.preventDefault();
-            return;
-        }
-        
-        // التحقق من صحة الإيميل
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-            alert('Please enter a valid email address.');
-            e.preventDefault();
-            return;
-        }
-        
-        // إضافة تتبع لـ Google Analytics
-        if(typeof gtag !== 'undefined') {
-            gtag('event', 'form_submission', {
-                'event_category': 'contact',
-                'event_label': 'contact_form'
+        });
+
+
+        document.querySelectorAll('.nav-links a')
+            .forEach(function (link) {
+
+                link.addEventListener('click', function () {
+
+                    navLinks.classList.remove('active');
+
+                    mobileMenuBtn.setAttribute(
+                        'aria-expanded',
+                        'false'
+                    );
+
+                    mobileMenuBtn.innerHTML =
+                        '<i class="fas fa-bars"></i>';
+
+                });
+
             });
+
+    }
+
+
+    /* =========================================================
+       HEADER SHADOW
+    ========================================================= */
+
+    const header =
+        document.getElementById('siteHeader');
+
+    window.addEventListener(
+        'scroll',
+        function () {
+
+            if (!header) {
+                return;
+            }
+
+            if (window.scrollY > 50) {
+
+                header.style.boxShadow =
+                    '0 5px 25px rgba(15, 23, 42, 0.12)';
+
+                header.style.backgroundColor =
+                    'rgba(255,255,255,0.98)';
+
+            } else {
+
+                header.style.boxShadow =
+                    '0 2px 15px rgba(0,0,0,0.08)';
+
+                header.style.backgroundColor =
+                    'rgba(255,255,255,0.97)';
+
+            }
+
         }
-        
-        // ✅ إزالة e.preventDefault() ليتم الإرسال إلى FormSubmit.co
-        // ✅ لا داعي لـ alert لأن FormSubmit سيعيد التوجيه
-        
-        // يمكنك إضافة رسالة نجاح إذا أردت
-        console.log('Form submitted successfully to FormSubmit.co');
-    });
-}
-        
-        // Back to Top Button
-        const backToTop = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
+    );
+
+
+    /* =========================================================
+       BACK TO TOP
+    ========================================================= */
+
+    const backToTop =
+        document.getElementById('backToTop');
+
+    window.addEventListener(
+        'scroll',
+        function () {
+
+            if (window.scrollY > 400) {
+
                 backToTop.classList.add('active');
+
             } else {
+
                 backToTop.classList.remove('active');
+
             }
-            
-            // Navbar background on scroll
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-                header.style.backgroundColor = 'white';
-            }
-        });
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if(this.getAttribute('href') === '#') return;
-                
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // WhatsApp button highlight
-        const whatsappBtn = document.querySelector('.btn-whatsapp');
-        if(whatsappBtn) {
-            whatsappBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const whatsappSection = document.querySelector('.whatsapp-feature');
-                if(whatsappSection) {
-                    window.scrollTo({
-                        top: whatsappSection.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
+
         }
-    </script>
+    );
+
+
+    backToTop.addEventListener(
+        'click',
+        function (e) {
+
+            e.preventDefault();
+
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+        }
+    );
+
+
+    /* =========================================================
+       SMOOTH INTERNAL NAVIGATION
+    ========================================================= */
+
+    document.querySelectorAll(
+        'a[href^="#"]'
+    ).forEach(function (anchor) {
+
+        anchor.addEventListener(
+            'click',
+            function (e) {
+
+                const targetId =
+                    this.getAttribute('href');
+
+                if (!targetId || targetId === '#') {
+                    return;
+                }
+
+                const target =
+                    document.querySelector(targetId);
+
+                if (!target) {
+                    return;
+                }
+
+                e.preventDefault();
+
+                const headerHeight =
+                    header
+                        ? header.offsetHeight
+                        : 80;
+
+                const targetPosition =
+                    target.getBoundingClientRect().top +
+                    window.pageYOffset -
+                    headerHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+
+            }
+        );
+
+    });
+
+
+    /* =========================================================
+       CLIENT SWIPER
+    ========================================================= */
+
+    if (typeof Swiper !== 'undefined') {
+
+        new Swiper('.client-slider', {
+
+            loop: true,
+
+            speed: 700,
+
+            slidesPerView: 5,
+
+            spaceBetween: 35,
+
+            autoplay: {
+                delay: 1800,
+                disableOnInteraction: false
+            },
+
+            breakpoints: {
+
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 15
+                },
+
+                480: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 25
+                },
+
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 35
+                }
+
+            }
+
+        });
+
+    }
+
+
+    /* =========================================================
+       CONTACT FORM VALIDATION
+    ========================================================= */
+
+    const contactForm =
+        document.getElementById('contactForm');
+
+    if (contactForm) {
+
+        contactForm.addEventListener(
+            'submit',
+            function (e) {
+
+                const name =
+                    document.getElementById('name').value.trim();
+
+                const email =
+                    document.getElementById('email').value.trim();
+
+                const message =
+                    document.getElementById('message').value.trim();
+
+
+                if (!name || !email || !message) {
+
+                    alert(
+                        'Please fill in all required fields marked with *.'
+                    );
+
+                    e.preventDefault();
+
+                    return;
+
+                }
+
+
+                const emailPattern =
+                    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+                if (!emailPattern.test(email)) {
+
+                    alert(
+                        'Please enter a valid email address.'
+                    );
+
+                    e.preventDefault();
+
+                    return;
+
+                }
+
+
+                if (typeof gtag !== 'undefined') {
+
+                    gtag(
+                        'event',
+                        'form_submission',
+                        {
+                            event_category: 'contact',
+                            event_label: 'MANA_contact_form'
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+</script>
+
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
