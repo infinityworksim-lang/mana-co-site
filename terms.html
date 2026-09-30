@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions | MANA LLC</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>MedicalSpace Terms & Conditions | MANA LLC</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
             --primary: #2563eb;
@@ -17,7 +20,6 @@
             --transition: all 0.3s ease;
             --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             --radius: 8px;
-            --whatsapp-green: #25D366;
         }
 
         * {
@@ -30,7 +32,7 @@
         body {
             background-color: var(--light);
             color: var(--secondary);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .container {
@@ -66,9 +68,9 @@
             align-items: center;
         }
 
-        .logo i {
+        .logo img {
+            height: 70px;
             margin-right: 10px;
-            color: var(--accent);
         }
 
         .nav-links {
@@ -107,7 +109,7 @@
         }
 
         .legal-content {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             background: white;
             padding: 50px;
@@ -117,13 +119,21 @@
 
         .legal-content h1 {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             color: var(--primary);
             font-size: 2.5rem;
         }
 
+        .legal-subtitle {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
         .legal-content h2 {
-            margin-top: 40px;
+            margin-top: 45px;
+            margin-bottom: 15px;
             color: var(--secondary);
             padding-bottom: 10px;
             border-bottom: 1px solid var(--gray-light);
@@ -131,53 +141,61 @@
 
         .legal-content h3 {
             margin-top: 30px;
+            margin-bottom: 10px;
             color: var(--primary);
         }
 
+        .legal-content p {
+            margin-bottom: 18px;
+        }
+
         .legal-list {
-            margin-left: 20px;
+            margin-left: 25px;
             margin-bottom: 20px;
         }
 
         .legal-list li {
             margin-bottom: 10px;
             position: relative;
-            padding-left: 10px;
-        }
-
-        .legal-list li:before {
-            content: "•";
-            color: var(--primary);
-            font-weight: bold;
-            position: absolute;
-            left: -10px;
+            padding-left: 5px;
         }
 
         .highlight-box {
             background: #f0f9ff;
             border-left: 4px solid var(--primary);
             padding: 20px;
-            margin: 20px 0;
+            margin: 25px 0;
             border-radius: 0 var(--radius) var(--radius) 0;
         }
 
-        .whatsapp-highlight {
-            background: rgba(37, 211, 102, 0.1);
-            border-left: 4px solid var(--whatsapp-green);
+        .important-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 18px;
+            margin: 25px 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .security-box {
+            background: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
         }
 
         .update-date {
             text-align: center;
             color: var(--gray);
             font-style: italic;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
             border-bottom: 1px solid var(--gray-light);
         }
 
         .back-button {
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 35px;
             padding: 10px 20px;
             background: var(--primary);
             color: white;
@@ -191,12 +209,22 @@
             transform: translateY(-2px);
         }
 
-        .important-note {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 var(--radius) var(--radius) 0;
+        .legal-links {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: var(--radius);
+            border: 1px solid var(--gray-light);
+        }
+
+        .legal-links a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .legal-links a:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
@@ -265,10 +293,11 @@
         }
 
         @media (max-width: 992px) {
+
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             .nav-links {
                 position: fixed;
                 top: 80px;
@@ -282,41 +311,53 @@
                 padding: 30px;
                 z-index: 999;
             }
-            
+
             .nav-links.active {
                 left: 0;
             }
-            
+
             .nav-links li {
                 margin: 15px 0;
             }
-            
+
             .legal-content {
                 padding: 30px 20px;
             }
         }
 
         @media (max-width: 768px) {
+
             .legal-content h1 {
                 font-size: 2rem;
             }
-            
+
             .footer-column {
                 min-width: 100%;
+            }
+
+            .logo img {
+                height: 55px;
+            }
+
+            .logo {
+                font-size: 1.4rem;
             }
         }
     </style>
 </head>
+
 <body>
+
     <!-- Header -->
     <header>
         <div class="container">
             <nav class="navbar">
+
                 <a href="index.html" class="logo">
-    <img src="logo.png" alt="MANA LLC Logo" style="height: 100px; margin-right: 10px;">
-    MANA LLC
-</a>
-                
+                    <img src="logo.png" alt="MANA LLC Logo">
+                    MANA LLC
+                </a>
+
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#services">Services</a></li>
@@ -324,231 +365,1637 @@
                     <li><a href="privacy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms</a></li>
                 </ul>
-                
-                <button class="mobile-menu-btn">
+
+                <button class="mobile-menu-btn" aria-label="Open navigation menu">
                     <i class="fas fa-bars"></i>
                 </button>
+
             </nav>
         </div>
     </header>
 
-    <!-- Terms & Conditions Content -->
+
+    <!-- Terms & Conditions -->
     <section class="legal-page">
+
         <div class="container">
+
             <div class="legal-content">
-                <h1>Terms & Conditions</h1>
-                <div class="update-date">Effective: October 2025</div>
-                
-                <p>These Terms & Conditions ("Terms") govern your use of MANA LLC's healthcare software services, including but not limited to PACS, DICOM, RIS, HIS, and WhatsApp integration services ("Services"). By accessing or using our Services, you agree to be bound by these Terms.</p>
-                
+
+                <h1>MedicalSpace Terms &amp; Conditions</h1>
+
+                <div class="legal-subtitle">
+                    MANA LLC
+                </div>
+
+                <div class="update-date">
+                    Effective Date: September 30, 2026<br>
+                    Last Updated: September 30, 2026
+                </div>
+
+
+                <p>
+                    These Terms &amp; Conditions ("Terms", "Agreement") constitute a legally
+                    binding agreement between <strong>MANA LLC</strong>, a Colorado limited
+                    liability company ("MANA", "we", "us", or "our"), and the individual or
+                    legal entity accessing or using <strong>MedicalSpace</strong>
+                    ("MedicalSpace", "Platform", "Service", "you", or "Customer").
+                </p>
+
+                <p>
+                    By creating an account, accessing, subscribing to, or using MedicalSpace,
+                    you agree to be bound by these Terms.
+                </p>
+
+                <p>
+                    If you do not agree to these Terms, you must not use MedicalSpace.
+                </p>
+
+
                 <div class="important-note">
-                    <strong>Important:</strong> These Terms include specific provisions for WhatsApp Business API usage. Healthcare providers must obtain explicit patient consent for all WhatsApp communications as required by Meta and healthcare regulations.
+                    <strong>Important:</strong>
+                    MedicalSpace is healthcare software technology. It is not a hospital,
+                    clinic, physician, pharmacist, emergency service, insurer, or other
+                    healthcare provider. MedicalSpace does not replace professional
+                    medical judgment or applicable legal and regulatory obligations.
                 </div>
-                
-                <div class="highlight-box whatsapp-highlight">
-                    <h3>WhatsApp Business API Usage Declaration</h3>
-                    <p><strong>"We use WhatsApp Business API to send medical notifications, reports, and support messages to registered users only. All communications are HIPAA-compliant and require explicit patient consent."</strong></p>
-                    <p>This statement is included in our Meta Business verification and API approval process.</p>
+
+
+                <!-- 1 -->
+                <h2>1. Nature of MedicalSpace</h2>
+
+                <p>
+                    MedicalSpace is a software-as-a-service platform intended primarily for:
+                </p>
+
+                <ul class="legal-list">
+                    <li>physicians;</li>
+                    <li>pharmacists;</li>
+                    <li>healthcare professionals;</li>
+                    <li>clinics;</li>
+                    <li>medical organizations;</li>
+                    <li>medical suppliers;</li>
+                    <li>medical equipment manufacturers;</li>
+                    <li>medical service providers; and</li>
+                    <li>other authorized professional users.</li>
+                </ul>
+
+                <p>
+                    MedicalSpace provides software and technology infrastructure for
+                    healthcare-related workflows, communication, information management,
+                    professional collaboration, and related functionality.
+                </p>
+
+                <p>
+                    <strong>MANA is not a hospital, clinic, physician, pharmacist, healthcare
+                    provider, insurer, or emergency medical service.</strong>
+                </p>
+
+                <p>
+                    MANA does not independently provide medical diagnosis, treatment,
+                    prescriptions, or medical advice through MedicalSpace.
+                </p>
+
+
+                <!-- 2 -->
+                <h2>2. No Medical Advice</h2>
+
+                <p>
+                    MedicalSpace and any information made available through MedicalSpace,
+                    including AI-generated information, are provided as technological
+                    assistance only.
+                </p>
+
+                <p>Nothing provided by MedicalSpace constitutes:</p>
+
+                <ul class="legal-list">
+                    <li>a medical diagnosis;</li>
+                    <li>medical advice;</li>
+                    <li>treatment;</li>
+                    <li>a prescription;</li>
+                    <li>a clinical order;</li>
+                    <li>a referral;</li>
+                    <li>an emergency service;</li>
+                    <li>a substitute for professional judgment; or</li>
+                    <li>a doctor-patient relationship.</li>
+                </ul>
+
+                <p>
+                    Healthcare professionals remain solely responsible for independently
+                    reviewing and evaluating information before relying upon it.
+                </p>
+
+
+                <!-- 3 -->
+                <h2>3. Artificial Intelligence Disclaimer</h2>
+
+                <p>
+                    MedicalSpace may contain artificial intelligence ("AI") assisted
+                    functionality.
+                </p>
+
+                <p>AI-generated results may contain:</p>
+
+                <ul class="legal-list">
+                    <li>factual errors;</li>
+                    <li>incomplete information;</li>
+                    <li>incorrect medical terminology;</li>
+                    <li>incorrect interpretation;</li>
+                    <li>inappropriate suggestions;</li>
+                    <li>omissions;</li>
+                    <li>outdated information;</li>
+                    <li>false positives; or</li>
+                    <li>false negatives.</li>
+                </ul>
+
+                <p>
+                    AI output must be treated as an <strong>assistive draft or recommendation
+                    only</strong>.
+                </p>
+
+                <p>
+                    You are solely responsible for reviewing and validating AI-generated
+                    information before:
+                </p>
+
+                <ul class="legal-list">
+                    <li>saving it to a medical record;</li>
+                    <li>communicating it to a patient;</li>
+                    <li>making a diagnosis;</li>
+                    <li>selecting treatment;</li>
+                    <li>prescribing medication;</li>
+                    <li>ordering an investigation;</li>
+                    <li>making an emergency decision; or</li>
+                    <li>taking any other clinical action.</li>
+                </ul>
+
+                <p>
+                    MANA does not guarantee the medical correctness, completeness, safety,
+                    or suitability of AI-generated output.
+                </p>
+
+
+                <!-- 4 -->
+                <h2>4. Emergency Use Prohibited</h2>
+
+                <p>
+                    MedicalSpace is not an emergency medical service and must not be used
+                    as the sole means of responding to an emergency.
+                </p>
+
+                <p>Examples include:</p>
+
+                <ul class="legal-list">
+                    <li>life-threatening emergencies;</li>
+                    <li>severe allergic reactions;</li>
+                    <li>chest pain;</li>
+                    <li>severe breathing difficulty;</li>
+                    <li>stroke symptoms;</li>
+                    <li>unconsciousness;</li>
+                    <li>major trauma;</li>
+                    <li>suicidal emergencies; or</li>
+                    <li>any other situation requiring immediate emergency intervention.</li>
+                </ul>
+
+                <p>
+                    In an emergency, users must contact the appropriate local emergency
+                    service or qualified medical professional.
+                </p>
+
+                <p>
+                    MANA is not responsible for delays, failures, interruptions, or
+                    consequences resulting from attempting to use MedicalSpace for
+                    emergency care, to the maximum extent permitted by applicable law.
+                </p>
+
+
+                <!-- 5 -->
+                <h2>5. Eligibility</h2>
+
+                <p>You represent and warrant that:</p>
+
+                <ol class="legal-list">
+                    <li>you have legal capacity to enter into this Agreement;</li>
+                    <li>you are using MedicalSpace for lawful professional or business purposes;</li>
+                    <li>all information you provide is accurate to the best of your knowledge;</li>
+                    <li>you will maintain the confidentiality of your credentials;</li>
+                    <li>you will comply with applicable laws; and</li>
+                    <li>you will not use MedicalSpace for unlawful purposes.</li>
+                </ol>
+
+                <p>
+                    If you are using MedicalSpace on behalf of an organization, you represent
+                    that you have authority to bind that organization.
+                </p>
+
+
+                <!-- 6 -->
+                <h2>6. Account Security</h2>
+
+                <p>
+                    You are responsible for maintaining the confidentiality of:
+                </p>
+
+                <ul class="legal-list">
+                    <li>usernames;</li>
+                    <li>passwords;</li>
+                    <li>authentication codes;</li>
+                    <li>access tokens;</li>
+                    <li>devices;</li>
+                    <li>administrator credentials; and</li>
+                    <li>other authentication information.</li>
+                </ul>
+
+                <p>
+                    You must immediately notify MANA if you suspect:
+                </p>
+
+                <ul class="legal-list">
+                    <li>unauthorized access;</li>
+                    <li>credential compromise;</li>
+                    <li>account takeover;</li>
+                    <li>unauthorized member access; or</li>
+                    <li>security incidents involving MedicalSpace.</li>
+                </ul>
+
+                <p>
+                    MANA is not responsible for losses resulting from credentials or access
+                    controls that you fail to protect, except to the extent liability cannot
+                    legally be excluded.
+                </p>
+
+
+                <!-- 7 -->
+                <h2>7. Doctors, Account Owners, and Organizations</h2>
+
+                <p>
+                    The person or organization that creates a MedicalSpace professional
+                    account ("Account Owner") is responsible for:
+                </p>
+
+                <ul class="legal-list">
+                    <li>the account;</li>
+                    <li>users invited to the account;</li>
+                    <li>member permissions;</li>
+                    <li>patient information;</li>
+                    <li>documents;</li>
+                    <li>prescriptions;</li>
+                    <li>visits;</li>
+                    <li>messages;</li>
+                    <li>uploaded content;</li>
+                    <li>account security;</li>
+                    <li>lawful use of the Service; and</li>
+                    <li>actions performed by authorized members.</li>
+                </ul>
+
+
+                <!-- 8 -->
+                <h2>8. Members and Employees</h2>
+
+                <p>
+                    MedicalSpace may allow Account Owners to invite employees, assistants,
+                    secretaries, doctors, pharmacists, or other authorized members.
+                </p>
+
+                <p>The Account Owner is responsible for:</p>
+
+                <ul class="legal-list">
+                    <li>deciding who receives access;</li>
+                    <li>assigning appropriate permissions;</li>
+                    <li>reviewing member access;</li>
+                    <li>removing former employees;</li>
+                    <li>preventing unauthorized access;</li>
+                    <li>ensuring that members are properly trained; and</li>
+                    <li>ensuring that members comply with these Terms and applicable law.</li>
+                </ul>
+
+                <p>
+                    A member's access is limited to the permissions assigned by the Account
+                    Owner and the technical capabilities of the Platform.
+                </p>
+
+                <p>
+                    MANA is not responsible for an Account Owner granting excessive
+                    permissions to a member.
+                </p>
+
+
+                <!-- 9 -->
+                <h2>9. Patient Information</h2>
+
+                <p>
+                    MedicalSpace may allow healthcare professionals to store patient
+                    information.
+                </p>
+
+                <p>
+                    You represent and warrant that you have the legal right and appropriate
+                    authority to:
+                </p>
+
+                <ul class="legal-list">
+                    <li>collect patient information;</li>
+                    <li>enter patient information into MedicalSpace;</li>
+                    <li>store patient information;</li>
+                    <li>process patient information;</li>
+                    <li>disclose patient information where necessary;</li>
+                    <li>use MedicalSpace for the applicable purpose; and</li>
+                    <li>instruct MANA to process such information.</li>
+                </ul>
+
+                <p>
+                    You are solely responsible for obtaining any patient consent,
+                    authorization, notice, or other lawful basis required by applicable law.
+                </p>
+
+                <p>
+                    MANA does not independently verify whether you have obtained such
+                    consent or authorization.
+                </p>
+
+
+                <!-- 10 -->
+                <h2>10. Medical Confidentiality</h2>
+
+                <p>
+                    Healthcare professionals remain responsible for their professional
+                    confidentiality obligations.
+                </p>
+
+                <p>
+                    You must not use MedicalSpace to disclose patient information to a
+                    person who is not authorized to receive it.
+                </p>
+
+                <p>
+                    You must configure user permissions appropriately and promptly remove
+                    unauthorized users.
+                </p>
+
+
+                <!-- 11 -->
+                <h2>11. User Content</h2>
+
+                <p>
+                    You retain ownership of content that you lawfully own and upload to
+                    MedicalSpace.
+                </p>
+
+                <p>
+                    You grant MANA a limited, non-exclusive, worldwide, royalty-free license
+                    to host, store, reproduce, transmit, process, display, and technically
+                    handle that content solely as reasonably necessary to:
+                </p>
+
+                <ul class="legal-list">
+                    <li>operate MedicalSpace;</li>
+                    <li>provide requested functionality;</li>
+                    <li>synchronize information;</li>
+                    <li>provide backups;</li>
+                    <li>maintain security;</li>
+                    <li>troubleshoot;</li>
+                    <li>prevent abuse;</li>
+                    <li>comply with law; and</li>
+                    <li>perform the Service.</li>
+                </ul>
+
+                <p>
+                    MANA does not acquire ownership of your medical records merely because
+                    you store them on MedicalSpace.
+                </p>
+
+
+                <!-- 12 -->
+                <h2>12. Prohibited Content</h2>
+
+                <p>You must not upload or transmit content that:</p>
+
+                <ul class="legal-list">
+                    <li>you do not have the right to use;</li>
+                    <li>violates applicable law;</li>
+                    <li>infringes intellectual property rights;</li>
+                    <li>contains malware;</li>
+                    <li>attempts to compromise the Platform;</li>
+                    <li>contains unauthorized patient information;</li>
+                    <li>is fraudulent;</li>
+                    <li>is unlawfully defamatory;</li>
+                    <li>promotes illegal activity;</li>
+                    <li>attempts to bypass security controls; or</li>
+                    <li>violates these Terms.</li>
+                </ul>
+
+
+                <!-- 12.1 -->
+                <h3>12.1 User-Generated Content and Community Guidelines</h3>
+
+                <p>
+                    MedicalSpace allows authorized users to create, publish, share, and
+                    interact with user-generated content, including posts, medical case
+                    discussions, comments or contributions, images, videos, documents,
+                    and other content submitted through the MedicalSpace platform
+                    ("User-Generated Content" or "UGC").
+                </p>
+
+                <p>By creating or submitting UGC, you agree that:</p>
+
+                <ul class="legal-list">
+
+                    <li>
+                        You will only submit content that you have the legal right and
+                        authorization to use, publish, and share.
+                    </li>
+
+                    <li>
+                        You will comply with all applicable laws, regulations, professional
+                        obligations, confidentiality requirements, and patient privacy
+                        requirements.
+                    </li>
+
+                    <li>
+                        You will not publish or disclose identifiable patient information
+                        unless you are legally authorized to do so and have an appropriate
+                        lawful basis for the disclosure.
+                    </li>
+
+                    <li>
+                        You will not use MedicalSpace to harass, bully, threaten,
+                        intimidate, target, or abuse another person.
+                    </li>
+
+                    <li>
+                        You will not publish content that promotes or encourages violence,
+                        dangerous activities, illegal activity, or other unlawful conduct.
+                    </li>
+
+                    <li>
+                        You will not publish hateful, discriminatory, sexually explicit,
+                        sexually inappropriate, or otherwise objectionable content.
+                    </li>
+
+                    <li>
+                        You will not use MedicalSpace to distribute spam, scams, fraudulent
+                        content, deceptive content, malicious software, or content intended
+                        to manipulate or disrupt the Platform.
+                    </li>
+
+                    <li>
+                        You will not impersonate another person, physician, healthcare
+                        professional, organization, or other entity, or falsely represent
+                        your affiliation or authority.
+                    </li>
+
+                    <li>
+                        You will not intentionally publish false or dangerously misleading
+                        medical information.
+                    </li>
+
+                    <li>
+                        You will not use UGC to unlawfully infringe copyrights, trademarks,
+                        privacy rights, publicity rights, or other intellectual property
+                        or legal rights of others.
+                    </li>
+
+                    <li>
+                        You will not intentionally target another user with repeated
+                        abusive, malicious, or retaliatory conduct.
+                    </li>
+
+                    <li>
+                        You will not attempt to circumvent, interfere with, or abuse
+                        MedicalSpace reporting, blocking, moderation, security, or other
+                        safety mechanisms.
+                    </li>
+
+                    <li>
+                        If you publish content generated or assisted by artificial
+                        intelligence, you remain responsible for reviewing that content
+                        and ensuring that its publication complies with these Terms,
+                        applicable law, professional obligations, and patient privacy
+                        requirements.
+                    </li>
+
+                </ul>
+
+                <p>
+                    Medical discussions, professional disagreements, clinical opinions,
+                    and differing approaches are permitted when presented responsibly
+                    and in accordance with applicable professional obligations.
+                </p>
+
+                <p>
+                    You retain ownership of UGC that you lawfully own. By submitting UGC
+                    to MedicalSpace, you grant MANA LLC a limited, non-exclusive,
+                    worldwide, royalty-free license to host, store, reproduce, process,
+                    display, transmit, moderate, and technically use that content only
+                    as reasonably necessary to operate, secure, maintain, improve, and
+                    provide the MedicalSpace services, subject to these Terms and the
+                    MedicalSpace Privacy Policy.
+                </p>
+
+                <p>
+                    MedicalSpace does not endorse, verify, or guarantee the accuracy,
+                    completeness, safety, legality, or professional appropriateness of
+                    UGC posted by users. Users remain responsible for the content they
+                    submit and for their professional and legal obligations relating
+                    to that content.
+                </p>
+
+
+                <!-- 12.2 -->
+                <h3>12.2 Reporting and Blocking</h3>
+
+                <p>
+                    MedicalSpace provides in-app mechanisms that allow users to report
+                    objectionable UGC and to block other users.
+                </p>
+
+                <p>Users may report content or users for reasons including:</p>
+
+                <ul class="legal-list">
+                    <li>spam or fraudulent activity;</li>
+                    <li>harassment or bullying;</li>
+                    <li>hate or abusive conduct;</li>
+                    <li>sexual or inappropriate content;</li>
+                    <li>violence or dangerous content;</li>
+                    <li>medical misinformation;</li>
+                    <li>privacy or confidentiality violations;</li>
+                    <li>copyright or other intellectual property violations; and</li>
+                    <li>other violations of these Terms or applicable law.</li>
+                </ul>
+
+                <p>
+                    Users may also block another doctor or user when they do not wish to
+                    interact with or receive content from that user.
+                </p>
+
+                <p>
+                    Reports should be submitted in good faith and should contain accurate
+                    information to the extent reasonably known by the reporting user.
+                    Users must not intentionally submit false, misleading, malicious,
+                    or abusive reports or use the reporting system to harass or retaliate
+                    against another user.
+                </p>
+
+                <p>
+                    Submitting a report does not guarantee that MedicalSpace will remove
+                    the reported content or take a particular action. MANA LLC may review
+                    reports and take appropriate action based on the circumstances,
+                    applicable law, these Terms, and MedicalSpace safety and moderation
+                    standards.
+                </p>
+
+
+                <!-- 12.3 -->
+                <h3>12.3 Moderation and Content Removal</h3>
+
+                <p>
+                    MANA LLC maintains reasonable and ongoing moderation processes
+                    intended to help maintain the safety, integrity, and appropriate use
+                    of the MedicalSpace platform.
+                </p>
+
+                <p>
+                    Depending on the circumstances, MANA LLC may review, restrict, hide,
+                    remove, disable access to, or otherwise take action regarding UGC
+                    that it reasonably believes:
+                </p>
+
+                <ul class="legal-list">
+                    <li>violates these Terms or applicable law;</li>
+                    <li>creates a safety, privacy, security, or legal risk;</li>
+                    <li>contains prohibited or objectionable material;</li>
+                    <li>improperly discloses patient or other confidential information;</li>
+                    <li>constitutes harassment, abuse, threats, spam, fraud, or other prohibited conduct;</li>
+                    <li>infringes the rights of another person or entity; or</li>
+                    <li>otherwise creates a significant risk to MedicalSpace, its users, healthcare professionals, patients, or third parties.</li>
+                </ul>
+
+                <p>
+                    MANA LLC may also restrict, suspend, or terminate accounts or access
+                    to features when permitted under these Terms, including where a
+                    user's conduct repeatedly or seriously violates applicable rules.
+                </p>
+
+                <p>
+                    Moderation may involve automated systems, manual review, user reports,
+                    security processes, or a combination of these methods.
+                </p>
+
+                <p>
+                    MANA LLC will consider reports and other available information when
+                    determining whether action is appropriate. Due to privacy, security,
+                    legal, and operational considerations, MANA LLC may not disclose the
+                    details or outcome of a moderation review to the reporting user or
+                    other users.
+                </p>
+
+                <p>
+                    Users acknowledge that MedicalSpace is a technology platform and that
+                    moderation cannot guarantee that all objectionable, unlawful,
+                    inaccurate, or inappropriate content will be detected or removed
+                    immediately. Users should use the available reporting and blocking
+                    mechanisms when they encounter content or behavior that may violate
+                    these Terms.
+                </p>
+
+
+                <!-- 13 -->
+                <h2>13. Prohibited Uses</h2>
+
+                <p>You may not:</p>
+
+                <ol class="legal-list">
+                    <li>reverse engineer MedicalSpace;</li>
+                    <li>decompile or disassemble the software except where legally permitted;</li>
+                    <li>attempt to obtain source code;</li>
+                    <li>bypass authentication;</li>
+                    <li>circumvent permission controls;</li>
+                    <li>interfere with Platform infrastructure;</li>
+                    <li>perform unauthorized penetration testing;</li>
+                    <li>introduce malware;</li>
+                    <li>overload or abuse the Service;</li>
+                    <li>scrape the Platform without authorization;</li>
+                    <li>create fraudulent accounts;</li>
+                    <li>impersonate another person;</li>
+                    <li>use MedicalSpace to violate patient privacy;</li>
+                    <li>use MedicalSpace for unlawful surveillance;</li>
+                    <li>resell the Service without authorization;</li>
+                    <li>use the Service to build a substantially competing service through unauthorized automated access;</li>
+                    <li>use AI output as an automated medical decision without appropriate human review; or</li>
+                    <li>use MedicalSpace in violation of applicable professional regulations.</li>
+                </ol>
+
+
+                <!-- 14 -->
+                <h2>14. Subscription Plans</h2>
+
+                <p>
+                    MedicalSpace may provide free and paid functionality.
+                </p>
+
+                <p>
+                    Paid subscriptions may be offered on monthly, annual, or other
+                    billing cycles disclosed at the time of purchase.
+                </p>
+
+                <p>
+                    The applicable price, billing period, renewal terms, and subscription
+                    benefits will be disclosed before purchase.
+                </p>
+
+                <p>
+                    MANA may change subscription prices for future billing periods by
+                    providing reasonable notice where required by applicable law or
+                    applicable platform rules.
+                </p>
+
+
+                <!-- 15 -->
+                <h2>15. Automatic Renewal</h2>
+
+                <p>
+                    Unless canceled before the applicable renewal date, an auto-renewing
+                    paid subscription may automatically renew for the same billing period.
+                </p>
+
+                <p>
+                    The applicable payment platform will charge the payment method
+                    associated with the subscription according to the terms presented
+                    at purchase.
+                </p>
+
+                <p>
+                    You are responsible for canceling the subscription before the next
+                    renewal if you do not wish to continue.
+                </p>
+
+
+                <!-- 16 -->
+                <h2>16. Refunds</h2>
+
+                <p>
+                    Subscription payments are generally non-refundable except where a
+                    refund, cancellation right, credit, or other remedy is required by
+                    applicable law, applicable Google Play policies, another applicable
+                    payment platform policy, or expressly provided by MANA.
+                </p>
+
+                <p>
+                    Where legally permitted, unused subscription time, partial billing
+                    periods, cancellation after renewal, unused features, or failure
+                    to use the Service may not qualify for a refund.
+                </p>
+
+                <p>
+                    Nothing in these Terms excludes or limits any refund or consumer
+                    remedy that cannot legally be excluded or limited.
+                </p>
+
+
+                <!-- 17 -->
+                <h2>17. Taxes</h2>
+
+                <p>
+                    You are responsible for applicable taxes, duties, VAT, sales taxes,
+                    or similar governmental charges associated with your purchase,
+                    except taxes imposed directly on MANA's income.
+                </p>
+
+
+                <!-- 18 -->
+                <h2>18. Payment Processing</h2>
+
+                <p>
+                    Payments may be processed by third-party payment providers such as
+                    Stripe or, where applicable, an app-store billing platform.
+                </p>
+
+                <p>
+                    MANA does not guarantee the availability or uninterrupted operation
+                    of third-party payment systems.
+                </p>
+
+                <p>
+                    Payment disputes may be subject to the terms and policies of the
+                    applicable payment provider.
+                </p>
+
+
+                <!-- 19 -->
+                <h2>19. Subscription Cancellation</h2>
+
+                <p>
+                    You may cancel a subscription according to the cancellation
+                    functionality made available by MedicalSpace or the applicable
+                    payment platform.
+                </p>
+
+                <p>
+                    If a subscription is purchased through Google Play, cancellation
+                    may be managed through Google Play's subscription management tools
+                    or through functionality provided by MedicalSpace where applicable.
+                </p>
+
+                <p>
+                    Cancellation generally prevents future renewal but does not
+                    automatically entitle you to a refund for the current billing period,
+                    except where required by applicable law or applicable platform policy.
+                </p>
+
+                <p>
+                    Unless otherwise stated, access to paid features may continue until
+                    the end of the paid subscription period.
+                </p>
+
+
+                <!-- 20 -->
+                <h2>20. Downgrades</h2>
+
+                <p>
+                    If MedicalSpace permits subscription downgrades, the downgrade may
+                    become effective at the beginning of the next applicable billing period.
+                </p>
+
+                <p>
+                    Certain features, storage limits, or usage limits may change when
+                    the downgrade becomes effective.
+                </p>
+
+                <p>
+                    MANA may restrict new usage after a downgrade where necessary to
+                    enforce the limits of the new plan.
+                </p>
+
+
+                <!-- 21 -->
+                <h2>21. Suspension</h2>
+
+                <p>
+                    MANA may suspend or restrict access where reasonably necessary to:
+                </p>
+
+                <ul class="legal-list">
+                    <li>protect the Platform;</li>
+                    <li>prevent fraud;</li>
+                    <li>investigate abuse;</li>
+                    <li>address security threats;</li>
+                    <li>comply with law;</li>
+                    <li>enforce these Terms;</li>
+                    <li>address unpaid charges;</li>
+                    <li>prevent unauthorized access; or</li>
+                    <li>protect users or third parties.</li>
+                </ul>
+
+                <p>
+                    Where reasonably practicable, MANA may provide notice before
+                    suspension, except where immediate action is reasonably necessary.
+                </p>
+
+
+                <!-- 22 -->
+                <h2>22. Termination</h2>
+
+                <p>MANA may terminate an account or this Agreement where:</p>
+
+                <ul class="legal-list">
+                    <li>you materially violate these Terms;</li>
+                    <li>you engage in unlawful activity;</li>
+                    <li>you compromise Platform security;</li>
+                    <li>you fail to pay applicable charges;</li>
+                    <li>your use creates material legal or security risk;</li>
+                    <li>required by law; or</li>
+                    <li>MedicalSpace is discontinued.</li>
+                </ul>
+
+                <p>
+                    You may stop using MedicalSpace at any time.
+                </p>
+
+
+                <!-- 23 -->
+                <h2>23. Data Following Termination</h2>
+
+                <p>
+                    After termination, MANA may retain information for periods reasonably
+                    necessary for:
+                </p>
+
+                <ul class="legal-list">
+                    <li>legal compliance;</li>
+                    <li>security;</li>
+                    <li>backups;</li>
+                    <li>dispute resolution;</li>
+                    <li>fraud prevention;</li>
+                    <li>accounting;</li>
+                    <li>enforcement of contractual obligations; or</li>
+                    <li>other legitimate purposes permitted by applicable law.</li>
+                </ul>
+
+                <p>
+                    Where applicable, data retention and deletion practices are described
+                    further in the MedicalSpace Privacy Policy.
+                </p>
+
+                <p>
+                    You are responsible for exporting records before termination where
+                    you are legally required to retain them.
+                </p>
+
+                <p>
+                    MANA does not guarantee permanent access to data after termination.
+                </p>
+
+
+                <!-- 24 -->
+                <h2>24. Service Availability</h2>
+
+                <p>
+                    MANA will use commercially reasonable efforts to operate MedicalSpace.
+                </p>
+
+                <p>
+                    However, MedicalSpace may occasionally be unavailable due to:
+                </p>
+
+                <ul class="legal-list">
+                    <li>maintenance;</li>
+                    <li>upgrades;</li>
+                    <li>outages;</li>
+                    <li>cloud provider failures;</li>
+                    <li>Internet failures;</li>
+                    <li>telecommunications failures;</li>
+                    <li>security incidents;</li>
+                    <li>force majeure events;</li>
+                    <li>third-party service failures; or</li>
+                    <li>other circumstances beyond MANA's reasonable control.</li>
+                </ul>
+
+                <p>
+                    MANA does not guarantee uninterrupted or error-free availability.
+                </p>
+
+
+                <!-- 25 -->
+                <h2>25. Third-Party Services</h2>
+
+                <p>
+                    MedicalSpace may integrate with or depend upon third-party services,
+                    including:
+                </p>
+
+                <ul class="legal-list">
+                    <li>payment providers;</li>
+                    <li>cloud infrastructure;</li>
+                    <li>AI services;</li>
+                    <li>authentication providers;</li>
+                    <li>communication services;</li>
+                    <li>video services;</li>
+                    <li>storage services;</li>
+                    <li>analytics services; and</li>
+                    <li>other infrastructure providers.</li>
+                </ul>
+
+                <p>
+                    Third-party services are controlled by their respective providers.
+                </p>
+
+                <p>
+                    MANA is not responsible for failures caused exclusively by third-party
+                    services to the extent permitted by law.
+                </p>
+
+
+                <!-- 26 -->
+                <h2>26. Professional Responsibility</h2>
+
+                <p>
+                    MedicalSpace does not replace professional qualifications, licensing,
+                    training, judgment, or supervision.
+                </p>
+
+                <p>You are solely responsible for:</p>
+
+                <ul class="legal-list">
+                    <li>your professional decisions;</li>
+                    <li>patient care;</li>
+                    <li>diagnoses;</li>
+                    <li>prescriptions;</li>
+                    <li>treatment plans;</li>
+                    <li>referrals;</li>
+                    <li>medical documentation;</li>
+                    <li>interpretation of tests;</li>
+                    <li>interpretation of imaging;</li>
+                    <li>review of AI output;</li>
+                    <li>compliance with professional regulations; and</li>
+                    <li>consequences of decisions made using information available through MedicalSpace.</li>
+                </ul>
+
+
+                <!-- 27 -->
+                <h2>27. Medical Records</h2>
+
+                <p>
+                    MANA provides software infrastructure for medical record management.
+                </p>
+
+                <p>
+                    MANA does not guarantee that MedicalSpace satisfies every medical
+                    record retention, documentation, interoperability, localization,
+                    or regulatory requirement applicable to your jurisdiction.
+                </p>
+
+                <p>
+                    You are responsible for determining whether MedicalSpace is
+                    appropriate for your particular regulatory environment.
+                </p>
+
+
+                <!-- 28 -->
+                <h2>28. AI-Generated Content</h2>
+
+                <p>
+                    You acknowledge that AI systems are probabilistic technologies and
+                    may generate inaccurate or misleading information.
+                </p>
+
+                <p>
+                    You agree not to rely upon AI-generated information without
+                    appropriate professional review.
+                </p>
+
+                <p>You are responsible for verifying:</p>
+
+                <ul class="legal-list">
+                    <li>patient identity;</li>
+                    <li>clinical facts;</li>
+                    <li>medications;</li>
+                    <li>doses;</li>
+                    <li>allergies;</li>
+                    <li>diagnoses;</li>
+                    <li>investigations;</li>
+                    <li>treatment plans;</li>
+                    <li>dates;</li>
+                    <li>medical history; and</li>
+                    <li>all other clinically significant information.</li>
+                </ul>
+
+                <p>
+                    MANA shall not be responsible for clinical decisions made solely or
+                    primarily on the basis of unverified AI output, to the maximum extent
+                    permitted by applicable law.
+                </p>
+
+
+                <!-- 29 -->
+                <h2>29. Intellectual Property</h2>
+
+                <p>
+                    MedicalSpace, including its software, source code, object code,
+                    architecture, design, interface, trademarks, logos, documentation,
+                    databases, proprietary technology, workflows, and underlying systems,
+                    are owned by or licensed to MANA and are protected by applicable
+                    intellectual property laws.
+                </p>
+
+                <p>
+                    Except for the limited right to use MedicalSpace under these Terms,
+                    no ownership rights are transferred to you.
+                </p>
+
+
+                <!-- 30 -->
+                <h2>30. Feedback</h2>
+
+                <p>
+                    If you provide suggestions, ideas, bug reports, feature requests,
+                    or other feedback regarding MedicalSpace, you grant MANA the right
+                    to use such feedback without restriction or compensation, provided
+                    that such use does not unlawfully disclose confidential patient
+                    information.
+                </p>
+
+
+                <!-- 31 -->
+                <h2>31. Disclaimer of Warranties</h2>
+
+                <p>
+                    <strong>
+                        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, MEDICALSPACE
+                        IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS.
+                    </strong>
+                </p>
+
+                <p>
+                    MANA disclaims all warranties that may lawfully be disclaimed,
+                    including warranties of:
+                </p>
+
+                <ul class="legal-list">
+                    <li>merchantability;</li>
+                    <li>fitness for a particular purpose;</li>
+                    <li>non-infringement;</li>
+                    <li>accuracy;</li>
+                    <li>availability;</li>
+                    <li>reliability;</li>
+                    <li>completeness; and</li>
+                    <li>uninterrupted operation.</li>
+                </ul>
+
+                <p>MANA does not warrant that:</p>
+
+                <ol class="legal-list">
+                    <li>MedicalSpace will always be available;</li>
+                    <li>MedicalSpace will be error-free;</li>
+                    <li>AI output will be accurate;</li>
+                    <li>MedicalSpace will satisfy every regulatory requirement;</li>
+                    <li>information will never be lost;</li>
+                    <li>third-party services will always operate; or</li>
+                    <li>the Service will be suitable for every medical or business purpose.</li>
+                </ol>
+
+                <p>
+                    Nothing in this Agreement excludes warranties that cannot legally
+                    be excluded.
+                </p>
+
+
+                <!-- 32 -->
+                <h2>32. Limitation of Liability</h2>
+
+                <p>
+                    <strong>
+                        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, MANA AND ITS
+                        MEMBERS, MANAGERS, OFFICERS, EMPLOYEES, CONTRACTORS, AFFILIATES,
+                        LICENSORS, AND SERVICE PROVIDERS SHALL NOT BE LIABLE FOR:
+                    </strong>
+                </p>
+
+                <ul class="legal-list">
+                    <li>indirect damages;</li>
+                    <li>incidental damages;</li>
+                    <li>consequential damages;</li>
+                    <li>special damages;</li>
+                    <li>exemplary or punitive damages;</li>
+                    <li>loss of profits;</li>
+                    <li>loss of revenue;</li>
+                    <li>loss of business;</li>
+                    <li>loss of goodwill;</li>
+                    <li>loss of data;</li>
+                    <li>loss of opportunity;</li>
+                    <li>business interruption; or</li>
+                    <li>cost of substitute services.</li>
+                </ul>
+
+                <p>
+                    These limitations apply to the maximum extent permitted by applicable
+                    law and subject to the liability cap below.
+                </p>
+
+
+                <!-- 33 -->
+                <h2>33. Liability Cap</h2>
+
+                <p>
+                    <strong>
+                        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, MANA'S TOTAL
+                        AGGREGATE LIABILITY ARISING OUT OF OR RELATING TO MEDICALSPACE
+                        OR THESE TERMS SHALL NOT EXCEED THE GREATER OF:
+                    </strong>
+                </p>
+
+                <ol class="legal-list">
+                    <li>
+                        the amount actually paid by the Customer to MANA for MedicalSpace
+                        during the twelve (12) months immediately preceding the event
+                        giving rise to the claim; or
+                    </li>
+                    <li>
+                        one hundred U.S. dollars (US $100).
+                    </li>
+                </ol>
+
+                <p>
+                    This limitation applies regardless of the legal theory of liability,
+                    including contract, tort, negligence, strict liability, or otherwise,
+                    except to the extent such limitation is prohibited by applicable law.
+                </p>
+
+                <p>
+                    Nothing in these Terms is intended to exclude liability that cannot
+                    legally be excluded or limited.
+                </p>
+
+
+                <!-- 34 -->
+                <h2>34. Healthcare and Patient Claims</h2>
+
+                <p>
+                    To the maximum extent permitted by law, MANA is not responsible for:
+                </p>
+
+                <ul class="legal-list">
+                    <li>the medical treatment provided by a healthcare professional;</li>
+                    <li>a diagnosis made by a healthcare professional;</li>
+                    <li>a prescription issued by a healthcare professional;</li>
+                    <li>a patient's clinical outcome;</li>
+                    <li>a healthcare professional's failure to review AI output;</li>
+                    <li>a healthcare professional's failure to obtain patient consent;</li>
+                    <li>unauthorized disclosure caused by a customer's configuration or conduct;</li>
+                    <li>incorrect patient information entered by a customer;</li>
+                    <li>inappropriate member permissions assigned by an Account Owner; or</li>
+                    <li>professional or regulatory violations committed by a MedicalSpace customer.</li>
+                </ul>
+
+
+                <!-- 35 -->
+                <h2>35. Indemnification</h2>
+
+                <p>
+                    To the maximum extent permitted by applicable law, you agree to defend,
+                    indemnify, and hold harmless MANA and its members, managers, officers,
+                    employees, contractors, affiliates, licensors, and service providers
+                    from claims, damages, liabilities, losses, costs, and reasonable legal
+                    expenses arising out of or relating to:
+                </p>
+
+                <ol class="legal-list">
+                    <li>your violation of these Terms;</li>
+                    <li>your unlawful use of MedicalSpace;</li>
+                    <li>your violation of another person's rights;</li>
+                    <li>your violation of privacy or data-protection laws;</li>
+                    <li>your patient-data processing activities;</li>
+                    <li>your failure to obtain required consent or authorization;</li>
+                    <li>your professional or clinical decisions;</li>
+                    <li>your use of AI-generated information without appropriate review;</li>
+                    <li>content you upload or transmit;</li>
+                    <li>actions of members you authorize; or</li>
+                    <li>your infringement of intellectual property rights.</li>
+                </ol>
+
+                <p>
+                    This indemnification obligation does not apply to the extent a claim
+                    is finally determined to have resulted from MANA's own conduct that
+                    cannot legally be indemnified.
+                </p>
+
+
+                <!-- 36 -->
+                <h2>36. Confidentiality</h2>
+
+                <p>
+                    Each party should take reasonable measures to protect confidential
+                    information received from the other party.
+                </p>
+
+                <p>
+                    Healthcare professionals remain responsible for their professional
+                    confidentiality obligations concerning patients.
+                </p>
+
+                <p>
+                    Nothing in this Agreement authorizes disclosure of confidential
+                    information where such disclosure is prohibited by law.
+                </p>
+
+
+                <!-- 37 -->
+                <h2>37. Security Incidents</h2>
+
+                <p>
+                    MANA maintains procedures intended to identify, investigate, contain,
+                    and respond to security incidents.
+                </p>
+
+                <p>
+                    Where applicable law requires notification of a security incident,
+                    MANA will provide notifications as required by applicable law.
+                </p>
+
+                <p>
+                    Users must promptly notify MANA of suspected unauthorized access or
+                    security incidents affecting their MedicalSpace account.
+                </p>
+
+
+                <!-- 38 -->
+                <h2>38. Compliance With Laws</h2>
+
+                <p>
+                    You agree to comply with all laws and regulations applicable to your
+                    use of MedicalSpace, including where applicable:
+                </p>
+
+                <ul class="legal-list">
+                    <li>healthcare regulations;</li>
+                    <li>medical licensing requirements;</li>
+                    <li>privacy laws;</li>
+                    <li>data-protection laws;</li>
+                    <li>professional confidentiality obligations;</li>
+                    <li>prescription regulations;</li>
+                    <li>cybersecurity requirements;</li>
+                    <li>patient-consent requirements; and</li>
+                    <li>cross-border data-transfer requirements.</li>
+                </ul>
+
+                <p>
+                    MANA does not represent that MedicalSpace is compliant with every
+                    law in every country.
+                </p>
+
+
+                <!-- 39 -->
+                <h2>39. Geographic Availability</h2>
+
+                <p>
+                    MedicalSpace is operated by MANA LLC from the United States.
+                </p>
+
+                <p>
+                    Although MedicalSpace may be accessible from countries throughout
+                    the Arab region and elsewhere, MANA does not represent that the
+                    Service is appropriate, authorized, or legally compliant for every
+                    jurisdiction.
+                </p>
+
+                <p>
+                    The customer is responsible for determining whether its use of
+                    MedicalSpace is lawful in its jurisdiction.
+                </p>
+
+
+                <!-- 40 -->
+                <h2>40. Export and Sanctions Compliance</h2>
+
+                <p>
+                    You may not use MedicalSpace in violation of applicable export-control,
+                    sanctions, embargo, or trade laws.
+                </p>
+
+                <p>
+                    MANA may restrict access where reasonably necessary to comply with
+                    applicable sanctions or legal requirements.
+                </p>
+
+
+                <!-- 41 -->
+                <h2>41. Force Majeure</h2>
+
+                <p>
+                    MANA shall not be liable for failure or delay caused by circumstances
+                    beyond its reasonable control, including:
+                </p>
+
+                <ul class="legal-list">
+                    <li>natural disasters;</li>
+                    <li>war;</li>
+                    <li>terrorism;</li>
+                    <li>civil unrest;</li>
+                    <li>governmental actions;</li>
+                    <li>Internet failures;</li>
+                    <li>telecommunications failures;</li>
+                    <li>cloud infrastructure failures;</li>
+                    <li>power failures;</li>
+                    <li>cyberattacks;</li>
+                    <li>epidemics or pandemics;</li>
+                    <li>labor disputes; or</li>
+                    <li>other events beyond reasonable control.</li>
+                </ul>
+
+
+                <!-- 42 -->
+                <h2>42. Governing Law</h2>
+
+                <p>
+                    To the maximum extent permitted by applicable law, these Terms shall
+                    be governed by the laws of the <strong>State of Colorado, United States
+                    of America</strong>, without regard to conflict-of-law principles.
+                </p>
+
+                <p>
+                    Mandatory consumer, privacy, healthcare, or other laws applicable to
+                    a user in their jurisdiction shall remain applicable to the extent
+                    they cannot legally be excluded.
+                </p>
+
+
+                <!-- 43 -->
+                <h2>43. Dispute Resolution</h2>
+
+                <p>
+                    To the maximum extent permitted by applicable law, disputes arising
+                    out of or relating to MedicalSpace or these Terms shall be resolved
+                    in accordance with applicable law and, where legally enforceable,
+                    through binding arbitration or the courts located in Colorado.
+                </p>
+
+                <p>Nothing in this section prevents either party from seeking:</p>
+
+                <ul class="legal-list">
+                    <li>emergency injunctive relief;</li>
+                    <li>protection of intellectual property;</li>
+                    <li>protection against unauthorized access or misuse of confidential information; or</li>
+                    <li>any remedy that cannot legally be subject to arbitration.</li>
+                </ul>
+
+                <p>
+                    Mandatory rights granted by applicable law are not waived.
+                </p>
+
+
+                <!-- 44 -->
+                <h2>44. No Class Action Where Legally Permitted</h2>
+
+                <p>
+                    To the maximum extent permitted by applicable law, disputes shall be
+                    brought on an individual basis and not as part of a class, collective,
+                    representative, or consolidated action.
+                </p>
+
+                <p>
+                    This provision applies only to the extent legally enforceable.
+                </p>
+
+
+                <!-- 45 -->
+                <h2>45. Severability</h2>
+
+                <p>
+                    If any provision of these Terms is determined to be invalid, unlawful,
+                    or unenforceable, that provision shall be enforced to the maximum
+                    extent permitted by law, and the remaining provisions shall remain
+                    in full force and effect.
+                </p>
+
+
+                <!-- 46 -->
+                <h2>46. No Waiver</h2>
+
+                <p>
+                    MANA's failure to enforce any provision of these Terms does not
+                    constitute a waiver of its right to enforce that provision later.
+                </p>
+
+
+                <!-- 47 -->
+                <h2>47. Entire Agreement</h2>
+
+                <p>
+                    These Terms, together with the MedicalSpace Privacy Policy and any
+                    additional agreements expressly incorporated into them, constitute
+                    the entire agreement between you and MANA regarding MedicalSpace.
+                </p>
+
+
+                <!-- 48 -->
+                <h2>48. Amendments</h2>
+
+                <p>
+                    MANA may modify these Terms from time to time.
+                </p>
+
+                <p>
+                    Where changes are material, MANA may provide notice through the
+                    Platform, email, or another reasonable method.
+                </p>
+
+                <p>
+                    Your continued use of MedicalSpace after the effective date of
+                    updated Terms constitutes acceptance of the updated Terms to the
+                    extent permitted by applicable law.
+                </p>
+
+
+                <!-- 49 -->
+                <h2>49. Electronic Acceptance</h2>
+
+                <p>
+                    You agree that clicking an acceptance button, creating an account,
+                    purchasing a subscription, or otherwise using MedicalSpace may
+                    constitute electronic acceptance of these Terms to the extent
+                    permitted by applicable law.
+                </p>
+
+                <p>
+                    MANA may maintain electronic records of acceptance.
+                </p>
+
+
+                <!-- 50 -->
+                <h2>50. Assignment</h2>
+
+                <p>
+                    You may not assign or transfer this Agreement without MANA's prior
+                    written consent, except where applicable law permits such transfer.
+                </p>
+
+                <p>
+                    MANA may assign or transfer this Agreement in connection with a
+                    merger, acquisition, corporate restructuring, financing, sale of
+                    assets, or similar transaction.
+                </p>
+
+
+                <!-- 51 -->
+                <h2>51. Relationship of the Parties</h2>
+
+                <p>
+                    Nothing in these Terms creates:
+                </p>
+
+                <ul class="legal-list">
+                    <li>a partnership;</li>
+                    <li>joint venture;</li>
+                    <li>employment relationship;</li>
+                    <li>agency relationship;</li>
+                    <li>fiduciary relationship; or</li>
+                    <li>doctor-patient relationship</li>
+                </ul>
+
+                <p>
+                    between you and MANA.
+                </p>
+
+
+                <!-- 52 -->
+                <h2>52. No Third-Party Beneficiaries</h2>
+
+                <p>
+                    Except where expressly stated otherwise, these Terms do not create
+                    rights for third-party beneficiaries.
+                </p>
+
+
+                <!-- 53 -->
+                <h2>53. Notices</h2>
+
+                <p>
+                    Legal notices to MANA should be sent to:
+                </p>
+
+                <p>
+                    <strong>MANA LLC</strong><br>
+                    Colorado, USA<br>
+                    Email:
+                    <a href="mailto:info@mana-co.com"
+                       style="color: var(--primary);">
+                        info@mana-co.com
+                    </a>
+                </p>
+
+                <p>
+                    MANA may provide notices to users through:
+                </p>
+
+                <ul class="legal-list">
+                    <li>email;</li>
+                    <li>in-app notifications;</li>
+                    <li>the MedicalSpace website;</li>
+                    <li>account notifications; or</li>
+                    <li>other reasonable electronic means.</li>
+                </ul>
+
+
+                <!-- 54 -->
+                <h2>54. Contact</h2>
+
+                <p>
+                    For legal, contractual, subscription, privacy, or general inquiries:
+                </p>
+
+                <p>
+                    <strong>MANA LLC</strong><br>
+                    <strong>Email:</strong>
+                    <a href="mailto:info@mana-co.com"
+                       style="color: var(--primary);">
+                        info@mana-co.com
+                    </a><br>
+                    <strong>Location:</strong> Colorado, USA
+                </p>
+
+
+                <!-- 55 -->
+                <h2>55. Acknowledgment</h2>
+
+                <p>
+                    <strong>BY USING MEDICALSPACE, YOU ACKNOWLEDGE THAT:</strong>
+                </p>
+
+                <ol class="legal-list">
+                    <li>MedicalSpace is software and not a healthcare provider;</li>
+                    <li>you are responsible for your use of patient information;</li>
+                    <li>you are responsible for obtaining any required patient consents or authorizations;</li>
+                    <li>you are responsible for your clinical decisions;</li>
+                    <li>AI-generated information must be reviewed by a qualified professional;</li>
+                    <li>MedicalSpace is not an emergency service;</li>
+                    <li>subscription payments are generally non-refundable except where required by applicable law or applicable platform policies;</li>
+                    <li>you are responsible for the actions and permissions of members you authorize;</li>
+                    <li>you will comply with all laws applicable to your use of the Service; and</li>
+                    <li>you have read and agreed to these Terms and the MedicalSpace Privacy Policy.</li>
+                </ol>
+
+                <p>
+                    <strong>
+                        MANA LLC reserves all rights not expressly granted under these Terms.
+                    </strong>
+                </p>
+
+
+                <!-- Legal Links -->
+                <div class="legal-links">
+
+                    <strong>Related Legal Documents</strong>
+
+                    <p style="margin-top: 12px; margin-bottom: 8px;">
+                        <a href="privacy.html">
+                            <i class="fas fa-shield-alt"></i>
+                            MedicalSpace Privacy Policy
+                        </a>
+                    </p>
+
+                    <p style="margin-bottom: 0;">
+                        <a href="medicalspace-delete-account.html">
+                            <i class="fas fa-user-times"></i>
+                            Account &amp; Data Deletion
+                        </a>
+                    </p>
+
                 </div>
-                
-                <h2>1. Acceptance of Terms</h2>
-                <p>By registering for, accessing, or using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you are entering into these Terms on behalf of a healthcare organization, you represent that you have the authority to bind that organization.</p>
-                
-                <h2>2. Healthcare Provider Responsibilities</h2>
-                <h3>2.1 Compliance with Healthcare Regulations</h3>
-                <ul class="legal-list">
-                    <li>Maintain valid healthcare licenses, certifications, and NPI numbers</li>
-                    <li>Comply with HIPAA, HITECH, GDPR, and other applicable regulations</li>
-                    <li>Implement appropriate administrative, physical, and technical safeguards</li>
-                    <li>Conduct required risk assessments and security audits</li>
-                </ul>
-                
-                <h3>2.2 Patient Consent Management</h3>
-                <ul class="legal-list">
-                    <li>Obtain explicit, documented consent from patients for data processing</li>
-                    <li>Maintain consent records for audit and compliance purposes</li>
-                    <li>Respect patient preferences for communication methods</li>
-                    <li>Provide clear opt-out mechanisms in all communications</li>
-                </ul>
-                
-                <h3>2.3 Data Accuracy and Integrity</h3>
-                <ul class="legal-list">
-                    <li>Ensure accuracy and completeness of patient data</li>
-                    <li>Implement data validation and quality control procedures</li>
-                    <li>Maintain audit trails for data modifications</li>
-                    <li>Report data errors or discrepancies promptly</li>
-                </ul>
-                
-                <h2>3. WhatsApp Integration Service Terms</h2>
-                
-                <div class="highlight-box">
-                    <h3>3.1 Approved Usage</h3>
-                    <p>Our WhatsApp Business API integration is approved by Meta for the following healthcare communications:</p>
-                    <ul class="legal-list">
-                        <li><strong>Medical Test Results:</strong> Laboratory reports, imaging findings, diagnostic results</li>
-                        <li><strong>Appointment Management:</strong> Reminders, confirmations, rescheduling, cancellations</li>
-                        <li><strong>Patient Follow-up:</strong> Post-treatment instructions, medication reminders, recovery check-ins</li>
-                        <li><strong>Healthcare Notifications:</strong> Facility updates, policy changes, service announcements</li>
-                        <li><strong>Support Messages:</strong> Technical assistance, billing inquiries, general support</li>
-                    </ul>
-                </div>
-                
-                <h3>3.2 Consent Requirements</h3>
-                <p>Healthcare providers must:</p>
-                <ul class="legal-list">
-                    <li>Obtain written consent from patients before sending WhatsApp messages</li>
-                    <li>Document consent in the patient's medical record</li>
-                    <li>Include opt-out instructions in every message (e.g., "Reply STOP to unsubscribe")</li>
-                    <li>Honor opt-out requests immediately (within 24 hours)</li>
-                    <li>Maintain consent records for at least 6 years as required by HIPAA</li>
-                </ul>
-                
-                <h3>3.3 Prohibited Usage</h3>
-                <p>The following uses of our WhatsApp integration are strictly prohibited:</p>
-                <ul class="legal-list">
-                    <li>Marketing, advertising, or promotional content</li>
-                    <li>Unsolicited medical advice or diagnosis</li>
-                    <li>Messages to individuals who have not provided consent</li>
-                    <li>Sharing of medical data with unauthorized third parties</li>
-                    <li>Phishing attempts or fraudulent activities</li>
-                    <li>Harassment, spam, or abusive communications</li>
-                </ul>
-                
-                <h3>3.4 Meta Compliance</h3>
-                <p>Healthcare providers must comply with Meta's WhatsApp Business Policy, including:</p>
-                <ul class="legal-list">
-                    <li>Only sending messages to opted-in recipients</li>
-                    <li>Respecting user privacy and communication preferences</li>
-                    <li>Not using WhatsApp for emergency communications</li>
-                    <li>Complying with Meta's prohibited content policies</li>
-                </ul>
-                
-                <h2>4. Service Description</h2>
-                <p>MANA LLC provides the following healthcare software solutions:</p>
-                <ul class="legal-list">
-                    <li><strong>PACS/DICOM Solutions:</strong> Medical image storage, retrieval, viewing, and sharing with full DICOM compliance</li>
-                    <li><strong>WhatsApp Medical Sender:</strong> Secure, HIPAA-compliant WhatsApp Business API integration for patient communications</li>
-                    <li><strong>Radiology Information System (RIS):</strong> Comprehensive management for imaging departments including scheduling, tracking, and reporting</li>
-                    <li><strong>Hospital Information System (HIS):</strong> Integrated hospital management including EHR, billing, inventory, and administration</li>
-                    <li><strong>Healthcare Data Security:</strong> End-to-end encryption, access controls, and regulatory compliance</li>
-                    <li><strong>Cloud & Telemedicine:</strong> Secure cloud hosting and remote patient care solutions</li>
-                </ul>
-                
-                <h2>5. User Rights and Service Levels</h2>
-                <h3>5.1 Service Access</h3>
-                <ul class="legal-list">
-                    <li>Access to the Services according to your subscription tier</li>
-                    <li>Technical support during business hours (24/7 for critical issues)</li>
-                    <li>Regular system updates and security patches</li>
-                    <li>Data backup and disaster recovery services</li>
-                </ul>
-                
-                <h3>5.2 Data Portability</h3>
-                <p>Upon request, we will provide healthcare providers with their data in standardized formats (DICOM, HL7, FHIR, etc.) for migration or interoperability purposes.</p>
-                
-                <h3>5.3 Service Modifications</h3>
-                <p>We reserve the right to modify, suspend, or discontinue any aspect of the Services with 30 days' notice. We will not make changes that materially reduce functionality or security without your consent.</p>
-                
-                <h2>6. Limitations of Liability</h2>
-                
-                <div class="important-note">
-                    <strong>Important Disclaimer:</strong> MANA LLC provides software tools for healthcare management but does not provide medical services, diagnosis, or treatment advice. Healthcare providers remain responsible for clinical decisions and patient care.
-                </div>
-                
-                <h3>6.1 Service Limitations</h3>
-                <p>MANA LLC provides software tools but does not:</p>
-                <ul class="legal-list">
-                    <li>Provide medical advice, diagnosis, or treatment recommendations</li>
-                    <li>Guarantee specific healthcare outcomes or results</li>
-                    <li>Assume responsibility for clinical decisions or medical errors</li>
-                    <li>Control internet connectivity, third-party services, or medical devices</li>
-                    <li>Ensure uninterrupted service (though we aim for 99.9% uptime)</li>
-                </ul>
-                
-                <h3>6.2 Liability Cap</h3>
-                <p>Our maximum aggregate liability for any claim related to the Services is limited to the amount paid by you for the Services in the 12 months preceding the claim. We are not liable for indirect, incidental, consequential, or punitive damages.</p>
-                
-                <h3>6.3 Force Majeure</h3>
-                <p>We are not liable for delays or failures in performance resulting from circumstances beyond our reasonable control, including natural disasters, acts of government, pandemics, or infrastructure failures.</p>
-                
-                <h2>7. Data Protection & Compliance</h2>
-                <ul class="legal-list">
-                    <li>We comply with HIPAA Security and Privacy Rules</li>
-                    <li>We sign Business Associate Agreements (BAAs) with covered entities</li>
-                    <li>We implement appropriate technical and organizational security measures</li>
-                    <li>We report data breaches according to regulatory requirements (within 60 days for HIPAA)</li>
-                    <li>We conduct regular security audits and risk assessments</li>
-                    <li>We provide security training to our personnel</li>
-                </ul>
-                
-                <h2>8. Intellectual Property</h2>
-                <p>All software, documentation, trademarks, logos, and related materials are owned by MANA LLC or its licensors. You receive a limited, non-exclusive, non-transferable license to use the Services according to your subscription. You may not:</p>
-                <ul class="legal-list">
-                    <li>Reverse engineer, decompile, or disassemble the software</li>
-                    <li>Modify, adapt, or create derivative works</li>
-                    <li>Distribute, sublicense, or transfer the software</li>
-                    <li>Remove or alter copyright notices</li>
-                    <li>Use the software for competitive analysis or development</li>
-                </ul>
-                
-                <h2>9. Payment Terms</h2>
-                <ul class="legal-list">
-                    <li>Subscription fees are billed monthly or annually in advance</li>
-                    <li>Payment is due upon receipt of invoice (net 30 days)</li>
-                    <li>Late payments may result in service suspension with 14 days' notice</li>
-                    <li>Fees are non-refundable except as required by law or specified in your agreement</li>
-                    <li>Price changes will be communicated 60 days in advance</li>
-                    <li>Additional fees may apply for custom development, integration, or premium support</li>
-                </ul>
-                
-                <h2>10. Termination</h2>
-                <h3>10.1 Termination Rights</h3>
-                <p>Either party may terminate service with 30 days written notice. We may terminate immediately for:</p>
-                <ul class="legal-list">
-                    <li>Material breach of these Terms</li>
-                    <li>Non-payment of fees</li>
-                    <li>Violation of healthcare regulations</li>
-                    <li>Unauthorized use of the Services</li>
-                </ul>
-                
-                <h3>10.2 Post-Termination</h3>
-                <p>Upon termination:</p>
-                <ul class="legal-list">
-                    <li>We will assist with data migration for 30 days</li>
-                    <li>We will securely delete your data according to our data retention policy</li>
-                    <li>You will pay all outstanding fees</li>
-                    <li>Licenses and access will be revoked</li>
-                </ul>
-                
-                <h2>11. Changes to Terms</h2>
-                <p>We may modify these Terms at any time. We will notify healthcare providers of significant changes via email or through our software platform at least 30 days before changes take effect. Continued use of the Services after changes constitutes acceptance of the modified Terms.</p>
-                
-                <h2>12. Governing Law and Dispute Resolution</h2>
-                <p>These Terms are governed by the laws of the State of New York, United States. Any disputes will be resolved through binding arbitration in New York, NY, in accordance with the rules of the American Arbitration Association. Each party bears its own arbitration costs.</p>
-                
-                <h2>13. Contact Information</h2>
-                <p>For questions about these Terms or to exercise your rights:</p>
-                <p><strong>MANA LLC Legal Department</strong><br>
-                Email: <a href="mailto:info@mana-co.com" style="color: var(--primary);">info@mana-co.com</a><br>
-                Phone: +2 (015) 050 90440<br>
-                Address: 1942 Broadway St. STE 314C Boulder CO 80302 US</p>
-                
-                
-                <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+
+                <a href="index.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Home
+                </a>
+
             </div>
         </div>
     </section>
 
-     <footer>
+
+    <!-- Footer -->
+    <footer>
+
         <div class="container">
+
             <div class="footer-content">
+
                 <div class="footer-column">
+
                     <h4>MANA LLC</h4>
-                    <p>US-based healthcare software company specializing in PACS, DICOM, RIS, HIS, and secure WhatsApp integration for medical facilities worldwide.</p>                   
+
+                    <p>
+                        US-based healthcare software company developing healthcare
+                        technology solutions including MedicalSpace, PACS, DICOM,
+                        RIS, HIS, and secure healthcare communication systems.
+                    </p>
+
                 </div>
-                
+
+
                 <div class="footer-column">
+
                     <h4>Quick Links</h4>
+
                     <ul class="footer-links">
                         <li><a href="index.html#home">Home</a></li>
                         <li><a href="index.html#services">Services</a></li>
@@ -556,60 +2003,148 @@
                         <li><a href="index.html#compliance">Compliance</a></li>
                         <li><a href="index.html#contact">Contact</a></li>
                     </ul>
+
                 </div>
-                
+
+
                 <div class="footer-column">
+
                     <h4>Legal</h4>
+
                     <ul class="footer-links">
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="#">HIPAA Compliance</a></li>
-                        <li><a href="#">Business Associate Agreement</a></li>
+                        <li>
+                            <a href="privacy.html">
+                                Privacy Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="terms.html">
+                                Terms &amp; Conditions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="medicalspace-delete-account.html">
+                                Account &amp; Data Deletion
+                            </a>
+                        </li>
                     </ul>
+
                 </div>
-                
+
+
                 <div class="footer-column">
+
                     <h4>Contact Us</h4>
+
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Colorado, USA</li>
-                        <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +1 (812) 791-4182</li>
-                        <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Cairo, EGYPT</li>
-                        <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +20 1505090440</li>
-                        <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> info@mana-co.com</li>
-                        <li><i class="fab fa-whatsapp" style="margin-right: 8px;"></i> 20 1007339500</li>
+
+                        <li>
+                            <i class="fas fa-map-marker-alt"
+                               style="margin-right: 8px;"></i>
+                            Colorado, USA
+                        </li>
+
+                        <li>
+                            <i class="fas fa-phone"
+                               style="margin-right: 8px;"></i>
+                            +1 (812) 791-4182
+                        </li>
+
+                        <li>
+                            <i class="fas fa-map-marker-alt"
+                               style="margin-right: 8px;"></i>
+                            Cairo, EGYPT
+                        </li>
+
+                        <li>
+                            <i class="fas fa-phone"
+                               style="margin-right: 8px;"></i>
+                            +20 1505090440
+                        </li>
+
+                        <li>
+                            <i class="fas fa-envelope"
+                               style="margin-right: 8px;"></i>
+                            <a href="mailto:info@mana-co.com">
+                                info@mana-co.com
+                            </a>
+                        </li>
+
+                        <li>
+                            <i class="fab fa-whatsapp"
+                               style="margin-right: 8px;"></i>
+                            20 1007339500
+                        </li>
+
                     </ul>
+
                 </div>
+
             </div>
-            
+
+
             <div class="copyright">
-                <p>&copy; 2025 MANA LLC. All rights reserved. | HIPAA Compliant Healthcare Software Solutions | Meta WhatsApp Business API Approved</p>
+
+                <p>
+                    &copy; 2026 MANA LLC. All rights reserved.
+                    | MedicalSpace Healthcare Software
+                </p>
+
             </div>
+
         </div>
+
     </footer>
 
+
     <script>
+
         // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        if(mobileMenuBtn) {
+
+        const mobileMenuBtn =
+            document.querySelector('.mobile-menu-btn');
+
+        const navLinks =
+            document.querySelector('.nav-links');
+
+        if (mobileMenuBtn) {
+
             mobileMenuBtn.addEventListener('click', () => {
+
                 navLinks.classList.toggle('active');
-                mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                    ? '<i class="fas fa-times"></i>' 
-                    : '<i class="fas fa-bars"></i>';
+
+                mobileMenuBtn.innerHTML =
+                    navLinks.classList.contains('active')
+                        ? '<i class="fas fa-times"></i>'
+                        : '<i class="fas fa-bars"></i>';
+
             });
+
         }
-        
+
+
         // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                if(mobileMenuBtn) mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+
+        document
+            .querySelectorAll('.nav-links a')
+            .forEach(link => {
+
+                link.addEventListener('click', () => {
+
+                    navLinks.classList.remove('active');
+
+                    if (mobileMenuBtn) {
+                        mobileMenuBtn.innerHTML =
+                            '<i class="fas fa-bars"></i>';
+                    }
+
+                });
+
             });
-        });
+
     </script>
+
 </body>
 </html>
-
-
